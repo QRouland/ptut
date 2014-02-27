@@ -1,6 +1,7 @@
 import tornado.ioloop
 import tornado.web
 import tornado.httpserver
+from loadConf import *
 
 confAveug = False
 
@@ -22,11 +23,13 @@ application = tornado.web.Application([
 
 if __name__ == "__main__":
     #chargement congig
+    hand = LoadConf()
     confAveug = hand.estAveugle()
     if confAveug == True:
         print "->Blind unhabitant system configuration"
     else :
         print "->Not blind unhabitant system configuration"
+
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()

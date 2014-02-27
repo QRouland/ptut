@@ -15,7 +15,7 @@ ficLog = Login()
 settings = {}
 settings["session_secret"] = 'some secret password!!'
 settings["session_dir"] = 'sessions'  # the directory to store sessions in
-session= Session()
+
 application.session_manager = TornadoSessionManager(settings["session_secret"], settings["session_dir"])
 
 class MainHandler(tornado.web.RequestHandler):

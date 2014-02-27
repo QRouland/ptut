@@ -64,6 +64,7 @@ class UnauthorizedHandler(BaseHandler):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
             self.set_secure_cookie("user", "illegalUser")
+            self.redirect("/video")
         else :
             self.redirect("/")
 

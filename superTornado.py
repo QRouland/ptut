@@ -46,7 +46,7 @@ class VideoHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/", MainHandler),
-    (r"/", VideoHandler),
+    (r"/video", VideoHandler),
 ])
 
 if __name__ == "__main__":

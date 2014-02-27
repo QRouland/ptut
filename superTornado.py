@@ -2,6 +2,7 @@ import tornado.ioloop
 import tornado.web
 import tornado.httpserver
 import tornado.websocket
+import tornado.options
 
 from tornado.ioloop import PeriodicCallback
 
@@ -46,7 +47,7 @@ class MainHandler(BaseHandler):
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->An unauthorized user try to access"
-            self.write("Unauthorized user access")
+            self.redirect("/illegal.html")
 
 class VideoHandler(BaseHandler):
     def get(self):
@@ -58,7 +59,7 @@ class VideoHandler(BaseHandler):
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
-        self.render("index.html")
+        self.render("illegal.html")
     def post(self):
         force = self.get_argument("id","")
         if force == 1 :
@@ -81,6 +82,7 @@ if __name__ == "__main__":
     else :
         print "->Not blind unhabitant system configuration"
 
+    tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()

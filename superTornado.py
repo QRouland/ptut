@@ -16,7 +16,7 @@ class MainHandler(tornado.web.RequestHandler):
 
         login = Login()
         autorise = login.connexion(iden, mdp)
-        #maison = httplib.HTTPConnection("192.168.16.150", 80)
+        # maison = httplib.HTTPConnection("192.168.16.150", 80)
         if autorise == True:
             ficLog.enregDansLog(iden,"Authorized user connection",info[0])
             if confAveug == True:
@@ -26,7 +26,7 @@ class MainHandler(tornado.web.RequestHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client authorized user access"
-            #redirection autorisé
+            # redirection autorisé
 
             else:
             ficLog.enregDansLog(iden,"Unauthorized user connection",info[0])
@@ -37,7 +37,7 @@ class MainHandler(tornado.web.RequestHandler):
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client unauthorized user access"
-            #redirection non autorisé
+            # redirection non autorisé
 
 
 
@@ -50,7 +50,7 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
-    #chargement congig
+    # chargement congfig
     hand = LoadConf()
     confAveug = hand.estAveugle()
     if confAveug == True:

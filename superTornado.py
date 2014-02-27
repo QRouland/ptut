@@ -6,9 +6,9 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html")
     def post(self):
-        iden = self.get_argument("id",'')
-        mdp = self.get_argument("mdp",'')
-        self.write("Le pseudo est :", iden)
+        #iden = self.get_argument("id",'')
+        #mdp = self.get_argument("mdp",'')
+        self.write("Le pseudo est :")
 
 
 

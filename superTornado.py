@@ -11,7 +11,7 @@ from login import *
 
 confAveug = False
 ficLog = Login()
-session= Session()
+session= TornadoSessionManager()
 settings = {}
 settings["session_secret"] = 'some secret password!!'
 settings["session_dir"] = 'sessions'  # the directory to store sessions in

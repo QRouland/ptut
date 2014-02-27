@@ -47,7 +47,7 @@ class MainHandler(BaseHandler):
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->An unauthorized user try to access"
-            self.redirect("/illegal.html")
+            self.redirect("/unauthorized")
 
 class VideoHandler(BaseHandler):
     def get(self):
@@ -61,7 +61,7 @@ class UnauthorizedHandler(BaseHandler):
     def get(self):
         self.render("illegal.html")
     def post(self):
-        force = self.get_argument("id","")
+        force = self.get_argument("illegalAccess","")
         if force == 1 :
             self.set_secure_cookie("user", "illegalUser")
         else :

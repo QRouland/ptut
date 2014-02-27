@@ -12,15 +12,11 @@ from login import *
 confAveug = False
 ficLog = Login()
 
-settings = {}
-settings["session_secret"] = 'some secret password!!'
-settings["session_dir"] = 'sessions'  # the directory to store sessions in
+class BaseHandler(tornado.web.RequestHandler):
+    def get_current_user(self):
+        return self.get_secure_cookie("user")
 
-application.session_manager = TornadoSessionManager(settings["session_secret"], settings["session_dir"])
-
-class MainHandler(tornado.web.RequestHandler):
-    def __init__ (self) :
-        self.session = session.TornadoSession(self.application.session_manager, self)
+class MainHandler(BaseHandler):
     def get(self):
         self.render("index.html")
     def post(self):
@@ -39,11 +35,8 @@ class MainHandler(tornado.web.RequestHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client authorized user access"
-            self.session['blah'] = 1234
-            self.save()
-            blah = self.session['blah']
-            self.write(blah)
-
+            self.set_secure_cookie("user", iden)
+            self.redirect("/video")
         else:
             ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
             if confAveug == True:
@@ -55,33 +48,21 @@ class MainHandler(tornado.web.RequestHandler):
             print "->Send to client unauthorized user access"
             self.write("Unauthorized user access")
 
-class VideoHandler(tornado.web.RequestHandler):
+class VideoHandler(BaseHandler):
     def get(self):
-        self.render("test.html")
+        if not self.current_user :
+            self.redirect("/")
+            return
+        name = tornado.escape.xhtml_escape(self.current_user)
+        self.write("Hello, " + name)
 
-class WSHandler(tornado.websocket.WebSocketHandler):
-    def open(self, *args):
-        self.id = self.get_argument("Id")
-        self.stream.set_nodelay(True)
-        clients[self.id] = {"id": self.id, "object": self}
 
-    def on_message(self, message):
-        """
-        when we receive some message we want some message handler..
-        for this example i will just print message to console
-        """
-        print "Client %s received a message : %s" % (self.id, message)
-
-    def on_close(self):
-        if self.id in clients:
-            del clients[self.id]
 
 
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
-    (r"/test", WSHandler),
-])
+], cookie_secret="1213215656")
 
 if __name__ == "__main__":
     hand = LoadConf()

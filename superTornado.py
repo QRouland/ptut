@@ -47,7 +47,7 @@ class VideoHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("test.html")
 
-class WebSocketHandler(tornado.websocket.WebSocketHandler):
+class WSHandler(tornado.websocket.WebSocketHandler):
     def open(self, *args):
         self.id = self.get_argument("Id")
         self.stream.set_nodelay(True)

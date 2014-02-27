@@ -8,7 +8,8 @@ class MainHandler(tornado.web.RequestHandler):
     def post(self):
         iden = self.get_argument("id","")
         mdp = self.get_argument("mdp","")
-        self.write("Le pseudo est :", iden)
+        self.write("Le pseudo est :")
+        self.write(iden)
 
 
 

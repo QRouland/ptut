@@ -13,7 +13,7 @@ class LoginHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/", MainHandler),
-    (r"/login", MainHandler),
+    (r"/login", LoginHandler),
 ])
 
 if __name__ == "__main__":

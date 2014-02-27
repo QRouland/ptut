@@ -13,8 +13,8 @@ def main(port = 80):
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(port)
     try:
-    ioloop.start()
+        ioloop.start()
     except KeyboardInterrupt:
-    pass
+        pass
 
 

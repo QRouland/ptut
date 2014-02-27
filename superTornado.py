@@ -28,7 +28,7 @@ class MainHandler(tornado.web.RequestHandler):
             print "->Send to client authorized user access"
 
 
-            else:
+        else:
             ficLog.enregDansLog(iden,"Unauthorized user connection",info[0])
             if confAveug == True:
                 print '->Send audio alarm unauthorized user'

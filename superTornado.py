@@ -7,8 +7,8 @@ class MainHandler(tornado.web.RequestHandler):
 
 class LoginHandler(tornado.web.RequestHandler):
     def post(self):
-        iden = self.get_argument("id")
-        mdp = self.get_argument("mdp")
+        iden = self.get_argument("id",'')
+        mdp = self.get_argument("mdp",'')
         self.write("Le pseudo est :", iden)
 
 application = tornado.web.Application([
@@ -17,5 +17,6 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
-    application.listen(80)
+    http_server = tornado.httpserver.HTTPSERVER(application)
+    http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()

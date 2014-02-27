@@ -34,7 +34,7 @@ class MainHandler(BaseHandler):
             else:
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Send to client authorized user access"
+            print "->Authorized user access"
             self.set_secure_cookie("user", iden)
             self.redirect("/video")
         else:
@@ -45,7 +45,7 @@ class MainHandler(BaseHandler):
             else:
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Send to client unauthorized user access"
+            print "->An unauthorized user try to access"
             self.write("Unauthorized user access")
 
 class VideoHandler(BaseHandler):
@@ -56,12 +56,21 @@ class VideoHandler(BaseHandler):
         name = tornado.escape.xhtml_escape(self.current_user)
         self.write("Hello, " + name)
 
-
+class UnauthorizedHandler(BaseHandler):
+    def get(self):
+        self.render("index.html")
+    def post(self):
+        force = self.get_argument("id","")
+        if force == 1 :
+            self.set_secure_cookie("user", "illegalUser")
+        else :
+            self.redirect("/")
 
 
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
+    (r"/unauthorized", UnauthorizedHandler),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

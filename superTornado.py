@@ -1,6 +1,10 @@
 import tornado.ioloop
 import tornado.web
 import tornado.httpserver
+import tornado.websocket
+from tornado.ioloop import PeriodicCallback
+
+
 from loadConf import *
 from login import *
 
@@ -41,12 +45,27 @@ class MainHandler(tornado.web.RequestHandler):
 
 class VideoHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Authorized user access")
+        self.render("test.html")
+
+class WSHandler(tornado.websocket.WebSocketHandler):
+    def open(self):
+        self.callback = PeriodicCallback(self.send_hello, 120)
+        self.callback.start()
+
+    def send_hello(self):
+        self.write_message('hello')
+
+    def on_message(self, message):
+        pass
+
+    def on_close(self):
+        self.callback.stop()
 
 
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
+    (r"/test", WSHandler),
 ])
 
 if __name__ == "__main__":
@@ -60,3 +79,4 @@ if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()
+

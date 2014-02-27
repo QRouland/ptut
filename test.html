@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+
+function fun(){
+
+    alert("in fun()");
+
+    var val=document.getElementById("txt");
+    var ws = new WebSocket("ws://localhost:8888");
+
+    ws.onopen = function(evt) { alert("Connection open ...");
+    ws.send(val.value); };
+    ws.onmessage = function(evt) {
+         alert("from server: "+evt.data);
+    }
+
+    ws.onclose = function(evt) {
+        alert("Connection closed.");
+    }
+}
+
+</script>
+
+</head>
+<body bgcolor="#FFFFFF">
+    <input type="text" id="txt" />
+    <button onClick="fun()">click</button>
+</body>
+</html>

@@ -11,9 +11,11 @@ from login import *
 
 confAveug = False
 ficLog = Login()
+session= Session()
 settings = {}
 settings["session_secret"] = 'some secret password!!'
 settings["session_dir"] = 'sessions'  # the directory to store sessions in
+session= Session()
 application.session_manager = session.TornadoSessionManager(settings["session_secret"], settings["session_dir"])
 
 class MainHandler(tornado.web.RequestHandler):

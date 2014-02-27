@@ -18,7 +18,7 @@ class MainHandler(tornado.web.RequestHandler):
         autorise = login.connexion(iden, mdp)
         #maison = httplib.HTTPConnection("192.168.16.150", 80)
         if autorise == True:
-            ficLog.enregDansLog(iden,"Authorized user connection",info[0])
+            ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
             if confAveug == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
@@ -26,10 +26,10 @@ class MainHandler(tornado.web.RequestHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client authorized user access"
-
+            self.write("authorized user access")
 
         else:
-            ficLog.enregDansLog(iden,"Unauthorized user connection",info[0])
+            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
             if confAveug == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
@@ -37,6 +37,7 @@ class MainHandler(tornado.web.RequestHandler):
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client unauthorized user access"
+            self.write("authorized user access")
 
 
 

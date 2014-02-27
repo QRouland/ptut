@@ -8,7 +8,7 @@ class MainHandler(tornado.web.RequestHandler):
 
 class LoginHandler(tornado.web.RequestHandler):
     def get(self):
-       seld.write("lol")
+        self.write("Le pseudo est :")
 
 application = tornado.web.Application([
     (r"/", MainHandler),

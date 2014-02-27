@@ -2,16 +2,22 @@ import tornado.ioloop
 import tornado.web
 import tornado.httpserver
 import tornado.websocket
+
 from tornado.ioloop import PeriodicCallback
 
-
+from session import *
 from loadConf import *
 from login import *
 
 confAveug = False
 ficLog = Login()
+settings["session_secret"] = 'some secret password!!'
+settings["session_dir"] = 'sessions'  # the directory to store sessions in
+application.session_manager = session.TornadoSessionManager(settings["session_secret"], settings["session_dir"])
 
 class MainHandler(tornado.web.RequestHandler):
+    def __init__ (self) :
+        self.session = session.TornadoSession(self.application.session_manager, self)
     def get(self):
         self.render("index.html")
     def post(self):
@@ -30,7 +36,10 @@ class MainHandler(tornado.web.RequestHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client authorized user access"
-            self.write("Authorized user access")
+            self.session['blah'] = 1234
+            self.save()
+            blah = self.session['blah']
+            self.write(blah)
 
         else:
             ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")

@@ -26,7 +26,7 @@ class MainHandler(tornado.web.RequestHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client authorized user access"
-            self.write("authorized user access")
+            self.write("Authorized user access")
 
         else:
             ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
@@ -37,15 +37,16 @@ class MainHandler(tornado.web.RequestHandler):
                     print '->Send visual alarm unauthorized user'
                     print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Send to client unauthorized user access"
-            self.write("authorized user access")
+            self.write("Unauthorized user access")
 
-
-
-
+class VideoHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write("Authorized user access")
 
 
 application = tornado.web.Application([
     (r"/", MainHandler),
+    (r"/", VideoHandler),
 ])
 
 if __name__ == "__main__":

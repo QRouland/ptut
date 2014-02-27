@@ -11,7 +11,7 @@ from login import *
 
 confAveug = False
 ficLog = Login()
-settings = []
+settings = {}
 settings["session_secret"] = 'some secret password!!'
 settings["session_dir"] = 'sessions'  # the directory to store sessions in
 application.session_manager = session.TornadoSessionManager(settings["session_secret"], settings["session_dir"])

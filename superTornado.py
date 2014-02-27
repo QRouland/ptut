@@ -62,7 +62,7 @@ class UnauthorizedHandler(BaseHandler):
         self.render("illegal.html")
     def post(self):
         force = self.get_argument("illegalAccess","")
-        if force == 1 :
+        if force == "1" :
             self.set_secure_cookie("user", "illegalUser")
         else :
             self.redirect("/")

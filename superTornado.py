@@ -4,6 +4,8 @@ import tornado.web
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html")
+
+class MainHandler(tornado.web.RequestHandler):
     def post(self):
         iden = self.get_argument("id")
         mdp = self.get_argument("mdp")

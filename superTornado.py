@@ -86,6 +86,10 @@ class AJAXHandler(BaseHandler):
         self.write(encoded)
         self.finish()
 
+class DisconnectionHandler(BaseHandler):
+    def post(self):
+        self.set_cookie("user", 0)
+        self.redirect("/")
 
 
 application = tornado.web.Application([
@@ -93,6 +97,7 @@ application = tornado.web.Application([
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
     (r"/ajax", AJAXHandler),
+    (r"/disconnection", DisconnectionHandler),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

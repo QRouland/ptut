@@ -3,6 +3,7 @@ import tornado.web
 import tornado.httpserver
 import tornado.websocket
 import tornado.options
+import base64
 from urllib import urlretrieve
 
 
@@ -78,9 +79,12 @@ class AJAXHandler(BaseHandler):
     def post(self):
         with open("image/temp.jpg", 'rb') as f:
             data = f.read()
-            self.set_header('Content-type', 'image/jpeg')
-            self.write(data)
+            #self.set_header('Content-type', 'image/jpeg')
+            encoded = base64.b64encode(data)
+            print encoded
+            self.write(encoded)
             self.finish()
+
 
 
 application = tornado.web.Application([

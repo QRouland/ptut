@@ -93,11 +93,11 @@ class DisconnectionHandler(BaseHandler):
         self.set_cookie("user", "0")
         self.redirect("/")
 
-class WSocketHandler(tornado.websocket.WebSocketHandler):
+class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
-        """"if not self.current_user :
+        if not self.current_user :
             self.close()
-            return"""
+            return
         print "->Websocket opened"
 
         try :

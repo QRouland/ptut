@@ -17,12 +17,12 @@
             ws.onclose = function () {
                 console.log("connection closed");
             };
-            function refresh() {
+           /* function refresh() {*/
                 console.log("send data");
                 ws.send("next");
-            }
-            /*$(document).ready(refresh())*/
-            setInterval(refresh(), 2000);
+            //}
+            /*$(document).ready(refresh())
+            setInterval(refresh(), 2000);*/
         </script>
     </head>
     <body>

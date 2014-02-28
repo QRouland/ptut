@@ -69,10 +69,19 @@ class UnauthorizedHandler(BaseHandler):
             self.redirect("/")
 
 
+
+class AJAXHandler(BaseHandler):
+    def get(self):
+        with open(path, 'rb') as f:
+        data = f.read()
+        self.write(data)
+
+
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
+    (r"/ajax", AJAXHandler),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

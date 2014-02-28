@@ -6,7 +6,7 @@ import tornado.options
 import time
 import base64
 from urllib import urlopen
-import Settings
+
 
 
 from tornado.ioloop import PeriodicCallback
@@ -14,6 +14,8 @@ from tornado.ioloop import PeriodicCallback
 from session import *
 from loadConf import *
 from login import *
+import os
+dirname = os.path.dirname(__file__)
 
 confAveug = False
 ficLog = Login()
@@ -129,11 +131,9 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),],
-settings = {
-            "template_path": Settings.TEMPLATE_PATH,
-            "static_path": Settings.STATIC_PATH,
-        },
-cookie_secret="1213215656")
+    STATIC_PATH = os.path.join(dirname, 'static'),
+    TEMPLATE_PATH = os.path.join(dirname, 'templates'),
+    cookie_secret="1213215656")
 
 if __name__ == "__main__":
     hand = LoadConf()

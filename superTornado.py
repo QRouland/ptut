@@ -75,7 +75,7 @@ class UnauthorizedHandler(BaseHandler):
 
 
 class AJAXHandler(BaseHandler):
-    def get(self):
+    def post(self):
         with open("image/temp.jpg", 'rb') as f:
             data = f.read()
             self.set_header('Content-type', 'image/jpg')

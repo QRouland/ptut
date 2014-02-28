@@ -18,6 +18,10 @@
             ws.onclose = function () {
                 console.log("connection closed");
             };
+
+            window.onunload=function(){
+                ws.close();
+            };
         </script>
     </head>
     <body>

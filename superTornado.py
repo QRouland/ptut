@@ -128,7 +128,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
-    (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "/home/vmproxy/Bureau/ptut/"})
+    (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "/home/vmproxy/Bureau/ptut/"}),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

@@ -4,7 +4,6 @@ import tornado.httpserver
 import tornado.websocket
 import tornado.options
 import base64
-import repr as reprlib
 from urllib import urlopen
 
 
@@ -23,7 +22,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.write(repr(self.request.remote_ip()))
+        self.write(str(self.request.remote_ip()))
         #self.render("index.html")
     def post(self):
         iden = self.get_argument("id","")

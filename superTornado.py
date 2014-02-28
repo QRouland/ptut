@@ -86,7 +86,7 @@ class AJAXHandler(BaseHandler):
             self.write(encoded)
             self.finish()
         except Exception, e :
-            self.write_error("Camera unavailable")
+            self.finish()
 
 class DisconnectionHandler(BaseHandler):
     def post(self):

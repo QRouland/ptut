@@ -73,8 +73,8 @@ class UnauthorizedHandler(BaseHandler):
 class AJAXHandler(BaseHandler):
     def get(self):
         with open(path, 'rb') as f:
-        data = f.read()
-        self.write(data)
+            data = f.read()
+            self.write(data)
 
 
 application = tornado.web.Application([

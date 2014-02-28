@@ -23,7 +23,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.render_string("index.html")
+        self.render("index.html")
     def post(self):
         iden = self.get_argument("id","")
         mdp = self.get_argument("mdp","")
@@ -128,6 +128,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
+    (r"/static/(.*)", web.StaticFileHandler, {"path": "/home/vmproxy/Bureau/ptut/"})
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

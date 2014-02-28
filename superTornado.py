@@ -39,13 +39,6 @@ class MainHandler(BaseHandler):
             self.set_secure_cookie("user", iden)
             self.redirect("/video")
         else:
-            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
-            if confAveug == True:
-                print '->Send audio alarm unauthorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
-            else:
-                    print '->Send visual alarm unauthorized user'
-                    print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->An unauthorized user try to access"
             self.redirect("/unauthorized")
 
@@ -55,7 +48,7 @@ class VideoHandler(BaseHandler):
             self.redirect("/")
             return
         name = tornado.escape.xhtml_escape(self.current_user)
-        self.write("Hello, " + name)
+        self.render("video.html")
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
@@ -64,6 +57,13 @@ class UnauthorizedHandler(BaseHandler):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
             self.set_secure_cookie("user", "illegalUser")
+            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
+            if confAveug == True:
+                print '->Send audio alarm unauthorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
+            else:
+                print '->Send visual alarm unauthorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             self.redirect("/video")
         else :
             self.redirect("/")

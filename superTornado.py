@@ -48,7 +48,17 @@ class VideoHandler(BaseHandler):
             self.redirect("/")
             return
         name = tornado.escape.xhtml_escape(self.current_user)
-        self.render("video.html")
+        with open("image/temp.jpg", 'rb') as f:
+            data = f.read()
+            qr.add_data(data)
+            qr.make(fit=True)
+            img = qr.make_image()
+            self.set_header('Content-type', 'image/png')
+            img_buff = StringIO()
+            img.save(img_buff)
+            img_buff.seek(0)
+            self.write(img_buff.read())
+            self.finish()
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):

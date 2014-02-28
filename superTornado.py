@@ -3,6 +3,7 @@ import tornado.web
 import tornado.httpserver
 import tornado.websocket
 import tornado.options
+import time
 import base64
 from urllib import urlopen
 
@@ -115,10 +116,11 @@ class TestSocket(tornado.websocket.WebSocketHandler):
                 data = f.read()
                 encoded = base64.b64encode(data)
                 self.write_message(encoded)
-            except WebSocketClosedError:
+            except tornado.websocket.WebSocketClosedError:
                 break
             else :
                 self.write_message(" ")
+            time.sleep(0.5)
 
     def on_message(self,mesg):
         pass

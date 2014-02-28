@@ -110,6 +110,7 @@ class TestSocket(tornado.websocket.WebSocketHandler):
         print "->Websocket opened"
 
     def on_message(self,mesg):
+        print '->lol'
         try :
             f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
             data = f.read()

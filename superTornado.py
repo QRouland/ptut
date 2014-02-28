@@ -111,16 +111,16 @@ class TestSocket(tornado.websocket.WebSocketHandler):
         print "->Websocket opened"
         print '->lol'
         #while 1 :
-            try :
-                f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
-                data = f.read()
-                encoded = base64.b64encode(data)
-                self.write_message(encoded)
-            except tornado.websocket.WebSocketClosedError:
-                break
-            else :
-                self.write_message(" ")
-            time.sleep(2)
+        try :
+            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
+            data = f.read()
+            encoded = base64.b64encode(data)
+            self.write_message(encoded)
+        except tornado.websocket.WebSocketClosedError:
+            break
+        else :
+            self.write_message(" ")
+        time.sleep(2)
 
     def on_message(self,mesg):
         pass

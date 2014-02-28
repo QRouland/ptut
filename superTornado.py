@@ -99,16 +99,16 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
             self.close()
             return"""
         print "->Websocket opened"
-        while 1 :
-            try :
-                f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
-                data = f.read()
-                encoded = base64.b64encode(data)
-                self.write_message(encoded)
-            except Exception, e :
-                print e
-                break
-            time.sleep(2)
+
+        try :
+            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
+            data = f.read()
+            encoded = base64.b64encode(data)
+            self.write_message(encoded)
+        except Exception, e :
+            print e
+
+
 
     def on_message(self,mesg):
         pass

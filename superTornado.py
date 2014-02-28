@@ -114,7 +114,7 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        self.redirect("/")
+        #self.redirect("/")
 
 
 

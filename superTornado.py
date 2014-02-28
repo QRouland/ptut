@@ -115,7 +115,24 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        self.redirect("/disconnection")
+        if not self.current_user :
+            iden="IllegalUser"
+            ficLog.enregDansLog(iden,"Unauthorized user deconnection","IP TO DO")
+        else :
+            iden = self.current_user
+            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
+
+
+        if confAveug == True:
+            print '->Send audio alarm deconnection user'
+            print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
+        else:
+            print '->Send visual alarm deconnection user'
+            print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
+        print"->"+iden+" Deconnection"
+
+        self.clear_cookie("user")
+        self.redirect("/")
 
 
 

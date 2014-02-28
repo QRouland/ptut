@@ -92,10 +92,10 @@ class DisconnectionHandler(BaseHandler):
     def post(self):
         if not self.current_user :
             iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
-        else :
-            iden = self.current_use
             ficLog.enregDansLog(iden,"Unauthorized user deconnection","IP TO DO")
+        else :
+            iden = self.current_user
+            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
 
 
         if confAveug == True:

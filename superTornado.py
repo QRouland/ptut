@@ -16,7 +16,7 @@ from login import *
 confAveug = False
 ficLog = Login()
 
-class BaseHandler(tornado.web.RequestHandler):
+class BaseHandler(tornado.web.RequestHandler,HTTPRequest):
     def get_current_user(self):
         return self.get_secure_cookie("user")
 

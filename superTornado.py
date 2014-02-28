@@ -131,8 +131,6 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),],
-    STATIC_PATH = os.path.join(dirname, 'static'),
-    TEMPLATE_PATH = os.path.join(dirname, 'templates'),
     cookie_secret="1213215656")
 
 if __name__ == "__main__":

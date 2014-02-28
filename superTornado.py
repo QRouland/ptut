@@ -113,9 +113,9 @@ class TestSocket(tornado.websocket.WebSocketHandler):
             f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
             data = f.read()
             encoded = base64.b64encode(data)
-            self.writemessage(encoded)
+            self.write_message(encoded)
         except Exception, e :
-            self.writemessage("a")
+            self.write_message("a")
 
     def on_message(self,mesg):
         pass

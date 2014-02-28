@@ -13,7 +13,7 @@
                 url:'/ajax',
                 contentType: "image/jpg",
                 success: function(data){
-                $('#image').html('<img src="data:image/png;base64,' + data + '" />'); }
+                $('#image').html(data)}
                 });
 
             })
@@ -21,6 +21,6 @@
     </head>
     <body>
         <h2>Vue camera</h2>
-        <div id="image"></div>
+        <iframe content= id="image"></iframe>
     </body>
 </html>

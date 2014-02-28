@@ -8,25 +8,24 @@
         <script type="text/javascript" >
 
             function refresh() {
-
                 $.ajax({
                 type: "POST",
                 url:'/ajax',
                 contentType: "image/jpeg",
                 success: function(data){
                 var str = "<img src='data:image/jpeg;base64,"+data+"'>";
-                $('#image').html(str);}
+                $('.image').html(str);}
                 });
 
             }
-
-            setInterval('refresh()', 2000);
+            $(document).ready(refresh())
+            setInterval('refresh()', 3000);
 
 
         </script>
     </head>
     <body>
         <h2>Vue camera</h2>
-        <div id="image"></div>
+        <div class="image"></div>
     </body>
 </html>

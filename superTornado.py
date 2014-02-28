@@ -4,8 +4,7 @@ import tornado.httpserver
 import tornado.websocket
 import tornado.options
 import base64
-import urllib2
-#from urllib import urlretrieve
+from urllib import urlopen
 
 
 from tornado.ioloop import PeriodicCallback
@@ -79,14 +78,14 @@ class AJAXHandler(BaseHandler):
         if not self.current_user :
             self.redirect("/")
             return
-        data = urllib2.urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195').read()
-        #urlretrieve('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
+
+        f =urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
         #with open("image/temp.jpg", 'rb') as f:
-            #data = f.read()
+        data = f.read()
         encoded = base64.b64encode(data)
         print encoded
         self.write(encoded)
-        elf.finish()
+        self.finish()
 
 
 

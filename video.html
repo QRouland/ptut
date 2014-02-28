@@ -15,12 +15,12 @@
                 contentType: "image/jpeg",
                 success: function(data){
                 var str = "<img src='data:image/jpeg;base64,"+data+"'>";
-                $('#image').html(str);}
+                $('#image').innerHTML(str);}
                 });
 
             }
 
-            setInterval('refresh()', 10000);
+            setInterval('refresh()', 2000);
 
 
         </script>

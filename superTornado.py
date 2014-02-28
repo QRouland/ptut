@@ -108,8 +108,6 @@ class DisconnectionHandler(BaseHandler):
 class TestSocket(tornado.websocket.WebSocketHandler):
     def open(self) :
         print "->Websocket opened"
-
-    def on_message(self,mesg):
         print '->lol'
         try :
             f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
@@ -118,6 +116,9 @@ class TestSocket(tornado.websocket.WebSocketHandler):
             self.writemessage(encoded)
         except Exception, e :
             self.writemessage("")
+
+    def on_message(self,mesg):
+        pass
 
     def on_close(self):
         print "->Websocket closed"

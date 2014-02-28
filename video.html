@@ -6,15 +6,15 @@
         <title>Acces camera</title>
         <script type="text/javascript" >
 
-              $(document).ready( function() {
+            $(document).ready( function() {
                 $.ajax({
                 type: "POST",
                 url:'/ajax',
                 contentType: "image/jpg",
                 success: function(data){
-                $('.image').html('<img src="data:image/png;base64,' + data + '" />'); },
-            } );
-        }
+                $('.image').html('<img src="data:image/png;base64,' + data + '" />'); }
+                });
+            }
         </script>
     </head>
     <body>

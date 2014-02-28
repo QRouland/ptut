@@ -4,6 +4,7 @@ import tornado.httpserver
 import tornado.websocket
 import tornado.options
 import base64
+import tornado.web.RequestHandler.request
 from urllib import urlopen
 
 

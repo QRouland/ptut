@@ -115,7 +115,7 @@ class TestSocket(tornado.websocket.WebSocketHandler):
             encoded = base64.b64encode(data)
             self.writemessage(encoded)
         except Exception, e :
-            self.writemessage("")
+            self.writemessage("a")
 
     def on_message(self,mesg):
         pass

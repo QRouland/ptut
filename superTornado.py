@@ -29,7 +29,7 @@ class MainHandler(BaseHandler):
 
         login = Login()
         autorise = login.connexion(iden, mdp)
-        #maison = httplib.HTTPConnection("192.168.16.150", 80)
+        print 'maison = httplib.HTTPConnection("192.168.16.150", 80)'
         if autorise == True:
             ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
             if confAveug == True:
@@ -52,7 +52,6 @@ class VideoHandler(BaseHandler):
             return
         self.render("video.html")
 
-
 class UnauthorizedHandler(BaseHandler):
     def get(self):
         self.render("illegal.html")
@@ -71,15 +70,13 @@ class UnauthorizedHandler(BaseHandler):
         else :
             self.redirect("/")
 
-
-
 class AJAXHandler(BaseHandler):
     def post(self):
         if not self.current_user :
             self.redirect("/")
             return
         try :
-            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
+            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
             data = f.read()
             encoded = base64.b64encode(data)
             self.write(encoded)

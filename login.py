@@ -6,7 +6,6 @@ from datetime import datetime
 class Login(object):
     def verifLogin(self,pLog,pMdp):
         hashMdp = hashlib.sha224(pMdp).hexdigest()
-	print "Hash pass " + hashMdp
         with open("fichier/autorise", "r") as source :
             for ligne in source :
                 data = ligne.rstrip('\n\r').split(',')

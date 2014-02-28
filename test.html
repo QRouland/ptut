@@ -18,6 +18,7 @@
                 console.log("connection closed");
             };
             function refresh() {
+                console.log("send data");
                 ws.send("next");
             }
             $(document).ready(refresh())

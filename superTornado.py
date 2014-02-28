@@ -101,7 +101,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         print "->Websocket opened"
 
         try :
-            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
+            f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
@@ -128,7 +128,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
-    (r"/static/(.*)", web.StaticFileHandler, {"path": "/home/vmproxy/Bureau/ptut/"})
+    (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "/home/vmproxy/Bureau/ptut/"})
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

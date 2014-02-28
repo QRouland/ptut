@@ -48,7 +48,9 @@ class VideoHandler(BaseHandler):
             self.redirect("/")
             return
         name = tornado.escape.xhtml_escape(self.current_user)
-        self.render("video.html")
+        with open(path, 'rb') as f:
+            data = f.read()
+            self.write(data)
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
@@ -72,9 +74,7 @@ class UnauthorizedHandler(BaseHandler):
 
 class AJAXHandler(BaseHandler):
     def get(self):
-        with open(path, 'rb') as f:
-            data = f.read()
-            self.write(data)
+        self.write("lol")
 
 
 application = tornado.web.Application([

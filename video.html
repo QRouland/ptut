@@ -6,22 +6,18 @@
         <title>Acces camera</title>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" >
-
-            function refresh() {
-                $.ajax({
-                type: "POST",
-                url:'/ajax',
-                contentType: "image/jpeg",
-                success: function(data){
-                var str = "<img src='data:image/jpeg;base64,"+data+"'>";
-                $('.image').html(str);}
-                });
-
+            var ws = new WebSocket ("ws://192.168.1.23/test");
+            ws.onmessage = function (evt) {
+                console.log("data receive");
+                var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";
+                $('.image').html(str);
             }
-            $(document).ready(refresh())
-            setInterval('refresh()', 2000);
-
-
+            ws.onopen = function () {
+                console.log("websocket engage");
+            };
+            ws.onclose = function () {
+                console.log("connection closed");
+            };
         </script>
     </head>
     <body>
@@ -32,3 +28,4 @@
         </form>
     </body>
 </html>
+

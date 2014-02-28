@@ -71,19 +71,6 @@ class UnauthorizedHandler(BaseHandler):
         else :
             self.redirect("/")
 
-class AJAXHandler(BaseHandler):
-    def post(self):
-        if not self.current_user :
-            self.redirect("/")
-            return
-        try :
-            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
-            data = f.read()
-            encoded = base64.b64encode(data)
-            self.write(encoded)
-            self.finish()
-        except Exception, e :
-            pass
 
 class DisconnectionHandler(BaseHandler):
     def post(self):
@@ -106,10 +93,13 @@ class DisconnectionHandler(BaseHandler):
         self.set_cookie("user", "0")
         self.redirect("/")
 
-class TestSocket(tornado.websocket.WebSocketHandler):
+class WSocketHandler(tornado.websocket.WebSocketHandler):
     def open(self) :
+        if not self.current_user :
+            self.close()
+            self.redirect("/")
+            return
         print "->Websocket opened"
-        print '->lol'
         while 1 :
             try :
                 f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
@@ -127,19 +117,15 @@ class TestSocket(tornado.websocket.WebSocketHandler):
         print "->Websocket closed"
 
 
-class testHtml(BaseHandler):
-    def get(self):
-        self.render("test.html")
+
 
 
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
-    (r"/ajax", AJAXHandler),
     (r"/disconnection", DisconnectionHandler),
-    (r"/test", TestSocket),
-    (r"/testHtml", testHtml),
+    (r"/test", WSocketHandler),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

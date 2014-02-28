@@ -78,7 +78,7 @@ class AJAXHandler(BaseHandler):
     def post(self):
         with open("image/temp.jpg", 'rb') as f:
             data = f.read()
-            self.set_header('Content-type', 'image/jpg')
+            self.set_header('Content-type', 'image/jpeg')
             self.write(data)
             self.finish()
 

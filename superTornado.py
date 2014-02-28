@@ -97,7 +97,6 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
     def open(self) :
         if not self.current_user :
             self.close()
-            self.redirect("/")
             return
         print "->Websocket opened"
         while 1 :
@@ -115,6 +114,7 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
+        self.redirect("/")
 
 
 

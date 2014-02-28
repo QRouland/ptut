@@ -90,7 +90,7 @@ class DisconnectionHandler(BaseHandler):
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
         print"->"+iden+" Deconnection"
 
-        self.set_cookie("user", "0")
+        self.clear_cookie("user")
         self.redirect("/")
 
 class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
@@ -115,6 +115,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
+        self.
 
 
 

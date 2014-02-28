@@ -23,7 +23,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.render("index.html")
+        self.render_string("index.html")
     def post(self):
         iden = self.get_argument("id","")
         mdp = self.get_argument("mdp","")

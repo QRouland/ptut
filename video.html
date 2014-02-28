@@ -13,7 +13,7 @@
                 url:'/ajax',
                 contentType: "image/jpg",
                 success: function(data){
-                $('.image').innerHTML('<img src="data:image/png;base64,' + data + '" />'); }
+                $('#image').('<img src="data:image/png;base64,' + data + '" />'); }
                 });
 
             })

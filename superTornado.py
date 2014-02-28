@@ -31,7 +31,7 @@ class MainHandler(BaseHandler):
         autorise = login.connexion(iden, mdp)
         #maison = httplib.HTTPConnection("192.168.16.150", 80)
         if autorise == True:
-            ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip.()
+            ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip.())
             if confAveug == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'

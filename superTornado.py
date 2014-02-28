@@ -78,12 +78,15 @@ class AJAXHandler(BaseHandler):
         if not self.current_user :
             self.redirect("/")
             return
-        f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
-        data = f.read()
-        encoded = base64.b64encode(data)
-        print encoded
-        self.write(encoded)
-        self.finish()
+        try :
+            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
+            data = f.read()
+            encoded = base64.b64encode(data)
+            print encoded
+            self.write(encoded)
+            self.finish()
+        except Exception, e :
+            self.write_error("Camera unavailable")
 
 class DisconnectionHandler(BaseHandler):
     def post(self):

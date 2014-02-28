@@ -51,6 +51,7 @@ class VideoHandler(BaseHandler):
             return
         name = tornado.escape.xhtml_escape(self.current_user)
         urlretrieve('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
+        self.render("video.html")
         with open("image/temp.jpg", 'rb') as f:
             data = f.read()
             self.set_header('Content-type', 'image/jpg')

@@ -105,6 +105,27 @@ class DisconnectionHandler(BaseHandler):
         self.set_cookie("user", "0")
         self.redirect("/")
 
+class DisconnectionHandler(websocket.WebSocketHandler):
+    def open(self) :
+        print "->Websocket opened"
+
+    def on_message(self,mesg)
+        try :
+            f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
+            data = f.read()
+            encoded = base64.b64encode(data)
+            self.writemessage(encoded)
+        except Exception, e :
+            self.writemessage("")
+
+    def on_close(self)
+        print "->Websocket closed"
+
+
+class testHtml(BaseHandler):
+    def get(self):
+        self.render("test.html")
+
 
 application = tornado.web.Application([
     (r"/", MainHandler),
@@ -112,6 +133,8 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/ajax", AJAXHandler),
     (r"/disconnection", DisconnectionHandler),
+    (r"/test", TestSocket),
+    (r"/testHtml", TestSocket),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

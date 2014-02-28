@@ -85,7 +85,7 @@ class AJAXHandler(BaseHandler):
             self.write(encoded)
             self.finish()
         except Exception, e :
-
+            pass
 
 class DisconnectionHandler(BaseHandler):
     def post(self):

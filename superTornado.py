@@ -105,7 +105,7 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
                 data = f.read()
                 encoded = base64.b64encode(data)
                 self.write_message(encoded)
-            except tornado.websocket.WebSocketClosedError,e:
+            except Exception, e :
                 print e
                 break
             time.sleep(2)

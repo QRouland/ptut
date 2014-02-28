@@ -105,7 +105,8 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
                 data = f.read()
                 encoded = base64.b64encode(data)
                 self.write_message(encoded)
-            except tornado.websocket.WebSocketClosedError:
+            except tornado.websocket.WebSocketClosedError,e:
+                print e
                 break
             time.sleep(2)
 
@@ -114,7 +115,7 @@ class WSocketHandler(tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        #self.redirect("/")
+        self.redirect("/")
 
 
 

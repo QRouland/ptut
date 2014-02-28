@@ -80,7 +80,6 @@ class AJAXHandler(BaseHandler):
             return
 
         f =urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
-        #with open("image/temp.jpg", 'rb') as f:
         data = f.read()
         encoded = base64.b64encode(data)
         print encoded

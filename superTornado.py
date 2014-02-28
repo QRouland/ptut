@@ -125,7 +125,7 @@ application = tornado.web.Application([
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
-    (r"/test", WSocketHandler),
+    (r"/socket", WSocketHandler),
 ], cookie_secret="1213215656")
 
 if __name__ == "__main__":

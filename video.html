@@ -6,7 +6,7 @@
         <title>Acces camera</title>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" >
-            var ws = new WebSocket ("ws://192.168.1.23/test");
+            var ws = new WebSocket ("ws://192.168.1.23/socket");
             ws.onmessage = function (evt) {
                 console.log("data receive");
                 var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";

@@ -6,6 +6,7 @@ import tornado.options
 import time
 import base64
 from urllib import urlopen
+import Settings
 
 
 from tornado.ioloop import PeriodicCallback

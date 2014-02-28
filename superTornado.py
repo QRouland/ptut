@@ -88,7 +88,7 @@ class AJAXHandler(BaseHandler):
 
 class DisconnectionHandler(BaseHandler):
     def post(self):
-        self.set_cookie("user", 0)
+        self.set_cookie("user", "0")
         self.redirect("/")
 
 

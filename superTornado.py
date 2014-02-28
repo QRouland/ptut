@@ -127,9 +127,12 @@ application = tornado.web.Application([
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
-    (r"/socket", WSocketHandler),
-    (r"/static/(.*)", tornado.web.StaticFileHandler, {"static_path": "/home/vmproxy/Bureau/ptut/"}),
-], cookie_secret="1213215656")
+    (r"/socket", WSocketHandler),],
+settings = {
+            "template_path": Settings.TEMPLATE_PATH,
+            "static_path": Settings.STATIC_PATH,
+        },
+cookie_secret="1213215656")
 
 if __name__ == "__main__":
     hand = LoadConf()

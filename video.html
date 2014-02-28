@@ -19,7 +19,7 @@
                 console.log("connection closed");
             };
 
-            window.onunload=function(){
+            window.onbeforeunload=function(){
                 ws.close();
             };
         </script>

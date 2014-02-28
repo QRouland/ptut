@@ -115,8 +115,8 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        dc = httplib.HTTPConnection("127.0.0.1", 80)
-        dc.request("POST", "/disconnection")
+        """"dc = httplib.HTTPConnection("127.0.0.1", 80)
+        dc.request("POST", "/disconnection")"""
 
 
 

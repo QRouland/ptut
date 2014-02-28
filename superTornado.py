@@ -115,7 +115,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        dc = DisconnectionHandler().post()
+        self.redirect_internal("/disconnection")
 
 
 

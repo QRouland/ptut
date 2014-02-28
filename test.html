@@ -8,6 +8,7 @@
         <script type="text/javascript" >
             var ws = new WebSocket ("ws://192.168.1.23/test");
             ws.onmessage = function (evt) {
+                console.log("data receive");
                 var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";
                 $('.image').html(str);
             }

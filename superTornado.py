@@ -120,7 +120,7 @@ class TestSocket(tornado.websocket.WebSocketHandler):
                 break
             else :
                 self.write_message(" ")
-            time.sleep(0.5)
+            time.sleep(2)
 
     def on_message(self,mesg):
         pass

@@ -48,7 +48,7 @@ class VideoHandler(BaseHandler):
             self.redirect("/")
             return
         name = tornado.escape.xhtml_escape(self.current_user)
-        with open(path, 'rb') as f:
+        with open("image/temp.jpg", 'rb') as f:
             data = f.read()
             self.write(data)
 

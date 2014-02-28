@@ -1,16 +1,44 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf8" />
-        <link rel="stylesheet" type="text/css" href="style/styles.css">
-        <title>Acces camera</title>
+<head>
+    <meta charset="ISO-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen, projection">
+    <title>Page d'identification</title>
+        <script type="text/javascript">
+            // Si aucun login et mot de passe n'ont été saisis alors :
+            function checkForm(form) {
+                if(form.j_username.value == "" && form.j_password.value == "") {
+                    alert('Veuillez saisir votre login et votre mot de passe svp !')
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
-        <h2>Acces securise camera</h2>
-        <form action="/" method="post">
-            ID : <input type="text" name="id"><br/>
-            MDP : <input type="password" name="mdp">  <br/>
-            <input type="submit" value="Connexion">
-        </form>
+        <!-- Login Logo -->
+        <div id="login-logo">
+            <img src="images/iut.jpg" alt="IUT Logo">
+        </div>
+        <!-- Login Form -->
+        <div id="login-form">
+            <!-- Header -->
+            <h2>Page d'identification</h2>
+            <!-- Form -->
+            <form id="sw-login" method="POST" action="stream.php">
+                <!-- Username -->
+                <div class="field">
+                    <label for="username">Identifiant</label>
+                    <input id="username" name="id" type="text">
+                </div>
+                <!-- Password -->
+                <div class="field">
+                    <label for="password">Mot de passe</label>
+                    <input id="password" name="mdp" type="password">
+                </div>
+                <!-- On click on the submit button run the checkFrom function -->
+                <input type="submit" value="Connexion" onclick="return checkForm(form);">
+            </form>
+        </div>
     </body>
 </html>
+

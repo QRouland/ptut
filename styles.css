@@ -1,0 +1,11 @@
+*{margin:0;padding:0;}
+    html{font-size:100%;}
+    body{background:#fff;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;text-align:center;font-size:75%;}
+    h2{font-size:2em;margin-bottom:0.75em;}
+    .error{background:#FBE3E4;border:2px solid #FBC2C4;color:#8a1f11;margin-bottom:1em;text-align:center;width:332px;padding:6px;}
+    #login-logo{padding:40px 0;}
+    #login-form{background:#fff;border:1px solid #ccc;text-align:center;width:350px;-moz-border-radius:5px;-webkit-border-radius:5px;-moz-box-shadow:0 1px 3px #ddd;-webkit-box-shadow:0 1px 3px #ddd;margin:0 auto;padding:15px 15px 25px;}
+    #login-form h2{text-align:center;padding:5px 0;}
+    #login-form .field{width:335px;margin:15px 0;}
+    #login-form .field label{color:#777;display:block;font-size:1em;font-weight:700;margin-bottom:5px;text-align:left;}
+    #login-form .field input{border:1px solid #ccc;font-size:1.2em;width:100%;padding:5px;}

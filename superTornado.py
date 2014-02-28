@@ -117,10 +117,10 @@ class TestSocket(tornado.websocket.WebSocketHandler):
             encoded = base64.b64encode(data)
             self.write_message(encoded)
         except tornado.websocket.WebSocketClosedError:
-            pass
+            self.write_message("error ")
             #break
         else :
-            self.write_message(" ")
+            self.write_message("aa")
         time.sleep(2)
 
     def on_message(self,mesg):

@@ -7,14 +7,17 @@
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" >
             var ws = new WebSocket ("ws://192.168.1.23/test");
-            function refresh() {
-                ws.writemessage("next")= function(evt){;};
-            }
             ws.onmessage = function (evt) {
-            var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";
+                var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";
                 $('.image').html(str);
             }
-            ws.onopen;
+            ws.onopen = function () {
+                console.log("websocket engage");
+            };
+            function refresh() {
+                ws.send("next")= function(evt){;};
+            }
+
             $(document).ready(refresh())
             setInterval('refresh()', 2000);
         </script>

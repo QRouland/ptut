@@ -14,12 +14,14 @@
             ws.onopen = function () {
                 console.log("websocket engage");
             };
+            ws.onclose = function () {
+                console.log("connection closed");
+            };
             function refresh() {
-                ws.send("next")= function(evt){;};
+                ws.send("next");
             }
-
             $(document).ready(refresh())
-            setInterval('refresh()', 2000);
+            setInterval(refresh(), 2000);
         </script>
     </head>
     <body>

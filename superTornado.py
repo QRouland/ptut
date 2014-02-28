@@ -109,7 +109,7 @@ class DisconnectionHandler(websocket.WebSocketHandler):
     def open(self) :
         print "->Websocket opened"
 
-    def on_message(self,mesg)
+    def on_message(self,mesg):
         try :
             f = urlopen('http://test:a@192.168.1.15/image.jpg?cidx=791836195')
             data = f.read()
@@ -118,7 +118,7 @@ class DisconnectionHandler(websocket.WebSocketHandler):
         except Exception, e :
             self.writemessage("")
 
-    def on_close(self)
+    def on_close(self):
         print "->Websocket closed"
 
 

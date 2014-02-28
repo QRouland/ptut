@@ -51,12 +51,8 @@ class VideoHandler(BaseHandler):
             return
         name = tornado.escape.xhtml_escape(self.current_user)
         urlretrieve('http://test:a@192.168.1.15/image.jpg?cidx=791836195', 'image/temp.jpg')
-        self.write("video.html")
-        with open("image/temp.jpg", 'rb') as f:
-            data = f.read()
-            self.set_header('Content-type', 'image/jpg')
-            self.write(data)
-            self.finish()
+        self.render("video.html")
+
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
@@ -80,7 +76,11 @@ class UnauthorizedHandler(BaseHandler):
 
 class AJAXHandler(BaseHandler):
     def get(self):
-        self.write("lol")
+        with open("image/temp.jpg", 'rb') as f:
+            data = f.read()
+            self.set_header('Content-type', 'image/jpg')
+            self.write(data)
+            self.finish()
 
 
 application = tornado.web.Application([

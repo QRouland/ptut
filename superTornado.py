@@ -95,9 +95,9 @@ class DisconnectionHandler(BaseHandler):
 
 class WSocketHandler(tornado.websocket.WebSocketHandler):
     def open(self) :
-        if not self.current_user :
+        """"if not self.current_user :
             self.close()
-            return
+            return"""
         print "->Websocket opened"
         while 1 :
             try :

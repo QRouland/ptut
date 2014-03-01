@@ -1,6 +1,6 @@
 class LoadConf(object):
     def loadHand(self):
-        with open("fichier/conf", "r") as source :
+        with open("m/fichier/conf", "r") as source :
             for ligne in source:
                 data = ligne.rstrip('\n\r').split('=')
                 if data[0] in 'handicap' :

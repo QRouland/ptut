@@ -35,14 +35,6 @@ class MainHandler(BaseHandler):
         autorise = login.connexion(iden, mdp)
         print 'maison = httplib.HTTPConnection("192.168.16.150", 80)'
         if autorise == True:
-            ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
-            if confAveug == True:
-                print '->Send audio alarm authorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
-            else:
-                print '->Send visual alarm authorized user'
-                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Authorized user access"
             self.set_secure_cookie("user", iden)
             self.redirect("/video")
         else:
@@ -63,13 +55,6 @@ class UnauthorizedHandler(BaseHandler):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
             self.set_secure_cookie("user", "illegalUser")
-            ficLog.enregDansLog("IllegalUser","Unauthorized user connection","IP TO DO")
-            if confAveug == True:
-                print '->Send audio alarm unauthorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
-            else:
-                print '->Send visual alarm unauthorized user'
-                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             self.redirect("/video")
         else :
             self.redirect("/")
@@ -78,21 +63,8 @@ class UnauthorizedHandler(BaseHandler):
 class DisconnectionHandler(BaseHandler):
     def post(self):
         if not self.current_user :
-            iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Unauthorized user deconnection","IP TO DO")
-        else :
-            iden = self.current_user
-            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
-
-
-        if confAveug == True:
-            print '->Send audio alarm deconnection user'
-            print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
-        else:
-            print '->Send visual alarm deconnection user'
-            print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
-        print"->"+iden+" Deconnection"
-
+            self.close()
+            return
         self.clear_cookie("user")
         self.redirect("/")
 
@@ -102,6 +74,25 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             self.close()
             return
         print "->Websocket opened"
+         if self.current_user == "illegalUser":
+            iden="IllegalUser"
+            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
+            if confAveug == True:
+                print '->Send audio alarm unauthorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
+            else:
+                print '->Send visual alarm unauthorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+        else :
+            iden = self.current_user
+            ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
+            if confAveug == True:
+                print '->Send audio alarm authorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
+            else:
+                print '->Send visual alarm authorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+            print "->Authorized user access"
 
         try :
             f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
@@ -118,8 +109,21 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed"
-        """"dc = httplib.HTTPConnection("127.0.0.1", 80)
-        dc.request("POST", "/disconnection")"""
+        if self.current_user == "illegalUser":
+            iden="IllegalUser"
+            ficLog.enregDansLog(iden,"Unauthorized user deconnection","IP TO DO")
+        else :
+            iden = self.current_user
+            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
+
+
+        if confAveug == True:
+            print '->Send audio alarm deconnection user'
+            print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
+        else:
+            print '->Send visual alarm deconnection user'
+            print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
+        print"->"+iden+" Deconnection"
 
 
 

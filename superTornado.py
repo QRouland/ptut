@@ -7,10 +7,8 @@ import time
 import base64
 import socket
 from urllib import urlopen
-
-
-
 from tornado.ioloop import PeriodicCallback
+
 
 from session import *
 from loadConf import *
@@ -146,6 +144,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),],
+    static_path=os.path.join(root, 'style')
     cookie_secret="1213215656")
 
 if __name__ == "__main__":

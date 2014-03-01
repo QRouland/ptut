@@ -12,13 +12,16 @@ return d||(f=$b[b],$b[b]=e,e=null!=c(a,b,d)?b.toLowerCase():null,$b[b]=f),e}});v
 
             var ws = new WebSocket ("ws://192.168.1.23/socket");
             ws.onmessage = function (evt) {
+                console.log("data receive");
                 if(evt.data != "error") {
-                    console.log("data receive");
+                    console.log("data OK !");
                     var str = "<img src='data:image/jpeg;base64,"+evt.data+"'>";
                     $('.image').html(str);
                 }
-                else
-                    var str = "<error>Erreur : image camera indisponilbe</error>";
+                else {
+                    console.log("data NOK !");
+                    var str = "<p>Erreur : image camera indisponilbe</p>";
+                }
             }
             ws.onopen = function () {
                 console.log("websocket engage");

@@ -25,26 +25,15 @@ return d||(f=$b[b],$b[b]=e,e=null!=c(a,b,d)?b.toLowerCase():null,$b[b]=f),e}});v
             window.onbeforeunload=function(){
                 ws.close();
             };
-
-            var time = new Date().getTime();
-            $(document.body).bind("mousemove keypress"), function(e){
-                time = new Date().getTime();
-            }
-
             function refresh() {
-
-                if(new Date().getTime() - time >= 60000){
-                    console.log("data");
-                    ws.send("lol");
-                }
-                else
-                    setTimeout('refresh()', 5000);
+                console.log("Data send);
+                ws.send("lol");
             }
 
 
         </script>
     </head>
-    <body onload="javascript:setTimeout('refresh();',5000)">
+    <body onload="javascript:setIntercal('refresh();',3000)">
         <h2>Vue camera</h2>
         <div class="image"></div>
         <form action="/disconnection" method="post">

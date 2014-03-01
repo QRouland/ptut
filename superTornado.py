@@ -144,7 +144,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
-    (r"/style/(.*)", tornado.web.StaticFileHandler,{"path":"./style"},
+    (r"/style/(.*)", tornado.web.StaticFileHandler,{"path":"./style"},),
     (r"/images/(.*)", tornado.web.StaticFileHandler,{"path":"./images"},)],
     cookie_secret="1213215656")
 

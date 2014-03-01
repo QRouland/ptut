@@ -74,25 +74,25 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             self.close()
             return
         print "->Websocket opened"
-            if self.current_user == "illegalUser":
-                iden="IllegalUser"
-                ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
-                if confAveug == True:
-                    print '->Send audio alarm unauthorized user'
-                    print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
-                else:
-                    print '->Send visual alarm unauthorized user'
-                    print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            else :
-                iden = self.current_user
-                ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
-                if confAveug == True:
-                    print '->Send audio alarm authorized user'
-                    print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
-                else:
-                    print '->Send visual alarm authorized user'
-                    print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-                print "->Authorized user access"
+        if self.current_user == "illegalUser":
+            iden="IllegalUser"
+            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
+            if confAveug == True:
+                print '->Send audio alarm unauthorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
+            else:
+                print '->Send visual alarm unauthorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+        else :
+            iden = self.current_user
+            ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
+            if confAveug == True:
+                print '->Send audio alarm authorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
+            else:
+                print '->Send visual alarm authorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+            print "->Authorized user access"
 
         try :
             f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')

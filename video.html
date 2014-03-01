@@ -32,8 +32,9 @@ return d||(f=$b[b],$b[b]=e,e=null!=c(a,b,d)?b.toLowerCase():null,$b[b]=f),e}});v
             }
 
             function refresh() {
-                console.log("data");
+
                 if(new Date().getTime() - time >= 60000)
+                    console.log("data");
                     ws.send("lol");
                 else
                     setTimeout('refresh()', 5000);

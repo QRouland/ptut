@@ -6,14 +6,16 @@ import tornado.options
 import time
 import base64
 import socket
+
 from urllib import urlopen
 from tornado.ioloop import PeriodicCallback
 
 
-from m/loadConf import *
-from m/login import *
+
+from m.loadConf import *
+from m.login import *
 import os
-dirname = os.path.dirname(__file__)
+
 
 confAveug = False
 ficLog = Login()

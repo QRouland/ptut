@@ -22,13 +22,26 @@ return d||(f=$b[b],$b[b]=e,e=null!=c(a,b,d)?b.toLowerCase():null,$b[b]=f),e}});v
             ws.onclose = function () {
                 console.log("connection closed");
             };
-
             window.onbeforeunload=function(){
                 ws.close();
             };
+
+            var time = new Date().getTime();
+            $(document.body).bind("mousemove keypress"), function(e){
+                time = new Date().getTime();
+            }
+
+            function refresh() {
+                if(newDate().getTime() - time >= 60000)
+                    ws.send("lol");
+                else
+                    setTimeout('refresh()', 5000);
+            }
+
+
         </script>
     </head>
-    <body>
+    <body onload="javascript:setTimeout('refresh();',5000)">
         <h2>Vue camera</h2>
         <div class="image"></div>
         <form action="/disconnection" method="post">

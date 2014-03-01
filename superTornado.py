@@ -105,7 +105,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
 
     def on_message(self,mesg):
-        pass
+        print "->Data receive"
 
     def on_close(self):
         print "->Websocket closed"

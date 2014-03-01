@@ -10,9 +10,7 @@ from urllib import urlopen
 from tornado.ioloop import PeriodicCallback
 
 
-from session import *
-from loadConf import *
-from login import *
+from m import *
 import os
 dirname = os.path.dirname(__file__)
 
@@ -25,7 +23,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.render("index.html")
+        self.render("v/index.html")
     def post(self):
         iden = self.get_argument("id","")
         mdp = self.get_argument("mdp","")
@@ -49,7 +47,7 @@ class VideoHandler(BaseHandler):
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
-        self.render("illegal.html")
+        self.render("v/illegal.html")
     def post(self):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
@@ -133,10 +131,6 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print '->Send visual alarm deconnection user'
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
         print"->"+iden+" Deconnection"
-
-
-
-
 
 application = tornado.web.Application([
     (r"/", MainHandler),

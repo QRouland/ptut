@@ -10,7 +10,8 @@ from urllib import urlopen
 from tornado.ioloop import PeriodicCallback
 
 
-from m import *
+from m/loadConf import *
+from m/login import *
 import os
 dirname = os.path.dirname(__file__)
 

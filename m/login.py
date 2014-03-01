@@ -6,7 +6,7 @@ from datetime import datetime
 class Login(object):
     def verifLogin(self,pLog,pMdp):
         hashMdp = hashlib.sha224(pMdp).hexdigest()
-        with open("fichier/autorise", "r") as source :
+        with open("m/fichier/autorise", "r") as source :
             for ligne in source :
                 data = ligne.rstrip('\n\r').split(',')
                 if data[0] in pLog :
@@ -17,7 +17,7 @@ class Login(object):
         return False
 
     def enregDansLog(self,pLog,pMsg,pIP):
-        with open("fichier/log", "a") as dest :
+        with open("m/fichier/log", "a") as dest :
             d = datetime.now().strftime("%c")
             dest.write("%s,%s,%s,%s\n" % (d,pLog,pMsg,pIP))
 

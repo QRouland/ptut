@@ -143,8 +143,8 @@ application = tornado.web.Application([
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
-    (r"/socket", WSocketHandler),],
-    static_path=os.path.join(os.path.dirname(__file__), 'style'),
+    (r"/socket", WSocketHandler),
+    (r"/style/(*)", tornaso.webStaticFileHandler,{"path":"/style"},)],
     cookie_secret="1213215656")
 
 if __name__ == "__main__":

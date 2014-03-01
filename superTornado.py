@@ -46,7 +46,7 @@ class VideoHandler(BaseHandler):
         if not self.current_user :
             self.redirect("/")
             return
-        self.render("video.html")
+        self.render("v/video.html")
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):

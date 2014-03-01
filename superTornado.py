@@ -94,15 +94,13 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Authorized user access"
 
-        try :
+        """"try :
             f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
         except Exception, e :
-            print e
-
-
+            print e"""
 
     def on_message(self,mesg):
         print "->Data receive"

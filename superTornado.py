@@ -42,7 +42,7 @@ class MainHandler(BaseHandler):
             print "->An unauthorized user try to access"
             self.redirect("/unauthorized")
 
-class VideoHandler(BaseHandler):
+class VideoHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def get(self):
         if not self.current_user :
             self.redirect("/")
@@ -109,7 +109,7 @@ class VideoHandler(BaseHandler):
             self.write_message("error")
 
 
-class UnauthorizedHandler(BaseHandler,tornado.websocket.WebSocketHandler):
+class UnauthorizedHandler(BaseHandler):
     def get(self):
         self.render("v/illegal.html")
 

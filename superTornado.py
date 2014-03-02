@@ -156,25 +156,28 @@ if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
         blind = config.isBlind()
-        camera = config.ipCamera()
-        port = config.portServ()
+        ipCamera = config.ipCamera()
+        portCamera = config.portCamera())
+        portServ = config.portServ()
         if blind == "error" :
-            raise "Failed Load Blind Configuration"
-        if camera == "error" :
-            raise "Failed Load IP Camera Configuration"
-        if port == "error" :
-            raise "Failed Load Port Server Configuration"
+            raise BlindConfigurationERROR(bcolors.FAIL +"Failed Load Blind Configuration")
+        if ipCamera == "error" :
+            raise IPCameraConfigurationERROR(bcolors.FAIL +"Failed Load IP Camera Configuration"
+        if portCamera == "error" :
+            raise PortCameraConfigurationERROR(bcolors.FAIL + "Failed Load IP Camera Configuration"
+        if portServ == "error" :
+            raise PortServ ConfigurationERROR(bcolors.FAIL + "Failed Load Port Server Configuration"
     except Exception, e :
-        print bcolors.WARNING + "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
-        print e
+        print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
+        print bcolors.FAIL + e + bcolors.ENDC
         sys.exit(1)
     print "->Configuration Server Load Successfully :"
     if blind == True:
         print "  ->Blind unhabitant"
     else :
         print "  ->Not blind unhabitant"
-    print "  ->Ip camera : " + camera
-    print "  ->Port Server : " + port
+    print "  ->Ip camera : " + ipCamera
+    print "  ->Port Server : " + portServ
     tornado.options.parse_command_line()
 
     try :

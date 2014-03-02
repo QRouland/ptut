@@ -21,8 +21,13 @@ class LoadConf(object):
     def ipCamera(self) :
         return self.loadValue("camera")
 
+    def portCamera(self) :
+        return self.loadValue("portCamera")
+
     def portServ(self) :
-        return self.loadValue("port")
+        return self.loadValue("portServ")
+
+
 
 class bcolors:
     HEADER = '\033[95m'

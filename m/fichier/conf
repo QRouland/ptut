@@ -1,3 +1,5 @@
-
+blind=1
 camera=192.168.1.13
-port=80
+
+portServ=80
+

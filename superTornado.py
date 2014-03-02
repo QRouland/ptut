@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    print "->Loading configuration ... "
+    print bcolors.HEADER + "HEADER->Loading configuration ... " + bcolors.ENDC
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -169,8 +169,7 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
-        print bcolors.FAIL
-        print e.value
+        print bcolors.FAIL + e.value
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         sys.exit(1)
     print "->Configuration Server Load Successfully :"

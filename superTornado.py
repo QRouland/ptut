@@ -27,6 +27,7 @@ class BaseHandler(tornado.web.RequestHandler):
 class MainHandler(BaseHandler):
     def get(self):
         self.render("v/index.html")
+
     def post(self):
         iden = self.get_argument("id","")
         mdp = self.get_argument("mdp","")
@@ -51,6 +52,7 @@ class VideoHandler(BaseHandler):
 class UnauthorizedHandler(BaseHandler):
     def get(self):
         self.render("v/illegal.html")
+
     def post(self):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
@@ -93,29 +95,11 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Authorized user access"
-
-        try :
-            socket.setdefaulttimeout(5)
-            f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
-            data = f.read()
-            encoded = base64.b64encode(data)
-            self.write_message(encoded)
-        except Exception, e :
-            print e
-            self.write_message("error")
-
+        self.send_image()
 
     def on_message(self,mesg):
         print "->Data receive"
-        try :
-            socket.setdefaulttimeout(5)
-            f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
-            data = f.read()
-            encoded = base64.b64encode(data)
-            self.write_message(encoded)
-        except Exception, e :
-            print e
-            self.write_message("error")
+        self.send_image()
 
     def on_close(self):
         print "->Websocket closed"
@@ -126,7 +110,6 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             iden = self.current_user
             ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
 
-
         if confAveug == True:
             print '->Send audio alarm deconnection user'
             print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
@@ -134,6 +117,18 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print '->Send visual alarm deconnection user'
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
         print"->"+iden+" Deconnection"
+
+    def send_image(self) :
+        try :
+            socket.setdefaulttimeout(5)
+            f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
+            data = f.read()
+            encoded = base64.b64encode(data)
+            self.write_message(encoded)
+            print ("->Data send")
+        except Exception, e :
+            print e
+            self.write_message("error")
 
 application = tornado.web.Application([
     (r"/", MainHandler),
@@ -158,4 +153,3 @@ if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()
-

@@ -155,9 +155,9 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
-        blind = config.isBlind
-        camera = config.ipCamera
-        port = config.portServ
+        blind = config.isBlind()
+        camera = config.ipCamera()
+        port = config.portServ()
         if blind == "error" :
             raise "Failed Load Blind Configuration"
         if camera == "error" :

@@ -4,7 +4,7 @@ class LoadConf(object):
             for ligne in source:
                 data = ligne.rstrip('\n\r').split('=')
                 try :
-                    if data[0] in key :
+                    if data[0] == key :
                             source.close()
                             return data[1]
                 except Exception, e :

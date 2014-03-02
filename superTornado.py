@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    print bcolors.HEADER + "HEADER->Loading configuration ... " + bcolors.ENDC
+    print bcolors.HEADER + "->Loading configuration ... " + bcolors.ENDC
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -172,7 +172,7 @@ if __name__ == "__main__":
         print bcolors.FAIL + e.value
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         sys.exit(1)
-    print "->Configuration Server Load Successfully :"
+    print bcolors.OKGREEN + "->Configuration Server Load Successfully :" + bcolors.ENDC
     if blind == True:
         print "  ->Blind unhabitant"
     else :
@@ -182,12 +182,12 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
 
     try :
-        print("->Server Start ...")
+        print(bcolors.HEADER + "->Server Start ..."+ bcolors.ENDC)
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(portServ)
-        print "->Server Start Successfully !"
+        print  bcolors.OKGREEN + "->Server Start Successfully !" + bcolors.ENDC
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
-        print "Server Start Failed !"
+        print bcolors.FAIL + "Server Start Failed !" + bcolors.ENDC
         print e
         sys.exit(1)

@@ -19,7 +19,6 @@ class LoadConf(object):
             return rep
 
     def ipCamera(self) :
-        print  self.loadValue("camera")
         return self.loadValue("camera")
 
     def portServ(self) :

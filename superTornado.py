@@ -165,10 +165,10 @@ if __name__ == "__main__":
         if port == "error" :
             raise "Failed Load Port Server Configuration"
     except Exception, e :
-        print "Configuration Loading Failed ! Check Configuration File !"
+        print bcolors.WARNING + "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         print e
         sys.exit(1)
-    print "->Configuration Server Load Successfully:"
+    print "->Configuration Server Load Successfully :"
     if blind == True:
         print "  ->Blind unhabitant"
     else :
@@ -181,6 +181,7 @@ if __name__ == "__main__":
         print("->Server Start ...")
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(port)
+        print "->Server Start Successfully !"
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         print "Server Start Failed !"

@@ -1,7 +1,6 @@
-import time
 import hashlib
 import httplib
-from datetime import datetime
+
 
 class Login(object):
     def verifLogin(self,pLog,pMdp):
@@ -15,11 +14,6 @@ class Login(object):
                         return True
             source.close()
         return False
-
-    def enregDansLog(self,pLog,pMsg,pIP):
-        with open("m/fichier/log", "a") as dest :
-            d = datetime.now().strftime("%c")
-            dest.write("%s,%s,%s,%s\n" % (d,pLog,pMsg,pIP))
 
     def connexion(self,pLog,pMdp):
         if self.verifLogin(pLog,pMdp) == True :

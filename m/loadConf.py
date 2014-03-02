@@ -1,16 +1,25 @@
 class LoadConf(object):
-    def loadHand(self):
+    def loadValue(self, key):
         with open("m/fichier/conf", "r") as source :
             for ligne in source:
                 data = ligne.rstrip('\n\r').split('=')
-                if data[0] in 'handicap' :
+                if data[0] in key :
                         source.close()
                         return data[1]
             source.close()
-        return 0
+        return "error"
 
-    def estAveugle(self):
-        if self.loadHand() == "1" :
+    def isBlind(self):
+        rep = self.loadValue("blind")
+        if rep == "1" :
             return True
-        else :
+        else if rep == "0":
             return False
+        else :
+            return rep
+
+    def ipCamera(self)
+        return self.loadValue("camera")
+
+    def portServ(self)
+        return self.loadValue("port")

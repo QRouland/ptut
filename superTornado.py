@@ -14,11 +14,12 @@ from tornado.ioloop import PeriodicCallback
 
 from m.loadConf import *
 from m.login import *
+from m.log import *
 import os
 
 
-confAveug = LoadConf().estAveugle()
-ficLog = Login()
+config = LoadConf()
+ficLog = Log()
 
 class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
@@ -43,7 +44,7 @@ class MainHandler(BaseHandler):
             self.set_secure_cookie("auth", "yes")
             self.redirect("/video")
         else:
-            print "->An unauthorized user try to access"
+            print "->An unauthorized user try to access : " + self.request.remote_ip
             self.redirect("/unauthorized")
 
 class VideoHandler(BaseHandler):
@@ -99,7 +100,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             else:
                 print '->Send visual alarm unauthorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Unauthorized user access" + self.request.remote_ip
+            print "->Unauthorized user access : " + self.request.remote_ip
         self.send_image()
 
     def on_message(self,mesg):
@@ -120,7 +121,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else:
             print '->Send visual alarm deconnection user'
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
-        print"->"+iden+" Deconnection" + self.request.remote_ip
+        print"->"+iden+" Deconnection : " + self.request.remote_ip
 
 
     def send_image(self) :
@@ -147,12 +148,31 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
+    print "->Loading configuration ... "
+    try :
+        confAveug = config.estAveugle
+        ipCamera = config.ipCamera
+        portServ = config.portServ
+        if confAveug == "error"
+            raise "Failed Load Blind Configuration"
+        if ipCamera == "error"
+            raise "Failed Load IP Camera Configuration"
+        if portServ == "error"
+            raise "Failed Load Port Server Configuration"
+    except Exception, e :
+        print "Configuration Loading Failed ! Check Conf File !"
+        print e
+        return 1
+    print "->Configuraion Server Load Successfully:"
     if confAveug == True:
-        print "->Blind unhabitant system configuration"
+        print "  ->Blind unhabitant"
     else :
-        print "->Not blind unhabitant system configuration"
+        print "  ->Not blind unhabitant"
+    print "  ->Ip camera : " + ipCamera
+    print "  ->Port Server : " + portServ
 
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(80)
+
     tornado.ioloop.IOLoop.instance().start()

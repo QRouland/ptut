@@ -162,7 +162,7 @@ if __name__ == "__main__":
     except Exception, e :
         print "Configuration Loading Failed ! Check Conf File !"
         print e
-        exit 1
+        sys.exit(1)
     print "->Configuraion Server Load Successfully:"
     if confAveug == True:
         print "  ->Blind unhabitant"

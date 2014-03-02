@@ -153,11 +153,11 @@ if __name__ == "__main__":
         confAveug = config.estAveugle
         ipCamera = config.ipCamera
         portServ = config.portServ
-        if confAveug == "error"
+        if confAveug == "error" :
             raise "Failed Load Blind Configuration"
-        if ipCamera == "error"
+        if ipCamera == "error" :
             raise "Failed Load IP Camera Configuration"
-        if portServ == "error"
+        if portServ == "error" :
             raise "Failed Load Port Server Configuration"
     except Exception, e :
         print "Configuration Loading Failed ! Check Conf File !"

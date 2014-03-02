@@ -20,13 +20,13 @@ import os
 confAveug = LoadConf().estAveugle()
 ficLog = Login()
 
-class BaseHandler(tornado.web.RequestHandler, tornado.httpserver.HTTPRequest):
+class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
         return self.get_secure_cookie("user")
 
 class MainHandler(BaseHandler):
     def get(self):
-        print "-> IP = " + self.remote_ip()
+        print "-> IP = "
         self.render("v/index.html")
 
     def post(self):

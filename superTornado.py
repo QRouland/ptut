@@ -26,6 +26,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
+        print "-> IP = " + self.remote_ip
         self.render("v/index.html")
 
     def post(self):
@@ -42,13 +43,35 @@ class MainHandler(BaseHandler):
             print "->An unauthorized user try to access"
             self.redirect("/unauthorized")
 
-class VideoHandler(BaseHandler,tornado.websocket.WebSocketHandler):
+class VideoHandler(BaseHandler):
     def get(self):
         if not self.current_user :
             self.redirect("/")
             return
         self.render("v/video.html")
 
+class UnauthorizedHandler(BaseHandler):
+    def get(self):
+        self.render("v/illegal.html")
+
+    def post(self):
+        force = self.get_argument("illegalAccess","")
+        if force == "1" :
+            self.set_secure_cookie("user", "illegalUser")
+            self.redirect("/video")
+        else :
+            self.redirect("/")
+
+
+class DisconnectionHandler(BaseHandler):
+    def post(self):
+        if not self.current_user :
+            self.close()
+            return
+        self.clear_cookie("user")
+        self.redirect("/")
+
+class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
         if not self.current_user :
             self.close()
@@ -96,6 +119,7 @@ class VideoHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
         print"->"+iden+" Deconnection"
 
+
     def send_image(self) :
         try :
             socket.setdefaulttimeout(5)
@@ -108,35 +132,12 @@ class VideoHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print e
             self.write_message("error")
 
-
-class UnauthorizedHandler(BaseHandler):
-    def get(self):
-        self.render("v/illegal.html")
-
-    def post(self):
-        force = self.get_argument("illegalAccess","")
-        if force == "1" :
-            self.set_secure_cookie("user", "illegalUser")
-            self.redirect("/video")
-        else :
-            self.redirect("/")
-
-
-class DisconnectionHandler(BaseHandler):
-    def post(self):
-        if not self.current_user :
-            self.close()
-            return
-        self.clear_cookie("user")
-        self.redirect("/")
-
-
-
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/video", VideoHandler),
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
+    (r"/socket", WSocketHandler),
     (r"/style/(.*)", tornado.web.StaticFileHandler,{"path":"./v/style"},),
     (r"/images/(.*)", tornado.web.StaticFileHandler,{"path":"./v/images"},),
     (r"/js/(.*)", tornado.web.StaticFileHandler,{"path":"./v/js"},)],

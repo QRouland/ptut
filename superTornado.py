@@ -117,6 +117,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print '->Send visual alarm deconnection user'
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
         print"->"+iden+" Deconnection"
+        self.clear_cookie("user")
 
     def send_image(self) :
         try :

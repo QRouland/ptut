@@ -21,8 +21,9 @@ import os
 
 config = LoadConf()
 blind = False
-camera = ""
-port =""
+ipCamera = ""
+portCamera = ""
+portServ =""
 ficLog = Log()
 
 
@@ -156,9 +157,18 @@ if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
         blind = config.isBlind()
+        ipCamera = config.ipCamera()
+        portCamera = config.portCamera()
+        portServ = config.portServ()
         if blind == "error" :
-            raise BlindConfigurationERROR("Failed Load Blind Configuration")
-    except BlindConfigurationERROR as e :
+            raise BlindConfigurationERROR("l")
+        if ipCamera == "error" :
+            raise IPCameraConfigurationERROR("b")
+        if portCamera == "error" :
+            raise PortCameraConfigurationERROR("c")
+        if portServ == "error" :
+            raise PortServConfigurationERROR("e")
+    except Exception as e :
         print bcolors.FAIL
         print e
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
@@ -168,13 +178,14 @@ if __name__ == "__main__":
         print "  ->Blind unhabitant"
     else :
         print "  ->Not blind unhabitant"
-
+    print "  ->Ip camera : " + ipCamera
+    print "  ->Port Server : " + portServ
     tornado.options.parse_command_line()
 
     try :
         print("->Server Start ...")
         http_server = tornado.httpserver.HTTPServer(application)
-        http_server.listen(80)
+        http_server.listen(portServ)
         print "->Server Start Successfully !"
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :

@@ -27,7 +27,11 @@ class LoadConf(object):
     def portServ(self) :
         return self.loadValue("portServ")
 
-
+class ConfigError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
 
 class bcolors:
     HEADER = '\033[95m'
@@ -44,3 +48,5 @@ class bcolors:
         self.WARNING = ''
         self.FAIL = ''
         self.ENDC = ''
+
+

@@ -17,7 +17,7 @@ from m.login import *
 import os
 
 
-confAveug = False
+confAveug = LoadConf().estAveugle()
 ficLog = Login()
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -142,8 +142,6 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    hand = LoadConf()
-    confAveug = hand.estAveugle()
     if confAveug == True:
         print "->Blind unhabitant system configuration"
     else :

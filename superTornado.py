@@ -151,7 +151,7 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
-        confAveug = config.estAveugle
+        confAveug = config.isBlind
         ipCamera = config.ipCamera
         portServ = config.portServ
         if confAveug == "error" :
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise "Failed Load Port Server Configuration"
     except Exception, e :
-        print "Configuration Loading Failed ! Check Conf File !"
+        print "Configuration Loading Failed ! Check Configuration File !"
         print e
         sys.exit(1)
     print "->Configuraion Server Load Successfully:"

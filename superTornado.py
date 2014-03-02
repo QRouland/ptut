@@ -167,7 +167,7 @@ if __name__ == "__main__":
             raise PortCameraConfigurationERROR("Failed Load IP Camera Configuration")
         if portServ == "error" :
             raise PortServConfigurationERROR("Failed Load Port Server Configuration")
-    except Exception, e :
+    except PortCameraConfigurationERROR:
         print bcolors.FAIL
         print e
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC

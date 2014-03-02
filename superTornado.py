@@ -21,7 +21,7 @@ import os
 
 config = LoadConf()
 blind = False
-cam = ""
+camera = ""
 port =""
 ficLog = Log()
 
@@ -156,11 +156,11 @@ if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
         blind = config.isBlind
-        cam = config.ipCamera
+        camera = config.ipCamera
         port = config.portServ
         if blind == "error" :
             raise "Failed Load Blind Configuration"
-        if cam == "error" :
+        if camera == "error" :
             raise "Failed Load IP Camera Configuration"
         if port == "error" :
             raise "Failed Load Port Server Configuration"
@@ -173,7 +173,7 @@ if __name__ == "__main__":
         print "  ->Blind unhabitant"
     else :
         print "  ->Not blind unhabitant"
-    print "  ->Ip camera : " + cam
+    print "  ->Ip camera : " + camera
     print "  ->Port Server : " + port
 
     tornado.options.parse_command_line()

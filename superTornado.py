@@ -160,12 +160,6 @@ if __name__ == "__main__":
         ipCamera = config.ipCamera()
         portCamera = config.portCamera()
         portServ = config.portServ()
-        if blind == "error" :
-            raise ConfigError("Failed Load Blind Configuration")
-        if ipCamera == "error" :
-            raise ConfigError("Failed Load IP Camera Configuration")
-        if portCamera == "error" :
-            raise ConfigError("Failed Load IP Camera Configuration")
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :

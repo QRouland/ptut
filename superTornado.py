@@ -170,7 +170,7 @@ if __name__ == "__main__":
             raise PortServConfigurationERROR("e")
     except Exception as e :
         print bcolors.FAIL
-        print e
+        raise
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         sys.exit(1)
     print "->Configuration Server Load Successfully :"

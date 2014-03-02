@@ -168,9 +168,8 @@ if __name__ == "__main__":
             raise PortCamERROR("c")
         if portServ == "error" :
             raise PortServERROR("e")
-    except Exception as e :
+    except PortServERROR as e :
         print bcolors.FAIL
-        print e
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         sys.exit(1)
     print "->Configuration Server Load Successfully :"

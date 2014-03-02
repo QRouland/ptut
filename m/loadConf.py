@@ -5,7 +5,7 @@ class LoadConf(object):
                 data = ligne.rstrip('\n\r').split('=')
                 if data[0] in key :
                         source.close()
-                        return data[1]
+                        return str(data[1])
             source.close()
         return "error"
 
@@ -19,7 +19,7 @@ class LoadConf(object):
             return rep
 
     def ipCamera(self) :
-        return self.loadValue("camera")
+        return str(self.loadValue("camera"))
 
     def portServ(self) :
-        return self.loadValue("port")
+        return str(self.loadValue("port"))

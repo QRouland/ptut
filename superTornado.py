@@ -20,7 +20,11 @@ import os
 
 
 config = LoadConf()
+blind = False
+cam = ""
+port =""
 ficLog = Log()
+
 
 class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
@@ -151,26 +155,26 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     print "->Loading configuration ... "
     try :
-        confAveug = config.isBlind
-        ipCamera = config.ipCamera
-        portServ = config.portServ
-        if confAveug == "error" :
+        blind = config.isBlind
+        cam = config.ipCamera
+        port = config.portServ
+        if blind == "error" :
             raise "Failed Load Blind Configuration"
-        if ipCamera == "error" :
+        if cam == "error" :
             raise "Failed Load IP Camera Configuration"
-        if portServ == "error" :
+        if port == "error" :
             raise "Failed Load Port Server Configuration"
     except Exception, e :
         print "Configuration Loading Failed ! Check Configuration File !"
         print e
         sys.exit(1)
     print "->Configuration Server Load Successfully:"
-    if confAveug == True:
+    if blind == True:
         print "  ->Blind unhabitant"
     else :
         print "  ->Not blind unhabitant"
-    print "  ->Ip camera : " + ipCamera
-    print "  ->Port Server : " + portServ
+    print "  ->Ip camera : " + cam
+    print "  ->Port Server : " + port
 
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(application)

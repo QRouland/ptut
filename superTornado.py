@@ -121,7 +121,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def send_image(self) :
         try :
             socket.setdefaulttimeout(5)
-            f = urlopen('http://test:a@192.168.0.13/image.jpg?cidx=791836195')
+            f = urlopen('http://test:a@192.168.1.13/image.jpg?cidx=791836195')
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)

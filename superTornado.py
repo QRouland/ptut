@@ -24,6 +24,9 @@ class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
         return self.get_secure_cookie("user")
 
+    def get_autorisation(self):
+        return self.get_secure_cookie("auth")
+
 class MainHandler(BaseHandler):
     def get(self):
         self.render("v/index.html")
@@ -35,8 +38,9 @@ class MainHandler(BaseHandler):
         login = Login()
         autorise = login.connexion(iden, mdp)
         print 'maison = httplib.HTTPConnection("192.168.16.150", 80)'
+        self.set_secure_cookie("user", iden)
         if autorise == True:
-            self.set_secure_cookie("user", iden)
+            self.set_secure_cookie("auth", "yes")
             self.redirect("/video")
         else:
             print "->An unauthorized user try to access"
@@ -44,19 +48,22 @@ class MainHandler(BaseHandler):
 
 class VideoHandler(BaseHandler):
     def get(self):
-        if not self.current_user :
+        if not self.get_current_user :
             self.redirect("/")
             return
         self.render("v/video.html")
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
+        if not self.get_autorisation :
+            self.redirect("/")
+            return
         self.render("v/illegal.html")
 
     def post(self):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
-            self.set_secure_cookie("user", "illegalUser")
+            self.set_secure_cookie("auth", "no")
             self.redirect("/video")
         else :
             self.redirect("/")
@@ -64,30 +71,18 @@ class UnauthorizedHandler(BaseHandler):
 
 class DisconnectionHandler(BaseHandler):
     def post(self):
-        if not self.current_user :
-            self.close()
-            return
+        self.clear_cookie("auth")
         self.clear_cookie("user")
         self.redirect("/")
 
 class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
-        if not self.current_user :
+        if not self.get_autorisation :
             self.close()
             return
         print "->Websocket opened : " + self.request.remote_ip
-        if self.current_user == "illegalUser":
-            iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Unauthorized user connection",self.request.remote_ip)
-            if confAveug == True:
-                print '->Send audio alarm unauthorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
-            else:
-                print '->Send visual alarm unauthorized user'
-                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Unauthorized user access" + self.request.remote_ip
-        else :
-            iden = self.current_user
+        iden = self.current_user
+        if self.get_autorisation == "yes":
             ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm authorized user'
@@ -95,21 +90,30 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             else:
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Authorized user access" + self.request.remote_ip
+            print "->Authorized user access : " + self.request.remote_ip
+        else :
+            ficLog.enregDansLog(iden + "as IllegalUser","Unauthorized user connection",self.request.remote_ip)
+            if confAveug == True:
+                print '->Send audio alarm unauthorized user'
+                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
+            else:
+                print '->Send visual alarm unauthorized user'
+                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+            print "->Unauthorized user access" + self.request.remote_ip
         self.send_image()
 
     def on_message(self,mesg):
-        print "->Data receive"
+        print "->Data receive : " + self.request.remote_ip
         self.send_image()
 
     def on_close(self):
         print "->Websocket closed : "+self.request.remote_ip
-        if self.current_user == "illegalUser":
-            iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Unauthorized user deconnection",self.request.remote_ip)
-        else :
+        if self.get_autorisation == "yes":
             iden = self.current_user
             ficLog.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
+        else :
+            iden="IllegalUser"
+            ficLog.enregDansLog(iden + "as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
 
         if confAveug == True:
             print '->Send audio alarm deconnection user'
@@ -127,7 +131,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            print ("->Data send")
+            print "->Data send : " + self.request.remote_ip
         except Exception, e :
             print e
             self.write_message("error")

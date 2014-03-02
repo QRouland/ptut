@@ -168,14 +168,13 @@ if __name__ == "__main__":
         print "  ->Blind unhabitant"
     else :
         print "  ->Not blind unhabitant"
-    print "  ->Ip camera : " + ipCamera
-    print "  ->Port Server : " + portServ
+
     tornado.options.parse_command_line()
 
     try :
         print("->Server Start ...")
         http_server = tornado.httpserver.HTTPServer(application)
-        http_server.listen(port)
+        http_server.listen(80)
         print "->Server Start Successfully !"
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :

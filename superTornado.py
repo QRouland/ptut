@@ -161,16 +161,16 @@ if __name__ == "__main__":
         portCamera = config.portCamera()
         portServ = config.portServ()
         if blind == "error" :
-            raise BlindConfigurationERROR("l")
+            raise BlindERROR("l")
         if ipCamera == "error" :
-            raise IPCameraConfigurationERROR("b")
+            raise IPCameraERROR("b")
         if portCamera == "error" :
-            raise PortCameraConfigurationERROR("c")
+            raise PortCamERROR("c")
         if portServ == "error" :
-            raise PortServConfigurationERROR("e")
+            raise PortServERROR("e")
     except Exception as e :
         print bcolors.FAIL
-        raise
+        print e
         print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
         sys.exit(1)
     print "->Configuration Server Load Successfully :"

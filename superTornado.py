@@ -26,7 +26,6 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        print "-> IP = " + self.request.remote_ip
         self.render("v/index.html")
 
     def post(self):
@@ -76,26 +75,27 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if not self.current_user :
             self.close()
             return
-        print "->Websocket opened"
+        print "->Websocket opened : " + self.request.remote_ip
         if self.current_user == "illegalUser":
             iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Unauthorized user connection","IP TO DO")
+            ficLog.enregDansLog(iden,"Unauthorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
             else:
                 print '->Send visual alarm unauthorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
+            print "->Unauthorized user access" + self.request.remote_ip
         else :
             iden = self.current_user
-            ficLog.enregDansLog(iden,"Authorized user connection","IP TO DO")
+            ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
             else:
                 print '->Send visual alarm authorized user'
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Authorized user access"
+            print "->Authorized user access" + self.request.remote_ip
         self.send_image()
 
     def on_message(self,mesg):
@@ -103,13 +103,13 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         self.send_image()
 
     def on_close(self):
-        print "->Websocket closed"
+        print "->Websocket closed : "+self.request.remote_ip
         if self.current_user == "illegalUser":
             iden="IllegalUser"
-            ficLog.enregDansLog(iden,"Unauthorized user deconnection","IP TO DO")
+            ficLog.enregDansLog(iden,"Unauthorized user deconnection",self.request.remote_ip)
         else :
             iden = self.current_user
-            ficLog.enregDansLog(iden,"Authorized user deconnection","IP TO DO")
+            ficLog.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
 
         if confAveug == True:
             print '->Send audio alarm deconnection user'
@@ -117,7 +117,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else:
             print '->Send visual alarm deconnection user'
             print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
-        print"->"+iden+" Deconnection"
+        print"->"+iden+" Deconnection" + self.request.remote_ip
 
 
     def send_image(self) :

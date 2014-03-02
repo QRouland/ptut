@@ -13,7 +13,7 @@ class LoadConf(object):
         rep = self.loadValue("blind")
         if rep == "1" :
             return True
-        else if rep == "0":
+        elif rep == "0":
             return False
         else :
             return rep

@@ -3,12 +3,9 @@ class LoadConf(object):
         with open("m/fichier/conf", "r") as source :
             for ligne in source:
                 data = ligne.rstrip('\n\r').split('=')
-                try :
                     if data[0] == key :
                             source.close()
                             return data[1]
-                except Exception, e :
-                    pass
             source.close()
         return "error"
 

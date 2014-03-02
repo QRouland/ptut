@@ -48,14 +48,14 @@ class MainHandler(BaseHandler):
 
 class VideoHandler(BaseHandler):
     def get(self):
-        if not self.get_current_user :
+        if not self.get_autorisation and not self.get_current_user  :
             self.redirect("/")
             return
         self.render("v/video.html")
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
-        if not self.get_autorisation :
+        if not self.get_current_user :
             self.redirect("/")
             return
         self.render("v/illegal.html")
@@ -77,7 +77,7 @@ class DisconnectionHandler(BaseHandler):
 
 class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
-        if not self.get_autorisation :
+        if not self.get_autorisation and not self.get_current_user :
             self.close()
             return
         print "->Websocket opened : " + self.request.remote_ip
@@ -92,7 +92,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Authorized user access : " + self.request.remote_ip
         else :
-            ficLog.enregDansLog(iden + "as IllegalUser","Unauthorized user connection",self.request.remote_ip)
+            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
@@ -108,12 +108,11 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         print "->Websocket closed : "+self.request.remote_ip
+        iden = self.current_user
         if self.get_autorisation == "yes":
-            iden = self.current_user
             ficLog.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
         else :
-            iden="IllegalUser"
-            ficLog.enregDansLog(iden + "as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
+            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
 
         if confAveug == True:
             print '->Send audio alarm deconnection user'

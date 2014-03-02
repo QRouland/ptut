@@ -26,7 +26,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        print "-> IP = "
+        print "-> IP = " + self.request.remote_ip
         self.render("v/index.html")
 
     def post(self):

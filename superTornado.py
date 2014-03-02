@@ -157,7 +157,7 @@ if __name__ == "__main__":
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
-        portCamera = config.portCamera())
+        portCamera = config.portCamera()
         portServ = config.portServ()
         if blind == "error" :
             raise BlindConfigurationERROR(bcolors.FAIL +"Failed Load Blind Configuration")

@@ -18,8 +18,8 @@ class LoadConf(object):
         else :
             return rep
 
-    def ipCamera(self)
+    def ipCamera(self) :
         return self.loadValue("camera")
 
-    def portServ(self)
+    def portServ(self) :
         return self.loadValue("port")

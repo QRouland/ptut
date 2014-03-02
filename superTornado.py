@@ -164,7 +164,7 @@ if __name__ == "__main__":
         print "Configuration Loading Failed ! Check Configuration File !"
         print e
         sys.exit(1)
-    print "->Configuraion Server Load Successfully:"
+    print "->Configuration Server Load Successfully:"
     if confAveug == True:
         print "  ->Blind unhabitant"
     else :

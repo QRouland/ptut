@@ -179,8 +179,9 @@ if __name__ == "__main__":
     log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
 
-    urlSocket = 'ws://'+ipServ':'+portCamera+'/socket'
+    urlSocket = 'ws://'+ipServ+':'+portCamera+'/socket'
     urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
+
     log.printL("->Ping camera ...",lvl.INFO)
     try :
         f = urlopen(urlCamera)

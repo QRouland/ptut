@@ -45,7 +45,7 @@ class Log(object):
         elif pLvl == 40 :
             sys.stdout.write(bcolors.FAIL)
         self.logger.log(pLvl,pMsg)
-        sys.stdout.write(bcolors.ENDC)
+
 
 class bcolors:
     DEBUG = '\033[94m'

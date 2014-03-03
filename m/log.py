@@ -20,7 +20,7 @@ class Log(object):
 
 
     def printL(self,pMsg,pLvl):
-        logger.log(pMsg, pLvl)
+        self.logger.log(pMsg, pLvl)
         if pLvl == 10 :
             print bcolors.DEBUG ,
         elif pLvl == 20 :

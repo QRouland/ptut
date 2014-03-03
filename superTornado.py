@@ -83,7 +83,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             return
         log.printL("->Websocket opened : " + self.request.remote_ip,25)
         iden = self.current_user
-        if self.get_current_user == "yes":
+        if iden != "IllegalUser":
             log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,20)
             if blind == True:
                 log.printL('->Send audio alarm authorized user',20)
@@ -108,7 +108,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def on_close(self):
         log.printL("->Websocket closed : "+self.request.remote_ip,25)
         iden = self.current_user
-        if self.get_autorisation == "yes":
+        if iden != "IllegalUser":
             log.printL("->"+iden+",Authorized user deconnection,"+self.request.remote_ip,20)
         else :
             log.printL("->"+iden +" as IllegalUser,Unauthorized user deconnection,"+self.request.remote_ip,30)

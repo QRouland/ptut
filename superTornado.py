@@ -26,6 +26,8 @@ portCamera = ""
 portServ =""
 log = Log()
 urlCamera=""
+urlSocket=""
+
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -35,7 +37,8 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        self.render("v/index.html")
+        urlSocket = 'ws://'+socket.getaddrinfo(socket.gethostname(), None)':'+portCamera+'/socket'
+        self.render("v/index.html", url=urlSocket)
 
     def post(self):
         iden = self.get_argument("id","")
@@ -177,7 +180,6 @@ if __name__ == "__main__":
     urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
     log.printL("->Ping camera ...",lvl.INFO)
     try :
-        socket.setdefaulttimeout(30)
         f = urlopen(urlCamera)
         log.printL( "->Camera OK ", lvl.SUCCESS)
     except Exception, e :

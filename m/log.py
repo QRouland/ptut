@@ -25,7 +25,7 @@ class Log(object):
 
         steam_handler = logging.StreamHandler()
         steam_handler.setLevel(logging.DEBUG)
-        logger.addHandler(steam_handler)
+        self.logger.addHandler(steam_handler)
 
     def enregDansLog(self,pLog,pMsg,pIP):
         with open("fichier/log", "a") as dest :

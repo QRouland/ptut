@@ -35,15 +35,15 @@ class Log(object):
 
     def printL(self,pMsg,pLvl):
         if pLvl == 10 :
-            sys.stdout.write bcolors.DEBUG
+            sys.stdout.write(bcolors.DEBUG)
         elif pLvl == 20 :
-            sys.stdout.write bcolors.INFO
+            sys.stdout.write(bcolors.INFO)
         elif pLvl == 25 :
-            sys.stdout.write bcolors.SUCCESS
+            sys.stdout.write(bcolors.SUCCESS)
         elif pLvl == 30 :
-            sys.stdout.write bcolors.WARNING
+            sys.stdout.write(bcolors.WARNING)
         elif pLvl == 40 :
-            sys.stdout.write bcolors.FAIL
+            sys.stdout.write(bcolors.FAIL)
         self.logger.log(pLvl,pMsg)
         sys.stdout bcolors.ENDC
 

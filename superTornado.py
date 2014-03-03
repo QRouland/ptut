@@ -135,7 +135,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            log.printL( "->Data send : " + self.request.remote_ip, 10)
+            log.printL( "->Data send : " + self.request.remote_ip, 20)
         except Exception, e :
             log.printL(e.value,40)
             self.write_message("error")

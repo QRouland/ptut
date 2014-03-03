@@ -24,8 +24,9 @@ class Log(object):
         self.logger.addHandler(file_handler_error)
 
         steam_handler = logging.StreamHandler()
-        steam_handler.setLevel(logging.DEBUG)
+        steam_handler.setLevel(logging.NOTSET)
         self.logger.addHandler(steam_handler)
+
 
     def printL(self,pMsg,pLvl):
         if pLvl == 10 :

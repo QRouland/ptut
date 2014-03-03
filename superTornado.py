@@ -89,18 +89,18 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
             if blind == True:
                 log.printL('->Send audio alarm authorized user',lvl.INFO)
-                send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
+                self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
             else:
                 log.printL('->Send visual alarm authorized user',lvl.INFO)
-                send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
+                self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         else :
             log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
             if blind == True:
                 log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
-                send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
+                self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
             else:
                 log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
-                send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
+                self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         self.send_image()
 
     def on_message(self,mesg):
@@ -117,10 +117,10 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
         if blind == True:
             log.printL('->Send audio alarm deconnection user', lvl.INFO)
-            send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+            self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
         else:
             log.printL('->Send visual alarm deconnection user ...',lvl.INFO)
-            send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=0")')
+            self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=0")')
 
     def send_signal_house(self, pRq) :
         log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)

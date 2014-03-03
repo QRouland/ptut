@@ -91,7 +91,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         iden = self.current_user
         if self.get_autorisation == "yes":
             log.printL(iden + ",Authorized user connection,"+self.request.remote_ip,20)
-            if confAveug == True:
+            if blind == True:
                 log.printL('->Send audio alarm authorized user',20)
                 log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")',10)
             else:
@@ -99,7 +99,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
         else :
             log.printL(iden + " as IllegalUser,Unauthorized user connection" + self.request.remote_ip,30)
-            if confAveug == True:
+            if blind == True:
                 log.printL('->Send audio alarm unauthorized user',30)
                 log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',10)
             else:

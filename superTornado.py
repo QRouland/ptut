@@ -45,7 +45,6 @@ class MainHandler(BaseHandler):
 
         login = Login()
         autorise = login.connexion(iden, mdp)
-        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
         self.set_secure_cookie("user", iden)
         if autorise == True:
             self.set_secure_cookie("user", iden,1)
@@ -90,18 +89,18 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
             if blind == True:
                 log.printL('->Send audio alarm authorized user',lvl.INFO)
-                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")',lvl.DEBUG)
+                send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
             else:
                 log.printL('->Send visual alarm authorized user',lvl.INFO)
-                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',lvl.DEBUG)
+                send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         else :
             log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
             if blind == True:
                 log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
-                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',lvl.DEBUG)
+                send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
             else:
                 log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
-                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',lvl.DEBUG)
+                send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         self.send_image()
 
     def on_message(self,mesg):
@@ -118,11 +117,19 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
 
         if blind == True:
             log.printL('->Send audio alarm deconnection user', lvl.INFO)
-            log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")',lvl.DEBUG)
+            send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
         else:
-            log.printL('->Send visual alarm deconnection user',lvl.INFO)
-            log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',lvl.DEBUG)
+            log.printL('->Send visual alarm deconnection user ...',lvl.INFO)
+            send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=0")')
 
+    def send_signal_house(self, pRq) :
+        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
+        try :
+            log.printL('maison.request("GET",'+pRq,lvl.DEBUG)
+            log.printL("->Send Successfully", lvl.SUCCESS)
+        except Exception, e :
+            log.printL(e, lvl.FAIL)
+            log.printL("->Send Failed", lvl.FAIL)
 
     def send_image(self) :
         try :

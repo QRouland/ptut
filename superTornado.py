@@ -119,7 +119,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else:
             log.printL('->Send visual alarm deconnection user',20)
             log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',10)
-        log.printL"->"+iden+" Deconnection : " + self.request.remote_ip
+        log.printL("->"+iden+" Deconnection : " + self.request.remote_ip)
 
 
     def send_image(self) :

@@ -6,7 +6,7 @@ from datetime import datetime
 class Log(object):
     def __init__(self) :
 
-        logging.addLevelName(25, "SUCCESS"")
+        logging.addLevelName(25, "SUCCESS")
 
         self.logger = log.getLogger()
         self.logger.setLevel(logging.DEBUG)

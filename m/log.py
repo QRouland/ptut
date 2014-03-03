@@ -37,13 +37,13 @@ class Log(object):
         if pLvl == 10 :
             pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         elif pLvl == 20 :
-            sys.stdout.write(bcolors.INFO)
+            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         elif pLvl == 25 :
-            sys.stdout.write(bcolors.SUCCESS)
+            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         elif pLvl == 30 :
-            sys.stdout.write(bcolors.WARNING)
+            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         elif pLvl == 40 :
-            sys.stdout.write(bcolors.FAIL)
+            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         self.logger.log(pLvl,pMsg)
 
 

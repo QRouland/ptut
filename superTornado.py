@@ -78,7 +78,7 @@ class DisconnectionHandler(BaseHandler):
 
 class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
-        if not self.get_current_user :
+        if not self.current_user :
             self.close()
             return
         log.printL("->Websocket opened : " + self.request.remote_ip,25)
@@ -109,9 +109,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         log.printL("->Websocket closed : "+self.request.remote_ip,25)
         iden = self.current_user
         if iden != "IllegalUser":
-            log.printL("->"+iden+",Authorized user deconnection,"+self.request.remote_ip,20)
+            log.printL("->"+iden+" : Authorized user deconnection : "+self.request.remote_ip,20)
         else :
-            log.printL("->"+iden +" as IllegalUser,Unauthorized user deconnection,"+self.request.remote_ip,30)
+            log.printL("->"+iden +" : Unauthorized user deconnection : "+self.request.remote_ip,30)
 
         if blind == True:
             log.printL('->Send audio alarm deconnection user', 20)

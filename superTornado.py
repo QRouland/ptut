@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    log.printL ("->Loading configuration ... ", 20 )
+    log.printL("->Loading configuration ... ",20)
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -169,12 +169,12 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
-        log.printL(e.value, 40)
-        log.printL("Configuration Loading Failed ! Check Configuration File !", 40)
+        log.printL(e.value,40)
+        log.printL("Configuration Loading Failed ! Check Configuration File !",40)
         sys.exit(1)
-    print log.printL("->Configuration Server Load Successfully !", 25)
+    print log.printL("->Configuration Server Load Successfully !",25)
     if blind == True:
-        log.printL("  ->Blind unhabitant", 25)
+        log.printL("  ->Blind unhabitant",25)
     else :
         log.printL("  ->Not blind unhabitant",25)
     log.printL("  ->Ip camera : " + ipCamera,25)
@@ -183,6 +183,7 @@ if __name__ == "__main__":
 
     try :
         log.printL("->Server Start ...",20)
+        tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(portServ)
         log.printL("->Server Start Successfully !",25)

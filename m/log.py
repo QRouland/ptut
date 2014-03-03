@@ -7,11 +7,16 @@ class Log(object):
     def __init__(self) :
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
+        formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
         file_handler = RotatingFileHandler('activity.log', 'a', 1000000, 1)
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
+
+        file_handler_error = RotatingFileHandler('error.log', 'a', 1000000, 1)
+        file_handler_error.setLevel(logging.ERROR)
+        file_handler_error.setFormatter(formatter)
+        self.logger.addHandler(file_handler_error)
 
     def enregDansLog(self,pLog,pMsg,pIP):
         with open("fichier/log", "a") as dest :
@@ -22,15 +27,15 @@ class Log(object):
     def printL(self,pMsg,pLvl):
         self.logger.log(pLvl,pMsg)
         if pLvl == 10 :
-            print bcolors.DEBUG ,
+            print bcolors.DEBUG,
         elif pLvl == 20 :
-            print bcolors.INFO ,
+            print bcolors.INFO,
         elif pLvl == 30 :
-            print bcolors.WARNING ,
+            print bcolors.WARNING,
         elif pLvl == 40 :
-            print bcolors.FAIL ,
+            print bcolors.FAIL,
         print pMsg
-        print bcolors.ENDC ,
+        print bcolors.ENDC,
 
 class bcolors:
     NOTSET = '\033[95m'

@@ -32,11 +32,6 @@ class Log(object):
         print pMsg
         print bcolors.ENDC ,
 
-
-        }
-
-
-
 class bcolors:
     NOTSET = '\033[95m'
     DEBUG = '\033[94m'
@@ -54,14 +49,4 @@ class bcolors:
         self.ENDC = ''
 
 
-
-
-
-# création d'un second handler qui va rediriger chaque écriture de log
-# sur la console
-
-# Après 3 heures, on peut enfin logguer
-# Il est temps de spammer votre code avec des logs partout :
-logger.info('Hello')
-logger.warning('Testing %s', 'foo')
 

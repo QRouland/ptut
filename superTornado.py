@@ -31,8 +31,6 @@ class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
         return self.get_secure_cookie("user")
 
-    def get_autorisation(self):
-        return self.get_secure_cookie("auth")
 
 class MainHandler(BaseHandler):
     def get(self):
@@ -47,7 +45,7 @@ class MainHandler(BaseHandler):
         log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',10)
         self.set_secure_cookie("user", iden)
         if autorise == True:
-            self.set_secure_cookie("auth", "yes")
+            self.set_secure_cookie("user", iden)
             self.redirect("/video")
         else:
             log.printL("->An unauthorized user try to access : " + self.request.remote_ip,30)
@@ -62,15 +60,12 @@ class VideoHandler(BaseHandler):
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
-        if not self.get_current_user :
-            self.redirect("/")
-            return
         self.render("v/illegal.html")
 
     def post(self):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
-            self.set_secure_cookie("auth", "no")
+            self.set_secure_cookie("user", "IllegalUser")
             self.redirect("/video")
         else :
             self.redirect("/")
@@ -78,18 +73,17 @@ class UnauthorizedHandler(BaseHandler):
 
 class DisconnectionHandler(BaseHandler):
     def post(self):
-        self.clear_cookie("auth")
         self.clear_cookie("user")
         self.redirect("/")
 
 class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def open(self) :
-        if not self.get_autorisation and not self.get_current_user :
+        if not self.get_current_user :
             self.close()
             return
         log.printL("->Websocket opened : " + self.request.remote_ip,25)
         iden = self.current_user
-        if self.autorisation == "yes":
+        if self.get_current_user == "yes":
             log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,20)
             if blind == True:
                 log.printL('->Send audio alarm authorized user',20)
@@ -98,7 +92,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 log.printL('->Send visual alarm authorized user',20)
                 log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
         else :
-            log.printL("->"+iden + " as IllegalUser : Unauthorized user connection : " + self.request.remote_ip,30)
+            log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,30)
             if blind == True:
                 log.printL('->Send audio alarm unauthorized user',30)
                 log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',10)

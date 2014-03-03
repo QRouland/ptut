@@ -174,12 +174,12 @@ if __name__ == "__main__":
         sys.exit(1)
     print log.printL("->Configuration Server Load Successfully !",25)
     if blind == True:
-        log.printL("  ->Blind unhabitant",25)
+        log.printL("  ->Blind unhabitant",20)
     else :
-        log.printL("  ->Not blind unhabitant",25)
-    log.printL("  ->Ip camera : " + ipCamera,25)
-    log.printL("  ->Port Camera : " + portCamera,25)
-    log.printL("  ->Port Server : " + portServ,25)
+        log.printL("  ->Not blind unhabitant",20)
+    log.printL("  ->Ip camera : " + ipCamera,20)
+    log.printL("  ->Port Camera : " + portCamera,20)
+    log.printL("  ->Port Server : " + portServ,20)
 
     try :
         log.printL("->Server Start ...",20)

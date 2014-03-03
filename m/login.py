@@ -8,7 +8,7 @@ class Login(object):
         with open("m/fichier/autorise", "r") as source :
             for ligne in source :
                 data = ligne.rstrip('\n\r').split(',')
-                if data[0] in pLog :
+                if data[0] == pLog :
                     if data[1] in hashMdp :
                         source.close()
                         return True

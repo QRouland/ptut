@@ -31,17 +31,17 @@ class Log(object):
     def printL(self,pMsg,pLvl):
         self.logger.log(pLvl,pMsg)
         if pLvl == 10 :
-            print bcolors.DEBUG,
+            print bcolors.DEBUG
         elif pLvl == 20 :
-            print bcolors.INFO,
+            print bcolors.INFO
         elif pLvl == 25 :
-            print bcolors.SUCCESS,
+            print bcolors.SUCCESS
         elif pLvl == 30 :
-            print bcolors.WARNING,
+            print bcolors.WARNING
         elif pLvl == 40 :
-            print bcolors.FAIL,
+            print bcolors.FAIL
         print pMsg
-        print bcolors.ENDC,
+        print bcolors.ENDC
 
 class bcolors:
     DEBUG = '\033[94m'

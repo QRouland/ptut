@@ -36,7 +36,6 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        print ("->")
         self.render("v/index.html")
 
     def post(self):
@@ -91,8 +90,8 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         print "->Websocket opened : " + self.request.remote_ip
         iden = self.current_user
         if self.get_autorisation == "yes":
-            ficLog.printL(iden +" Authorized user connection " + self.request.remote_ip)
-            if blind == True:
+            ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
+            if confAveug == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
             else:
@@ -100,8 +99,8 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Authorized user access : " + self.request.remote_ip
         else :
-            ficLog.printL(iden + " as IllegalUser Unauthorized user connection" + self.request.remote_ip)
-            if blind == True:
+            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user connection",self.request.remote_ip)
+            if confAveug == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
             else:
@@ -118,11 +117,11 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         print "->Websocket closed : "+self.request.remote_ip
         iden = self.current_user
         if self.get_autorisation == "yes":
-            ficLog.printL(iden +" Authorized user deconnection " + self.request.remote_ip)
+            ficLog.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
         else :
-            ficLog.printL(iden + " as IllegalUser Unauthorized user deconnection" + self.request.remote_ip)
+            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
 
-        if blind == True:
+        if confAveug == True:
             print '->Send audio alarm deconnection user'
             print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
         else:
@@ -155,9 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    print bcolors.HEADER ,
-    ficLog.printL("->Loading configuration ... ")
-    print bcolors.ENDC ,
+    print bcolors.HEADER + "->Loading configuration ... " + bcolors.ENDC
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()

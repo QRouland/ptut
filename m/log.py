@@ -4,22 +4,8 @@ import time
 from datetime import datetime
 
 class Log(object):
-    def __init__(self) :
-        self.logger = logging.getLogger()
-        self.logger.setLevel(logging.DEBUG)
+    def enregDansLog(self,pLog,pMsg,pIP):
+        with open("fichier/log", "a") as dest :
+            d = datetime.now().strftime("%c")
+            dest.write("%s,%s,%s,%s\n" % (d,pLog,pMsg,pIP))
 
-        formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
-        file_handler = RotatingFileHandler('m/fichier/log', 'a', 1000000, 1)
-
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(formatter)
-        self.logger.addHandler(file_handler)
-
-
-        steam_handler = logging.StreamHandler()
-        steam_handler.setLevel(logging.DEBUG)
-        self.logger.addHandler(steam_handler)
-
-
-    def printL(self,pMsg):
-        self.logger.info(pMsg)

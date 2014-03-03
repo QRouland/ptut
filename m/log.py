@@ -6,7 +6,7 @@ from datetime import datetime
 class Log(object):
     def __init__(self) :
         self.logger = logging.getLogger()
-        self.logger = addLevelName(25, SUCESS)
+        self.logger.addLevelName(25, SUCCESS)
         self.logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
         file_handler = RotatingFileHandler('activity.log', 'a', 1000000, 1)

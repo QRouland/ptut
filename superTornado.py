@@ -83,7 +83,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if not self.current_user :
             self.close()
             return
-        log.printL("->Websocket opened : " + self.request.remote_ip,lvl.SUCCESS)
+        log.printL("->Websocket Open : " + self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
             log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
@@ -104,32 +104,32 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         self.send_image()
 
     def on_message(self,mesg):
-        log.printL("->Data receive : " + self.request.remote_ip,lvl.INFO)
+        log.printL("->Demand Data Receive : " + self.request.remote_ip,lvl.INFO)
         self.send_image()
 
     def on_close(self):
-        log.printL("->Websocket closed : "+self.request.remote_ip,lvl.SUCCESS)
+        log.printL("->Websocket Closed : "+self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
-            log.printL("->"+iden+" : Authorized user deconnection : "+self.request.remote_ip,lvl.INFO)
+            log.printL("->"+iden+" : Authorized User Deconnection : "+self.request.remote_ip,lvl.INFO)
         else :
-            log.printL("->"+iden +" : Unauthorized user deconnection : "+self.request.remote_ip,lvl.WARNING)
+            log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
 
         if blind == True:
-            log.printL('->Send audio alarm deconnection user', lvl.INFO)
+            log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
             self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
         else:
-            log.printL('->Send visual alarm deconnection user ...',lvl.INFO)
+            log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
             self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=0")')
 
     def send_signal_house(self, pRq) :
         log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
         try :
             log.printL('maison.request("GET",'+pRq,lvl.DEBUG)
-            log.printL("->Send Successfully", lvl.SUCCESS)
+            log.printL("->Signal To House Send Successfully", lvl.SUCCESS)
         except Exception, e :
             log.printL(e, lvl.FAIL)
-            log.printL("->Send Failed", lvl.FAIL)
+            log.printL("->Signal To House Send Failed", lvl.FAIL)
 
     def send_image(self) :
         try :
@@ -138,7 +138,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            log.printL( "->Data send : " + self.request.remote_ip, lvl.INFO)
+            log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)
         except Exception, e :
             log.printL(e,lvl.FAIL)
             self.write_message("error")
@@ -183,6 +183,7 @@ if __name__ == "__main__":
         log.printL(" +Not blind unhabitant",lvl.INFO)
     log.printL("  +Ip Camera : " + ipCamera,lvl.INFO)
     log.printL("  +Port Camera : " + portCamera,lvl.INFO)
+    log.printL("  +Ip Server : " + ipServ,lvl.INFO)
     log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
 

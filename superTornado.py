@@ -25,6 +25,7 @@ ipCamera = ""
 portCamera = ""
 portServ =""
 log = Log()
+urlCamera=""
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -172,6 +173,14 @@ if __name__ == "__main__":
     log.printL("  +Port Camera : " + portCamera,lvl.INFO)
     log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
+
+    urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195''
+    try :
+            f = urlopen(urlCamera)
+            log.printL( "->Camera OK ", lvl.SUCCESS)
+        except Exception, e :
+            log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.ERROR)
+
 
     try :
         log.printL("->Server Start ...",lvl.INFO)

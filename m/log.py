@@ -13,8 +13,7 @@ class lvl:
     NOTSET = 0
     DEBUG = 10
     INFO = 20
-    SUCCESS = 21
-    ILLEGAL = 25
+    SUCCESS = 25
     WARNING = 30
     FAIL = 40
 
@@ -33,7 +32,6 @@ class Log(object):
     def __init__(self) :
 
         logging.addLevelName(lvl.SUCCESS, "SUCCESS")
-        logging.addLevelName(lvl.ILLEGAL, "ILLEGAL")
 
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
@@ -45,9 +43,9 @@ class Log(object):
         self.logger.addHandler(file_handler)
 
         file_handler_warning = RotatingFileHandler('illegal.log', 'a', 1000000, 1)
-        f1 = SingleLevelFilter(logging.ILLEGAL, False)
+        f1 = SingleLevelFilter(logging.WARNING, False)
         file_handler_warning.addFilter(f1)
-        file_handler.setFormatter(formatter)
+        file_handler_warning.setFormatter(formatter)
         self.logger.addHandler(file_handler_warning)
 
         file_handler_error = RotatingFileHandler('error.log', 'a', 1000000, 1)

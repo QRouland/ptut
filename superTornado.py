@@ -174,7 +174,7 @@ if __name__ == "__main__":
     log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
 
-    urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195''
+    urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
     try :
             f = urlopen(urlCamera)
             log.printL( "->Camera OK ", lvl.SUCCESS)

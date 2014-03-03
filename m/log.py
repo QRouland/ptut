@@ -17,6 +17,17 @@ class lvl:
     WARNING = 30
     FAIL = 40
 
+class SingleLevelFilter(logging.Filter):
+    def __init__(self, passlevel, reject):
+        self.passlevel = passlevel
+        self.reject = reject
+
+    def filter(self, record):
+        if self.reject:
+            return (record.levelno != self.passlevel)
+        else:
+            return (record.levelno == self.passlevel)
+
 class Log(object):
     def __init__(self) :
 
@@ -30,6 +41,12 @@ class Log(object):
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
+
+        file_handler_warning = RotatingFileHandler('warning.log', 'a', 1000000, 1)
+        f1 = SingleLevelFilter(logging.WARNING, False)
+        file_handler_warning.addFilter(f1)
+        file_handler.setFormatter(formatter)
+        self.logger.addHandler(file_handler_warning)
 
         file_handler_error = RotatingFileHandler('error.log', 'a', 1000000, 1)
         file_handler_error.setLevel(logging.ERROR)

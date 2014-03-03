@@ -179,7 +179,7 @@ if __name__ == "__main__":
         f = urlopen(urlCamera)
         log.printL( "->Camera OK ", lvl.SUCCESS)
     except Exception, e :
-        log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.ERROR)
+        log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.FAIL)
 
 
     try :

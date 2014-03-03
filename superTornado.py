@@ -24,7 +24,7 @@ blind = False
 ipCamera = ""
 portCamera = ""
 portServ =""
-ficLog = Log()
+log = Log()
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -90,7 +90,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         print "->Websocket opened : " + self.request.remote_ip
         iden = self.current_user
         if self.get_autorisation == "yes":
-            ficLog.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
+            log.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
@@ -99,7 +99,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
             print "->Authorized user access : " + self.request.remote_ip
         else :
-            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user connection",self.request.remote_ip)
+            log.enregDansLog(iden + " as IllegalUser","Unauthorized user connection",self.request.remote_ip)
             if confAveug == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
@@ -117,9 +117,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         print "->Websocket closed : "+self.request.remote_ip
         iden = self.current_user
         if self.get_autorisation == "yes":
-            ficLog.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
+            log.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
         else :
-            ficLog.enregDansLog(iden + " as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
+            log.enregDansLog(iden + " as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
 
         if confAveug == True:
             print '->Send audio alarm deconnection user'
@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    ficLog.printL ("->Loading configuration ... ", 20 )
+    log.printL ("->Loading configuration ... ", 20 )
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -169,26 +169,25 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
-        print bcolors.FAIL + e.value
-        print "Configuration Loading Failed ! Check Configuration File !" + bcolors.ENDC
+        log.printL(e.value, 40)
+        log.printL("Configuration Loading Failed ! Check Configuration File !")
         sys.exit(1)
-    print bcolors.OKGREEN + "->Configuration Server Load Successfully :" + bcolors.ENDC
+    print log.printL("->Configuration Server Load Successfully :", 20)
     if blind == True:
-        print "  ->Blind unhabitant"
+        log.printL("  ->Blind unhabitant", 20)
     else :
-        print "  ->Not blind unhabitant"
-    print "  ->Ip camera : " + ipCamera
-    print "  ->Port Camera : " + portCamera
-    print "  ->Port Server : " + portServ
-    tornado.options.parse_command_line()
+        log.printL("  ->Not blind unhabitant",20)
+    log.printL("  ->Ip camera : " + ipCamera,20)
+    log.printL("  ->Port Camera : " + portCamera,20)
+    log.printL("  ->Port Server : " + portServ,20)
 
     try :
-        print(bcolors.HEADER + "->Server Start ..."+ bcolors.ENDC)
+        log.printL("->Server Start ...",20)
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(portServ)
-        print  bcolors.OKGREEN + "->Server Start Successfully !" + bcolors.ENDC
+        log.printL("->Server Start Successfully !",20)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
-        print bcolors.FAIL + "Server Start Failed !" + bcolors.ENDC
-        print e
+        log.printL("Server Start Failed !",40)
+        log.printL(e,40)
         sys.exit(1)

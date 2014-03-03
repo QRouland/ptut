@@ -16,9 +16,9 @@ class Log(object):
         self.logger.addHandler(file_handler)
 
 
-        self.steam_handler = logging.StreamHandler()
-        self.steam_handler.setLevel(logging.DEBUG)
-        logger.addHandler(steam_handler)
+        steam_handler = logging.StreamHandler()
+        steam_handler.setLevel(logging.DEBUG)
+        self.logger.addHandler(steam_handler)
 
 
     def printL(self,pMsg):

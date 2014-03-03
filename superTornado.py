@@ -37,7 +37,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        urlSocket = 'ws://'+socket.getaddrinfo(socket.gethostname(), None)':'+portCamera+'/socket'
+        urlSocket = 'ws://'+socket.getaddrinfo(socket.gethostname(), None)+':'+portCamera+'/socket'
         self.render("v/index.html", url=urlSocket)
 
     def post(self):

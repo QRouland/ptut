@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    print bcolors.HEADER + "->Loading configuration ... " + bcolors.ENDC
+    printL ("->Loading configuration ... ", 20 )
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -178,6 +178,7 @@ if __name__ == "__main__":
     else :
         print "  ->Not blind unhabitant"
     print "  ->Ip camera : " + ipCamera
+    print "  ->Port Camera : " + portCamera
     print "  ->Port Server : " + portServ
     tornado.options.parse_command_line()
 

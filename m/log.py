@@ -5,10 +5,13 @@ from datetime import datetime
 
 class Log(object):
     def __init__(self) :
-        self.logger = logging.getLogger()
-        self.logger.addLevelName(25, SUCCESS)
+        log = logging()
+        log.addLevelName(25, SUCCESS)
+
+        self.logger = log.getLogger()
         self.logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
+
         file_handler = RotatingFileHandler('activity.log', 'a', 1000000, 1)
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)

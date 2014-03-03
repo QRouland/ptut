@@ -6,7 +6,7 @@
         <title>Acces camera</title>
         <script src="js/jquery-2.1.0.min.js"></script>
         <script >
-            var ws = new WebSocket ("{{ url }}/");
+            var ws = new WebSocket ("{{ url }}");
             ws.onmessage = function (evt) {
                 console.log("data receive");
                 if(evt.data != "error") {

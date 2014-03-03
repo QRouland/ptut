@@ -92,7 +92,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         iden = self.current_user
         if self.get_autorisation == "yes":
             ficLog.printL(iden +" Authorized user connection " + self.request.remote_ip)
-            if confAveug == True:
+            if blind == True:
                 print '->Send audio alarm authorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
             else:
@@ -101,7 +101,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             print "->Authorized user access : " + self.request.remote_ip
         else :
             ficLog.printL(iden + " as IllegalUser Unauthorized user connection" + self.request.remote_ip)
-            if confAveug == True:
+            if blind == True:
                 print '->Send audio alarm unauthorized user'
                 print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
             else:
@@ -122,7 +122,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else :
             ficLog.printL(iden + " as IllegalUser Unauthorized user deconnection" + self.request.remote_ip)
 
-        if confAveug == True:
+        if blind == True:
             print '->Send audio alarm deconnection user'
             print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
         else:

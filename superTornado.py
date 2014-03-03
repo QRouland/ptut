@@ -42,13 +42,13 @@ class MainHandler(BaseHandler):
 
         login = Login()
         autorise = login.connexion(iden, mdp)
-        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',10)
+        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
         self.set_secure_cookie("user", iden)
         if autorise == True:
             self.set_secure_cookie("user", iden,1)
             self.redirect("/video")
         else:
-            log.printL("->An unauthorized user try to access : " + self.request.remote_ip,30)
+            log.printL("->An unauthorized user try to access : " + self.request.remote_ip,lvl.WARNING)
             self.redirect("/unauthorized")
 
 class VideoHandler(BaseHandler):
@@ -81,44 +81,44 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if not self.current_user :
             self.close()
             return
-        log.printL("->Websocket opened : " + self.request.remote_ip,25)
+        log.printL("->Websocket opened : " + self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
-            log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,20)
+            log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
             if blind == True:
-                log.printL('->Send audio alarm authorized user',20)
-                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")',10)
+                log.printL('->Send audio alarm authorized user',lvl.INFO)
+                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")',lvl.DEBUG)
             else:
-                log.printL('->Send visual alarm authorized user',20)
-                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
+                log.printL('->Send visual alarm authorized user',lvl.INFO)
+                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',lvl.DEBUG)
         else :
-            log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,30)
+            log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
             if blind == True:
-                log.printL('->Send audio alarm unauthorized user',30)
-                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',10)
+                log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
+                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',lvl.DEBUG)
             else:
-                log.printL('->Send visual alarm unauthorized user',30)
-                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
+                log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
+                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',lvl.DEBUG)
         self.send_image()
 
     def on_message(self,mesg):
-        log.printL("->Data receive : " + self.request.remote_ip,20)
+        log.printL("->Data receive : " + self.request.remote_ip,lvl.INFO)
         self.send_image()
 
     def on_close(self):
-        log.printL("->Websocket closed : "+self.request.remote_ip,25)
+        log.printL("->Websocket closed : "+self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
-            log.printL("->"+iden+" : Authorized user deconnection : "+self.request.remote_ip,20)
+            log.printL("->"+iden+" : Authorized user deconnection : "+self.request.remote_ip,lvl.INFO)
         else :
-            log.printL("->"+iden +" : Unauthorized user deconnection : "+self.request.remote_ip,30)
+            log.printL("->"+iden +" : Unauthorized user deconnection : "+self.request.remote_ip,lvl.WARNING)
 
         if blind == True:
-            log.printL('->Send audio alarm deconnection user', 20)
-            log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")',10)
+            log.printL('->Send audio alarm deconnection user', lvl.INFO)
+            log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")',lvl.DEBUG)
         else:
-            log.printL('->Send visual alarm deconnection user',20)
-            log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',10)
+            log.printL('->Send visual alarm deconnection user',lvl.INFO)
+            log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',lvl.DEBUG)
         log.printL("->"+iden+" Deconnection : " + self.request.remote_ip)
 
 
@@ -129,9 +129,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            log.printL( "->Data send : " + self.request.remote_ip, 20)
+            log.printL( "->Data send : " + self.request.remote_ip, lvl.INFO)
         except Exception, e :
-            log.printL(e,40)
+            log.printL(e,lvl.FAIL)
             self.write_message("error")
 
 application = tornado.web.Application([
@@ -146,7 +146,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    log.printL("->Loading configuration ... ",20)
+    log.printL("->Loading configuration ... ",lvl.INFO)
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()
@@ -161,27 +161,27 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
-        log.printL(e.value,40)
-        log.printL("Configuration Loading Failed ! Check Configuration File !",40)
+        log.printL(e.value,lvl.FAIL)
+        log.printL("Configuration Loading Failed ! Check Configuration File !",lvl.FAIL)
         sys.exit(1)
-    log.printL("->Configuration Server Load Successfully !",25)
+    log.printL("->Configuration Server Load Successfully !",lvl.SUCCESS)
     if blind == True:
-        log.printL("  +Blind unhabitant",20)
+        log.printL("  +Blind unhabitant",lvl.INFO)
     else :
-        log.printL(" +Not blind unhabitant",20)
-    log.printL("  +Ip Camera : " + ipCamera,20)
-    log.printL("  +Port Camera : " + portCamera,20)
-    log.printL("  +Port Server : " + portServ,20)
+        log.printL(" +Not blind unhabitant",lvl.INFO)
+    log.printL("  +Ip Camera : " + ipCamera,lvl.INFO)
+    log.printL("  +Port Camera : " + portCamera,lvl.INFO)
+    log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
 
     try :
-        log.printL("->Server Start ...",20)
+        log.printL("->Server Start ...",lvl.INFO)
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(portServ)
-        log.printL("->Server Start Successfully !",25)
+        log.printL("->Server Start Successfully !",lvl.SUCCESS)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
-        log.printL("Server Start Failed !",40)
-        log.printL(e,40)
+        log.printL("Server Start Failed !",lvl.FAIL)
+        log.printL(e,lvl.FAIL)
         sys.exit(1)

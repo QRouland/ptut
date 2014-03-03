@@ -1,13 +1,26 @@
 import logging
 from logging.handlers import RotatingFileHandler
-import sys
-import time
-from datetime import datetime
+
+class bcolors:
+    DEBUG = '\033[94m'
+    INFO = '\033[95m'
+    SUCCESS = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+class lvl:
+    NOTSET = 0
+    DEBUG = 10
+    INFO = 20
+    SUCCESS = 25
+    WARNING = 30
+    FAIL = 40
 
 class Log(object):
     def __init__(self) :
 
-        logging.addLevelName(25, "SUCCESS")
+        logging.addLevelName(lvl.SUCESS, "SUCCESS")
 
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
@@ -17,8 +30,6 @@ class Log(object):
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
-
-
 
         file_handler_error = RotatingFileHandler('error.log', 'a', 1000000, 1)
         file_handler_error.setLevel(logging.ERROR)
@@ -31,26 +42,20 @@ class Log(object):
 
 
     def printL(self,pMsg,pLvl):
-        if pLvl == 10 :
+        if pLvl == lvl.DEBUG :
             pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
-        elif pLvl == 20 :
+        elif pLvl == lvl.INFO :
             pMsg = bcolors.INFO + pMsg + bcolors.ENDC
-        elif pLvl == 25 :
+        elif pLvl == lvl.SUCESS :
             pMsg = bcolors.SUCCESS + pMsg + bcolors.ENDC
-        elif pLvl == 30 :
+        elif pLvl == lvl.WARNING :
             pMsg = bcolors.WARNING + pMsg + bcolors.ENDC
-        elif pLvl == 40 :
+        elif pLvl == lvl.FAIL :
             pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
         self.logger.log(pLvl,pMsg)
 
 
-class bcolors:
-    DEBUG = '\033[94m'
-    INFO = '\033[95m'
-    SUCCESS = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
+
 
 
 

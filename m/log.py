@@ -19,18 +19,18 @@ class Log(object):
             dest.write("%s,%s,%s,%s\n" % (d,pLog,pMsg,pIP))
 
 
-    def printL(self,pMsg,pLvl)
+    def printL(self,pMsg,pLvl):
         logger.log(pMsg, pLvl)
-            if pLvl == 10
-                print bcolors.DEBUG ,
-            elif pLvl == 20 :
-                print bcolors.INFO ,
-            elif pLvl == 30 :
-                print bcolors.WARNING ,
-            elif pLvl == 40 :
-                print bcolors.FAIL ,
-            print pMsg
-            print bcolors.ENDC ,
+        if pLvl == 10
+            print bcolors.DEBUG ,
+        elif pLvl == 20 :
+            print bcolors.INFO ,
+        elif pLvl == 30 :
+            print bcolors.WARNING ,
+        elif pLvl == 40 :
+            print bcolors.FAIL ,
+        print pMsg
+        print bcolors.ENDC ,
 
 
         }

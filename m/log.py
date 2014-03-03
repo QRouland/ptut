@@ -35,7 +35,7 @@ class Log(object):
 
     def printL(self,pMsg,pLvl):
         if pLvl == 10 :
-            sys.stdout.write(bcolors.DEBUG)
+            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
         elif pLvl == 20 :
             sys.stdout.write(bcolors.INFO)
         elif pLvl == 25 :

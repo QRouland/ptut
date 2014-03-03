@@ -1,5 +1,6 @@
 import logging
 from logging.handlers import RotatingFileHandler
+import sys
 import time
 from datetime import datetime
 
@@ -22,6 +23,10 @@ class Log(object):
         file_handler_error.setFormatter(formatter)
         self.logger.addHandler(file_handler_error)
 
+        steam_handler = logging.StreamHandler()
+        steam_handler.setLevel(logging.DEBUG)
+        logger.addHandler(steam_handler)
+
     def enregDansLog(self,pLog,pMsg,pIP):
         with open("fichier/log", "a") as dest :
             d = datetime.now().strftime("%c")
@@ -29,18 +34,18 @@ class Log(object):
 
 
     def printL(self,pMsg,pLvl):
-        self.logger.log(pLvl,pMsg)
         if pLvl == 10 :
-            print bcolors.DEBUG + pMsg + bcolors.ENDC
+            sys.stdout.write bcolors.DEBUG
         elif pLvl == 20 :
-            print bcolors.INFO + pMsg + bcolors.ENDC
+            sys.stdout.write bcolors.INFO
         elif pLvl == 25 :
-            print bcolors.SUCCESS + pMsg + bcolors.ENDC
+            sys.stdout.write bcolors.SUCCESS
         elif pLvl == 30 :
-            print bcolors.WARNING + pMsg + bcolors.ENDC
+            sys.stdout.write bcolors.WARNING
         elif pLvl == 40 :
-            print bcolors.FAIL + pMsg + bcolors.ENDC
-
+            sys.stdout.write bcolors.FAIL
+        self.logger.log(pLvl,pMsg)
+        sys.stdout bcolors.ENDC
 
 class bcolors:
     DEBUG = '\033[94m'

@@ -154,7 +154,7 @@ application = tornado.web.Application([
     cookie_secret="1213215656")
 
 if __name__ == "__main__":
-    printL ("->Loading configuration ... ", 20 )
+    ficLog.printL ("->Loading configuration ... ", 20 )
     try :
         blind = config.isBlind()
         ipCamera = config.ipCamera()

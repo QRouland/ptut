@@ -176,10 +176,10 @@ if __name__ == "__main__":
 
     urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
     try :
-            f = urlopen(urlCamera)
-            log.printL( "->Camera OK ", lvl.SUCCESS)
-        except Exception, e :
-            log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.ERROR)
+        f = urlopen(urlCamera)
+        log.printL( "->Camera OK ", lvl.SUCCESS)
+    except Exception, e :
+        log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.ERROR)
 
 
     try :

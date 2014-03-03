@@ -21,6 +21,7 @@
             }
             ws.onopen = function () {
                 console.log("websocket engage");
+                document.cookie = encodeURIComponent("user") + "=deleted; expires=" + new Date(0).toUTCString();
             };
             ws.onclose = function () {
                 console.log("connection closed");

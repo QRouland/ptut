@@ -45,7 +45,7 @@ class MainHandler(BaseHandler):
         log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',10)
         self.set_secure_cookie("user", iden)
         if autorise == True:
-            self.set_secure_cookie("user", iden)
+            self.set_secure_cookie("user", iden,1)
             self.redirect("/video")
         else:
             log.printL("->An unauthorized user try to access : " + self.request.remote_ip,30)
@@ -65,7 +65,7 @@ class UnauthorizedHandler(BaseHandler):
     def post(self):
         force = self.get_argument("illegalAccess","")
         if force == "1" :
-            self.set_secure_cookie("user", "IllegalUser")
+            self.set_secure_cookie("user", "IllegalUser",1)
             self.redirect("/video")
         else :
             self.redirect("/")
@@ -119,7 +119,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else:
             log.printL('->Send visual alarm deconnection user',20)
             log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',10)
-        print"->"+iden+" Deconnection : " + self.request.remote_ip
+        log.printL"->"+iden+" Deconnection : " + self.request.remote_ip
 
 
     def send_image(self) :

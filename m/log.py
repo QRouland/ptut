@@ -6,6 +6,7 @@ from datetime import datetime
 class Log(object):
     def __init__(self) :
         self.logger = logging.getLogger()
+        self.logger = addLevelName(25, SUCESS)
         self.logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
         file_handler = RotatingFileHandler('activity.log', 'a', 1000000, 1)
@@ -30,6 +31,8 @@ class Log(object):
             print bcolors.DEBUG,
         elif pLvl == 20 :
             print bcolors.INFO,
+        elif pLvl == 25 :
+            print bcolors.SUCCESS,
         elif pLvl == 30 :
             print bcolors.WARNING,
         elif pLvl == 40 :
@@ -38,20 +41,13 @@ class Log(object):
         print bcolors.ENDC,
 
 class bcolors:
-    NOTSET = '\033[95m'
-    DEBUG = '\033[94m'
-    INFO = '\033[92m'
+    DEBUG = '\033[95m'
+    INFO = '\033[94m'
+    SUCCESS = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
 
-    def disable(self):
-        self.HEADER = ''
-        self.OKBLUE = ''
-        self.OKGREEN = ''
-        self.WARNING = ''
-        self.FAIL = ''
-        self.ENDC = ''
 
 
 

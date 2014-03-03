@@ -170,9 +170,9 @@ if __name__ == "__main__":
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
         log.printL(e.value, 40)
-        log.printL("Configuration Loading Failed ! Check Configuration File !")
+        log.printL("Configuration Loading Failed ! Check Configuration File !", 40)
         sys.exit(1)
-    print log.printL("->Configuration Server Load Successfully :", 20)
+    print log.printL("->Configuration Server Load Successfully :", 25)
     if blind == True:
         log.printL("  ->Blind unhabitant", 20)
     else :
@@ -185,7 +185,7 @@ if __name__ == "__main__":
         log.printL("->Server Start ...",20)
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(portServ)
-        log.printL("->Server Start Successfully !",20)
+        log.printL("->Server Start Successfully !",25)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         log.printL("Server Start Failed !",40)

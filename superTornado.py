@@ -37,8 +37,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        urlSocket = 'ws://'+socket.getaddrinfo(socket.gethostname(), None)+':'+portCamera+'/socket'
-        self.render("v/index.html", url=urlSocket)
+        self.render("v/index.html")
 
     def post(self):
         iden = self.get_argument("id","")
@@ -60,7 +59,7 @@ class VideoHandler(BaseHandler):
         if not self.current_user  :
             self.redirect("/")
             return
-        self.render("v/video.html")
+        self.render("v/video.html", url=urlSocket)
 
 class UnauthorizedHandler(BaseHandler):
     def get(self):
@@ -154,13 +153,16 @@ if __name__ == "__main__":
         blind = config.isBlind()
         ipCamera = config.ipCamera()
         portCamera = config.portCamera()
+        ipServ = config.ipServ()
         portServ = config.portServ()
         if blind == "error" :
             raise ConfigError("Failed Load Blind Configuration")
         if ipCamera == "error" :
             raise ConfigError("Failed Load IP Camera Configuration")
         if portCamera == "error" :
-            raise ConfigError("Failed Load IP Camera Configuration")
+            raise ConfigError("Failed Load Port Camera Configuration")
+        if ipServ == "error" :
+            raise ConfigError("Failed Load IP Server Configuration")
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
@@ -177,6 +179,7 @@ if __name__ == "__main__":
     log.printL("  +Port Server : " + portServ,lvl.INFO)
     print ""
 
+    urlSocket = 'ws://'+ipServ':'+portCamera+'/socket'
     urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
     log.printL("->Ping camera ...",lvl.INFO)
     try :

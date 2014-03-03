@@ -53,7 +53,7 @@ class MainHandler(BaseHandler):
 
 class VideoHandler(BaseHandler):
     def get(self):
-        if not self.get_autorisation and not self.get_current_user  :
+        if not self.current_user  :
             self.redirect("/")
             return
         self.render("v/video.html")

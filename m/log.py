@@ -27,12 +27,6 @@ class Log(object):
         steam_handler.setLevel(logging.DEBUG)
         self.logger.addHandler(steam_handler)
 
-    def enregDansLog(self,pLog,pMsg,pIP):
-        with open("fichier/log", "a") as dest :
-            d = datetime.now().strftime("%c")
-            dest.write("%s,%s,%s,%s\n" % (d,pLog,pMsg,pIP))
-
-
     def printL(self,pMsg,pLvl):
         if pLvl == 10 :
             pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC

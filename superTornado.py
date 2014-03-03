@@ -44,13 +44,13 @@ class MainHandler(BaseHandler):
 
         login = Login()
         autorise = login.connexion(iden, mdp)
-        print 'maison = httplib.HTTPConnection("192.168.16.150", 80)'
+        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',10)
         self.set_secure_cookie("user", iden)
         if autorise == True:
             self.set_secure_cookie("auth", "yes")
             self.redirect("/video")
         else:
-            print "->An unauthorized user try to access : " + self.request.remote_ip
+            log.printL("->An unauthorized user try to access : " + self.request.remote_ip,30)
             self.redirect("/unauthorized")
 
 class VideoHandler(BaseHandler):
@@ -87,46 +87,44 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if not self.get_autorisation and not self.get_current_user :
             self.close()
             return
-        print "->Websocket opened : " + self.request.remote_ip
+        log.printL("->Websocket opened : " + self.request.remote_ip,25)
         iden = self.current_user
         if self.get_autorisation == "yes":
-            log.enregDansLog(iden,"Authorized user connection",self.request.remote_ip)
+            log.printL(iden + ",Authorized user connection,"+self.request.remote_ip,20)
             if confAveug == True:
-                print '->Send audio alarm authorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")'
+                log.printL('->Send audio alarm authorized user',20)
+                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")',10)
             else:
-                print '->Send visual alarm authorized user'
-                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Authorized user access : " + self.request.remote_ip
+                log.printL('->Send visual alarm authorized user',20)
+                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
         else :
-            log.enregDansLog(iden + " as IllegalUser","Unauthorized user connection",self.request.remote_ip)
+            log.printL(iden + " as IllegalUser,Unauthorized user connection" + self.request.remote_ip,30)
             if confAveug == True:
-                print '->Send audio alarm unauthorized user'
-                print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")'
+                log.printL('->Send audio alarm unauthorized user',30)
+                log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")',10)
             else:
-                print '->Send visual alarm unauthorized user'
-                print 'maison.request("GET", "micom/lamp.php?room=salon1&order=1")'
-            print "->Unauthorized user access : " + self.request.remote_ip
+                log.printL('->Send visual alarm unauthorized user',30)
+                log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=1")',10)
         self.send_image()
 
     def on_message(self,mesg):
-        print "->Data receive : " + self.request.remote_ip
+        log.printL("->Data receive : " + self.request.remote_ip,20)
         self.send_image()
 
     def on_close(self):
-        print "->Websocket closed : "+self.request.remote_ip
+        log.printL("->Websocket closed : "+self.request.remote_ip,25)
         iden = self.current_user
         if self.get_autorisation == "yes":
-            log.enregDansLog(iden,"Authorized user deconnection",self.request.remote_ip)
+            log.printL(iden+",Authorized user deconnection,"+self.request.remote_ip,20)
         else :
-            log.enregDansLog(iden + " as IllegalUser","Unauthorized user deconnection",self.request.remote_ip)
+            log.printL(iden +" as IllegalUser,Unauthorized user deconnection,"+self.request.remote_ip,30)
 
         if confAveug == True:
-            print '->Send audio alarm deconnection user'
-            print 'maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")'
+            log.printL('->Send audio alarm deconnection user', 20)
+            log.printL('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")',10)
         else:
-            print '->Send visual alarm deconnection user'
-            print 'maison.request("GET", "micom/lamp.php?room=salon1&order=0")'
+            log.printL('->Send visual alarm deconnection user',20)
+            log.printL('maison.request("GET", "micom/lamp.php?room=salon1&order=0")',10)
         print"->"+iden+" Deconnection : " + self.request.remote_ip
 
 
@@ -137,9 +135,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            print "->Data send : " + self.request.remote_ip
+            log.printL( "->Data send : " + self.request.remote_ip, 10)
         except Exception, e :
-            print e
+            log.printL(e.value,40)
             self.write_message("error")
 
 application = tornado.web.Application([
@@ -172,7 +170,7 @@ if __name__ == "__main__":
         log.printL(e.value,40)
         log.printL("Configuration Loading Failed ! Check Configuration File !",40)
         sys.exit(1)
-    print log.printL("->Configuration Server Load Successfully !",25)
+    log.printL("->Configuration Server Load Successfully !",25)
     if blind == True:
         log.printL("  +Blind unhabitant",20)
     else :

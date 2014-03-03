@@ -131,7 +131,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             self.write_message(encoded)
             log.printL( "->Data send : " + self.request.remote_ip, 20)
         except Exception, e :
-            log.printL(e.value,40)
+            log.printL(e,40)
             self.write_message("error")
 
 application = tornado.web.Application([
@@ -183,5 +183,5 @@ if __name__ == "__main__":
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         log.printL("Server Start Failed !",40)
-        log.printL(e.value,40)
+        log.printL(e,40)
         sys.exit(1)

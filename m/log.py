@@ -8,7 +8,6 @@ class Log(object):
     def __init__(self) :
 
         logging.addLevelName(25, "SUCCESS")
-        logging.addLevelName(45, "ILLEGALUSER")
 
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
@@ -19,16 +18,12 @@ class Log(object):
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
 
+
+
         file_handler_error = RotatingFileHandler('error.log', 'a', 1000000, 1)
         file_handler_error.setLevel(logging.ERROR)
         file_handler_error.setFormatter(formatter)
         self.logger.addHandler(file_handler_error)
-
-        file_handler = RotatingFileHandler('illegal.log', 'a', 1000000, 1)
-        file_handler.setLevel(logging.ILLEGALUSER)
-        file_handler.setFormatter(formatter)
-        self.logger.addHandler(file_handler)
-
 
         steam_handler = logging.StreamHandler()
         steam_handler.setLevel(logging.NOTSET)
@@ -44,7 +39,7 @@ class Log(object):
             pMsg = bcolors.SUCCESS + pMsg + bcolors.ENDC
         elif pLvl == 30 :
             pMsg = bcolors.WARNING + pMsg + bcolors.ENDC
-        elif pLvl == 40 or pLvl ==45 :
+        elif pLvl == 40 :
             pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
         self.logger.log(pLvl,pMsg)
 

@@ -125,7 +125,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
     def send_image(self) :
         try :
             socket.setdefaulttimeout(5)
-            f = urlopen('http://test:a@192.168.1.13/image.jpg?cidx=791836195')
+            f = urlopen(urlCamera)
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
@@ -175,12 +175,14 @@ if __name__ == "__main__":
     print ""
 
     urlCamera = 'http://test:a@'+ipCamera+':'+portCamera+'/image.jpg?cidx=791836195'
+    log.printL("->Ping camera ...",lvl.INFO)
     try :
+        socket.setdefaulttimeout(30)
         f = urlopen(urlCamera)
         log.printL( "->Camera OK ", lvl.SUCCESS)
     except Exception, e :
-        log.printL("->Camera Unreachable! Check Camera Configuration!",lvl.FAIL)
-
+        log.printL("->WARNING : Camera Unreachable! Check Camera Configuration!",lvl.FAIL)
+    print ""
 
     try :
         log.printL("->Server Start ...",lvl.INFO)

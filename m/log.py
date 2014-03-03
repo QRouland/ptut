@@ -20,7 +20,7 @@ class lvl:
 class Log(object):
     def __init__(self) :
 
-        logging.addLevelName(lvl.SUCESS, "SUCCESS")
+        logging.addLevelName(lvl.SUCCESS, "SUCCESS")
 
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)

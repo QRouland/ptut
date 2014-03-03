@@ -8,7 +8,7 @@ class Log(object):
 
         logging.addLevelName(25, "SUCCESS")
 
-        self.logger = log.getLogger()
+        self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
 

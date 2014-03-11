@@ -1,24 +1,26 @@
+"""Seveur Tornado"""
 import tornado.ioloop
 import tornado.web
 import tornado.httpserver
 import tornado.websocket
 import tornado.options
+from tornado.ioloop import PeriodicCallback
+
+"""Autre """
 import sys
 import time
 import base64
 import socket
-
+import os
 from urllib import urlopen
-from tornado.ioloop import PeriodicCallback
 
-
-
+"""Nos Fichier"""
 from m.loadConf import *
 from m.login import *
 from m.log import *
-import os
 
 
+"""Global"""
 config = LoadConf()
 blind = False
 ipCamera = ""

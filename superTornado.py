@@ -194,6 +194,7 @@ if __name__ == "__main__":
 
     log.printL("->Ping camera ...",lvl.INFO)
     try :
+        socket.setdefaulttimeout(30)
         f = urlopen(urlCamera)
         log.printL( "->Camera OK ", lvl.SUCCESS)
     except Exception, e :

@@ -151,6 +151,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
+    (r"/favicon.ico", tornado.web.StaticFileHandler,{"path":"./v/favicon.ico"},),
     (r"/style/(.*)", tornado.web.StaticFileHandler,{"path":"./v/style"},),
     (r"/images/(.*)", tornado.web.StaticFileHandler,{"path":"./v/images"},),
     (r"/js/(.*)", tornado.web.StaticFileHandler,{"path":"./v/js"},)],

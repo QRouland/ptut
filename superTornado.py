@@ -151,8 +151,7 @@ application = tornado.web.Application([
     (r"/unauthorized", UnauthorizedHandler),
     (r"/disconnection", DisconnectionHandler),
     (r"/socket", WSocketHandler),
-    (r"/ssl/(.*)", tornado.web.StaticFileHandler,{"path":"./ssl"},),
-    (r"/(favicon.ico)", tornado.web.StaticFileHandler,{"path":"./v/"},),
+    (r"/(favicon.ico)", tornado.web.StaticFileHandler,{"path":"./v/images"},),
     (r"/style/(.*)", tornado.web.StaticFileHandler,{"path":"./v/style"},),
     (r"/images/(.*)", tornado.web.StaticFileHandler,{"path":"./v/images"},),
     (r"/js/(.*)", tornado.web.StaticFileHandler,{"path":"./v/js"},)],
@@ -206,10 +205,12 @@ if __name__ == "__main__":
     try :
         log.printL("->Server Start ...",lvl.INFO)
         tornado.options.parse_command_line()
+        print "lol"
         http_server = tornado.httpserver.HTTPServer(application,ssl_options={
         "certfile": "/ssl/server.crt",
         "keyfile": "/ssl/server.key",
         })
+        print "lol1"
         http_server.listen(433)
         log.printL("->Server Start Successfully !",lvl.SUCCESS)
         tornado.ioloop.IOLoop.instance().start()

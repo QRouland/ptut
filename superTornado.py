@@ -206,7 +206,7 @@ if __name__ == "__main__":
         log.printL("->Server Start ...",lvl.INFO)
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application,ssl_options={
-    "certfile": os.path.join("/ssl", "server.crt"),
+    "certfile": os.path.join("/lol", "server.crt"),
     "keyfile": os.path.join("/ssl", "server.key"),
     })
         http_server.listen(portServ)

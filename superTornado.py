@@ -207,10 +207,11 @@ if __name__ == "__main__":
         log.printL("->Server Start ...",lvl.INFO)
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application,ssl_options={
-        "certfile": "/ssl","server.crt"),
-        "keyfile": "/ssl","server.key"),
+        "certfile": "/ssl/server.crt",
+        "keyfile": "/ssl/server.key",
+    })
         })
-        http_server.listen(portServ)
+        http_server.listen(433)
         log.printL("->Server Start Successfully !",lvl.SUCCESS)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :

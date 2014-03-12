@@ -215,5 +215,5 @@ if __name__ == "__main__":
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         log.printL("Server Start Failed !",lvl.FAIL)
-        log.printL(e,lvl.FAIL)
+        log.printL(e.value,lvl.FAIL)
         sys.exit(1)

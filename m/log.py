@@ -42,7 +42,7 @@ class Log(object):
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
 
-        file_handler_warning = RotatingFileHandler('illegal.log', 'a', 1000000, 1)
+        file_handler_warning = RotatingFileHandler('warning.log', 'a', 1000000, 1)
         f1 = SingleLevelFilter(logging.WARNING, False)
         file_handler_warning.addFilter(f1)
         file_handler_warning.setFormatter(formatter)

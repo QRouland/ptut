@@ -78,7 +78,7 @@ class MainHandler(BaseHandler):
             self.set_secure_cookie("user", iden,1)
             self.redirect("/video")
         else:
-            log.printL("->An unauthorized user try to access : " + self.request.remote_ip,lvl.WARNING)
+            GlobalVars.log.printL("->An unauthorized user try to access : " + self.request.remote_ip,lvl.WARNING)
             self.redirect("/unauthorized")
 
 
@@ -154,27 +154,27 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if not self.current_user :
             self.close()
             return
-        log.printL("->Websocket Open : " + self.request.remote_ip,lvl.SUCCESS)
+        GlobalVars.log.printL("->Websocket Open : " + self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
-            log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
+            GlobalVars.log.printL("->"+iden + " : Authorized user connection : "+self.request.remote_ip,lvl.INFO)
             if blind == True:
                 GlobalVars.authorized + 1
-                log.printL('->Send audio alarm authorized user',lvl.INFO)
+                GlobalVars.log.printL('->Send audio alarm authorized user',lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
             else:
                 GlobalVars.authorized + 1
-                log.printL('->Send visual alarm authorized user',lvl.INFO)
+                GlobalVars.log.printL('->Send visual alarm authorized user',lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         else :
-            log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
+            GlobalVars.log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
             if blind == True:
                 GlobalVars.unauthorized + 1
-                log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
+                GlobalVars.log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
             else:
                 GlobalVars.unauthorized + 1
-                log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
+                GlobalVars.log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
                 self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         self.send_image()
 
@@ -183,7 +183,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         """
         Client Ask For Image
         """
-        log.printL("->Demand Data Receive : " + self.request.remote_ip,lvl.INFO)
+        GlobalVars.log.printL("->Demand Data Receive : " + self.request.remote_ip,lvl.INFO)
         self.send_image()
 
     def on_close(self):
@@ -191,35 +191,35 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         Socket connection Connection->
         Alert unhabitant with the good signal
         """
-        log.printL("->Websocket Closed : "+self.request.remote_ip,lvl.SUCCESS)
+        GlobalVars.log.printL("->Websocket Closed : "+self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
             authorized - 1
-            log.printL("->"+iden+" : Authorized User Deconnection : "+self.request.remote_ip,lvl.INFO)
+            GlobalVars.log.printL("->"+iden+" : Authorized User Deconnection : "+self.request.remote_ip,lvl.INFO)
         else :
             unauthorized - 1
-            log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
+            GlobalVars.log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
 
         if blind == True:
             if (GlobalVars.unauthorized == 0) and (authorized == 0):
-                log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
+                GlobalVars.log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
         else:
             if (GlobalVars.unauthorized == 0) and (authorized == 0):
-                log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
+                GlobalVars.log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=0")')
 
     def send_signal_house(self, pRq) :
         """
         Allow send pRq request to the house
         """
-        log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
+        GlobalVars.log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
         try :
-            log.printL('maison.request("GET",'+pRq,lvl.DEBUG)
-            log.printL("->Signal To House Send Successfully", lvl.SUCCESS)
+            GlobalVars.log.printL('maison.request("GET",'+pRq,lvl.DEBUG)
+            GlobalVars.log.printL("->Signal To House Send Successfully", lvl.SUCCESS)
         except Exception, e :
-            log.printL(e, lvl.FAIL)
-            log.printL("->Signal To House Send Failed", lvl.FAIL)
+            GlobalVars.log.printL(e, lvl.FAIL)
+            GlobalVars.log.printL("->Signal To House Send Failed", lvl.FAIL)
 
     def send_image(self) :
         """
@@ -231,9 +231,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = f.read()
             encoded = base64.b64encode(data)
             self.write_message(encoded)
-            log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)
+            GlobalVars.log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)
         except Exception, e :
-            log.printL(e,lvl.FAIL)
+            GlobalVars.log.printL(e,lvl.FAIL)
             self.write_message("error")
 
 
@@ -250,7 +250,7 @@ application = tornado.web.Application([
     cookie_secret=''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(64)))
 
 if __name__ == "__main__":
-    log.printL("->Loading configuration ... ",lvl.INFO)
+    GlobalVarsGlobalVars.log.printL("->Loading configuration ... ",lvl.INFO)
     try :
         GlobalVars.blind = config.isBlind()
         GlobalVars.ipCamera = config.ipCamera()
@@ -275,39 +275,39 @@ if __name__ == "__main__":
         if portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
-        log.printL(e.value,lvl.FAIL)
-        log.printL("Configuration Loading Failed ! Check Configuration File !",lvl.FAIL)
+        GlobalVars.log.printL(e.value,lvl.FAIL)
+        GlobalVars.log.printL("Configuration Loading Failed ! Check Configuration File !",lvl.FAIL)
         sys.exit(1)
-    log.printL("->Configuration Server Load Successfully !",lvl.SUCCESS)
+    GlobalVars.log.printL("->Configuration Server Load Successfully !",lvl.SUCCESS)
     if blind == True:
-        log.printL("  +Blind unhabitant",lvl.INFO)
+        GlobalVars.log.printL("  +Blind unhabitant",lvl.INFO)
     else :
-        log.printL(" +Not blind unhabitant",lvl.INFO)
-    log.printL("  +Ip Camera : " + GlobalVars.ipCamera,lvl.INFO)
-    log.printL("  +Port Camera : " + GlobalVars.portCamera,lvl.INFO)
-    log.printL("  +Ip Server : " + GlobalVars.ipServ,lvl.INFO)
-    log.printL("  +Port Server : " + GlobalVars.portServ,lvl.INFO)
+        GlobalVars.log.printL(" +Not blind unhabitant",lvl.INFO)
+    GlobalVars.log.printL("  +Ip Camera : " + GlobalVars.ipCamera,lvl.INFO)
+    GlobalVars.log.printL("  +Port Camera : " + GlobalVars.portCamera,lvl.INFO)
+    GlobalVars.log.printL("  +Ip Server : " + GlobalVars.ipServ,lvl.INFO)
+    GlobalVars.log.printL("  +Port Server : " + GlobalVars.portServ,lvl.INFO)
     print ""
 
     GlobalVars.urlSocket = 'ws://'+GlobalVars.ipServ+':'+GlobalVars.portCamera+'/socket'
     GlobalVars.urlCamera = 'http://'+GlobalVars.idCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/'+GlobalVars.endUrlCamera
 
-    log.printL("->Ping camera ...",lvl.INFO)
+    GlobalVars.log.printL("->Ping camera ...",lvl.INFO)
     try :
         socket.setdefaulttimeout(30)
         urlopen(GlobalVars.urlCamera)
-        log.printL( "->Camera OK ", lvl.SUCCESS)
+        GlobalVars.log.printL( "->Camera OK ", lvl.SUCCESS)
     except Exception, e :
-        log.printL("->WARNING : Camera Unreachable! Check Camera Configuration!",lvl.FAIL)
+        GlobalVars.log.printL("->WARNING : Camera Unreachable! Check Camera Configuration!",lvl.FAIL)
     print ""
 
     try :
-        log.printL("->Server Start ...",lvl.INFO)
+        GlobalVars.log.printL("->Server Start ...",lvl.INFO)
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(GlobalVars.portServ)
-        log.printL("->Server Start Successfully !",lvl.SUCCESS)
+        GlobalVars.log.printL("->Server Start Successfully !",lvl.SUCCESS)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
-        log.printL("Server Start Failed !",lvl.FAIL)
+        GlobalVars.log.printL("Server Start Failed !",lvl.FAIL)
         sys.exit(1)

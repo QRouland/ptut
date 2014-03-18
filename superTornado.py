@@ -25,7 +25,7 @@ from m.log import *
 class GlobalVars :
     """
     Global vars for server
-        """
+    """
     config = LoadConf()
     blind = False
     ipCamera = ""

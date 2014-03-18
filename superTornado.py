@@ -30,9 +30,11 @@ class GlobalVars :
     blind = False
     ipCamera = ""
     portCamera = ""
+    endUrlCamera = ""
+    idCamera = ""
+    urlCamera = ""
     portServ = ""
     log = Log()
-    urlCamera = ""
     urlSocket = ""
     authorized = 0
     unauthorized = 0
@@ -253,14 +255,21 @@ if __name__ == "__main__":
         GlobalVars.blind = config.isBlind()
         GlobalVars.ipCamera = config.ipCamera()
         GlobalVars.portCamera = config.portCamera()
+        GlobalVars.idCamera = config.idCamera()
+        GlobalVars.endUrlCamera = config.endUrlCamera()
         GlobalVars.ipServ = config.ipServ()
         GlobalVars.portServ = config.portServ()
+
         if blind == "error" :
             raise ConfigError("Failed Load Blind Configuration")
         if ipCamera == "error" :
             raise ConfigError("Failed Load IP Camera Configuration")
         if portCamera == "error" :
             raise ConfigError("Failed Load Port Camera Configuration")
+        if idCamera == "error" :
+            raise ConfigError("Failed Load ID Camera Configuration")
+        if endUrlCamera == "error" :
+            raise ConfigError("Failed Load ID Camera Configuration")
         if ipServ == "error" :
             raise ConfigError("Failed Load IP Server Configuration")
         if portServ == "error" :
@@ -281,7 +290,7 @@ if __name__ == "__main__":
     print ""
 
     GlobalVars.urlSocket = 'ws://'+GlobalVars.ipServ+':'+GlobalVars.portCamera+'/socket'
-    GlobalVars.urlCamera = 'http://test:a@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/image.jpg?cidx=791836195'
+    GlobalVars.urlCamera = 'http://'+GlobalVars.idCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/'+GlobalVars.endUrlCamera
 
     log.printL("->Ping camera ...",lvl.INFO)
     try :

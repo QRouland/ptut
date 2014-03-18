@@ -168,7 +168,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 self.send_signal_house('maison.request("GET", "micom/lamp.php?room=salon1&order=1")')
         else :
             GlobalVars.log.printL("->"+iden + ": Unauthorized user connection : " + self.request.remote_ip,lvl.WARNING)
-            if blind == True:
+            if GlobalVars.blind == True:
                 GlobalVars.unauthorized + 1
                 GlobalVars.log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
@@ -200,7 +200,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             unauthorized - 1
             GlobalVars.log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
 
-        if blind == True:
+        if GlobalVars.blind == True:
             if (GlobalVars.unauthorized == 0) and (authorized == 0):
                 GlobalVars.log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
@@ -279,7 +279,7 @@ if __name__ == "__main__":
         GlobalVars.log.printL("Configuration Loading Failed ! Check Configuration File !",lvl.FAIL)
         sys.exit(1)
     GlobalVars.log.printL("->Configuration Server Load Successfully !",lvl.SUCCESS)
-    if blind == True:
+    if GlobalVars.blind == True:
         GlobalVars.log.printL("  +Blind unhabitant",lvl.INFO)
     else :
         GlobalVars.log.printL(" +Not blind unhabitant",lvl.INFO)

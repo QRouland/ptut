@@ -250,7 +250,7 @@ application = tornado.web.Application([
     cookie_secret=''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(64)))
 
 if __name__ == "__main__":
-    GlobalVarsGlobalVars.log.printL("->Loading configuration ... ",lvl.INFO)
+    GlobalVars.log.printL("->Loading configuration ... ",lvl.INFO)
     try :
         GlobalVars.blind = config.isBlind()
         GlobalVars.ipCamera = config.ipCamera()

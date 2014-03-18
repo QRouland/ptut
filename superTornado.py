@@ -201,7 +201,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             GlobalVars.log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
 
         if GlobalVars.blind == True:
-            if (GlobalVars.unauthorized == 0) and (authorized == 0):
+            if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized == 0):
                 GlobalVars.log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
                 self.send_signal_house('maison.request("GET", "micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
         else:

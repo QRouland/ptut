@@ -1,0 +1,58 @@
+.TH "superTornado.MainHandler" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+superTornado.MainHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBsuperTornado\&.BaseHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBget\fP"
+.br
+.ti -1c
+.RI "def \fBpost\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Main web page : / in http sever
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def superTornado\&.MainHandler\&.get (self)"
+
+.PP
+.nf
+GET request -> return index.html where user can login
+
+.fi
+.PP
+ 
+.SS "def superTornado\&.MainHandler\&.post (self)"
+
+.PP
+.nf
+POST request -> try to connect user with parameter POST (iden and paswd)
+if connection sucessfull
+    go to the /video page (VideoHandler)
+else
+    go to the /unauthorized page (UnauthorizedHandler)
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TornadoServerMI from the source code\&.

@@ -1,0 +1,96 @@
+.TH "superTornado.WSocketHandler" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+superTornado.WSocketHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBsuperTornado\&.BaseHandler\fP, and WebSocketHandler\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBopen\fP"
+.br
+.ti -1c
+.RI "def \fBon_message\fP"
+.br
+.ti -1c
+.RI "def \fBon_close\fP"
+.br
+.ti -1c
+.RI "def \fBsend_signal_house\fP"
+.br
+.ti -1c
+.RI "def \fBsend_image\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+/socket in http server
+websocket definition
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def superTornado\&.WSocketHandler\&.on_close (self)"
+
+.PP
+.nf
+Socket connection Connection->
+Alert unhabitant with the good signal
+
+.fi
+.PP
+ 
+.SS "def superTornado\&.WSocketHandler\&.on_message (self, mesg)"
+
+.PP
+.nf
+Client Ask For Image
+
+.fi
+.PP
+ 
+.SS "def superTornado\&.WSocketHandler\&.open (self)"
+
+.PP
+.nf
+Open socket request ->
+if is a connect user
+    open connection socket, alert the unhabitant with the good signal
+else
+    don't open connection
+
+.fi
+.PP
+ 
+.SS "def superTornado\&.WSocketHandler\&.send_image (self)"
+
+.PP
+.nf
+Allow send the image in the websocket
+
+.fi
+.PP
+ 
+.SS "def superTornado\&.WSocketHandler\&.send_signal_house (self, pRq)"
+
+.PP
+.nf
+Allow send pRq request to the house
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TornadoServerMI from the source code\&.

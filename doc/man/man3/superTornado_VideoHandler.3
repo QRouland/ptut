@@ -1,0 +1,46 @@
+.TH "superTornado.VideoHandler" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+superTornado.VideoHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBsuperTornado\&.BaseHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBget\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Video web page : /video in http sever
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def superTornado\&.VideoHandler\&.get (self)"
+
+.PP
+.nf
+GET request ->
+If user is connected return video.html who
+    allow with websocket (WSocketHandler) to see the video of the camera
+Else
+    go to main page (MainHandler)
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TornadoServerMI from the source code\&.

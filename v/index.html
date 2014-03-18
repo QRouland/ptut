@@ -6,7 +6,7 @@
         <script type="text/javascript">
             // Si aucun login et mot de passe n'ont été saisis alors :
             function checkForm(form) {
-                if(form.j_username.value == "" && form.j_password.value == "") {
+                if(form.username.value == "" && form.password.value == "") {
                     alert('Veuillez saisir votre login et votre mot de passe svp !')
                     return false;
                 }
@@ -32,7 +32,7 @@
                 <!-- Password -->
                 <div class="field">
                     <label for="password">Mot de passe</label>
-                    <input id="password" name="mdp" type="password">
+                    <input id="password" name="paswd" type="password">
                 </div>
                 <!-- On click on the submit button run the checkFrom function -->
                 <input type="submit" value="Connexion" onclick="return checkForm(form);">

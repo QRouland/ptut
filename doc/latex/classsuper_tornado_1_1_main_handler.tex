@@ -1,0 +1,51 @@
+\hypertarget{classsuper_tornado_1_1_main_handler}{\section{super\-Tornado.\-Main\-Handler Class Reference}
+\label{classsuper_tornado_1_1_main_handler}\index{super\-Tornado.\-Main\-Handler@{super\-Tornado.\-Main\-Handler}}
+}
+Inheritance diagram for super\-Tornado.\-Main\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsuper_tornado_1_1_main_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsuper_tornado_1_1_main_handler_aa07ddde9b0a5bd006a055858ffef03cd}{get}
+\item 
+def \hyperlink{classsuper_tornado_1_1_main_handler_a34b9f9761f25b951e452954252e82deb}{post}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Main web page : / in http sever
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classsuper_tornado_1_1_main_handler_aa07ddde9b0a5bd006a055858ffef03cd}{\index{super\-Tornado\-::\-Main\-Handler@{super\-Tornado\-::\-Main\-Handler}!get@{get}}
+\index{get@{get}!superTornado::MainHandler@{super\-Tornado\-::\-Main\-Handler}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}def super\-Tornado.\-Main\-Handler.\-get (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsuper_tornado_1_1_main_handler_aa07ddde9b0a5bd006a055858ffef03cd}
+\begin{DoxyVerb}GET request -> return index.html where user can login
+\end{DoxyVerb}
+ \hypertarget{classsuper_tornado_1_1_main_handler_a34b9f9761f25b951e452954252e82deb}{\index{super\-Tornado\-::\-Main\-Handler@{super\-Tornado\-::\-Main\-Handler}!post@{post}}
+\index{post@{post}!superTornado::MainHandler@{super\-Tornado\-::\-Main\-Handler}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}def super\-Tornado.\-Main\-Handler.\-post (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsuper_tornado_1_1_main_handler_a34b9f9761f25b951e452954252e82deb}
+\begin{DoxyVerb}POST request -> try to connect user with parameter POST (iden and paswd)
+if connection sucessfull
+    go to the /video page (VideoHandler)
+else
+    go to the /unauthorized page (UnauthorizedHandler)
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+super\-Tornado.\-py\end{DoxyCompactItemize}

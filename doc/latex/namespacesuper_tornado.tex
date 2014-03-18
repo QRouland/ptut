@@ -1,0 +1,52 @@
+\hypertarget{namespacesuper_tornado}{\section{super\-Tornado Namespace Reference}
+\label{namespacesuper_tornado}\index{super\-Tornado@{super\-Tornado}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsuper_tornado_1_1_global_vars}{Global\-Vars}
+\item 
+class \hyperlink{classsuper_tornado_1_1_base_handler}{Base\-Handler}
+\item 
+class \hyperlink{classsuper_tornado_1_1_main_handler}{Main\-Handler}
+\item 
+class \hyperlink{classsuper_tornado_1_1_video_handler}{Video\-Handler}
+\item 
+class \hyperlink{classsuper_tornado_1_1_unauthorized_handler}{Unauthorized\-Handler}
+\item 
+class \hyperlink{classsuper_tornado_1_1_disconnection_handler}{Disconnection\-Handler}
+\item 
+class \hyperlink{classsuper_tornado_1_1_w_socket_handler}{W\-Socket\-Handler}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple {\bfseries application}
+\item 
+\hypertarget{namespacesuper_tornado_acc65a75d3941165f9c5e66f6af6bd32f}{tuple {\bfseries http\-\_\-server} = tornado.\-httpserver.\-H\-T\-T\-P\-Server(application)}\label{namespacesuper_tornado_acc65a75d3941165f9c5e66f6af6bd32f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Import Tornado Server\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{namespacesuper_tornado_a8fda9ce7efd1de41c7487a207de2f71d}{\index{super\-Tornado@{super\-Tornado}!application@{application}}
+\index{application@{application}!superTornado@{super\-Tornado}}
+\subsubsection[{application}]{\setlength{\rightskip}{0pt plus 5cm}tuple super\-Tornado.\-application}}\label{namespacesuper_tornado_a8fda9ce7efd1de41c7487a207de2f71d}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = tornado.web.Application([
+2     (\textcolor{stringliteral}{r"/"}, MainHandler),
+3     (\textcolor{stringliteral}{r"/video"}, VideoHandler),
+4     (\textcolor{stringliteral}{r"/unauthorized"}, UnauthorizedHandler),
+5     (\textcolor{stringliteral}{r"/disconnection"}, DisconnectionHandler),
+6     (\textcolor{stringliteral}{r"/socket"}, WSocketHandler),
+7     (\textcolor{stringliteral}{r"/(favicon.ico)"}, tornado.web.StaticFileHandler,\{\textcolor{stringliteral}{"path"}:\textcolor{stringliteral}{"./v/images"}\},),
+8     (\textcolor{stringliteral}{r"/style/(.*)"}, tornado.web.StaticFileHandler,\{\textcolor{stringliteral}{"path"}:\textcolor{stringliteral}{"./v/style"}\},),
+9     (\textcolor{stringliteral}{r"/images/(.*)"}, tornado.web.StaticFileHandler,\{\textcolor{stringliteral}{"path"}:\textcolor{stringliteral}{"./v/images"}\},),
+10     (\textcolor{stringliteral}{r"/js/(.*)"}, tornado.web.StaticFileHandler,\{\textcolor{stringliteral}{"path"}:\textcolor{stringliteral}{"./v/js"}\},)],
+11     cookie\_secret=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase + string.digits) \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(64)))
+\end{DoxyCode}

@@ -1,0 +1,73 @@
+.TH "superTornado" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+superTornado \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGlobalVars\fP"
+.br
+.ti -1c
+.RI "class \fBBaseHandler\fP"
+.br
+.ti -1c
+.RI "class \fBMainHandler\fP"
+.br
+.ti -1c
+.RI "class \fBVideoHandler\fP"
+.br
+.ti -1c
+.RI "class \fBUnauthorizedHandler\fP"
+.br
+.ti -1c
+.RI "class \fBDisconnectionHandler\fP"
+.br
+.ti -1c
+.RI "class \fBWSocketHandler\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBapplication\fP"
+.br
+.ti -1c
+.RI "tuple \fBhttp_server\fP = tornado\&.httpserver\&.HTTPServer(application)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Import Tornado Server
+.fi
+.PP
+ 
+.SH "Variable Documentation"
+.PP 
+.SS "tuple superTornado\&.application"
+\fBInitial value:\fP
+.PP
+.nf
+1 = tornado\&.web\&.Application([
+2     (r"/", MainHandler),
+3     (r"/video", VideoHandler),
+4     (r"/unauthorized", UnauthorizedHandler),
+5     (r"/disconnection", DisconnectionHandler),
+6     (r"/socket", WSocketHandler),
+7     (r"/(favicon\&.ico)", tornado\&.web\&.StaticFileHandler,{"path":"\&./v/images"},),
+8     (r"/style/(\&.*)", tornado\&.web\&.StaticFileHandler,{"path":"\&./v/style"},),
+9     (r"/images/(\&.*)", tornado\&.web\&.StaticFileHandler,{"path":"\&./v/images"},),
+10     (r"/js/(\&.*)", tornado\&.web\&.StaticFileHandler,{"path":"\&./v/js"},)],
+11     cookie_secret=''\&.join(random\&.choice(string\&.ascii_uppercase + string\&.digits) for _ in range(64)))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TornadoServerMI from the source code\&.

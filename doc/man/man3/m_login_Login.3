@@ -1,0 +1,47 @@
+.TH "m.login.Login" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+m.login.Login \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBcheckLogin\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Login manager
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def m\&.login\&.Login\&.checkLogin (self, pLog, pPasswd)"
+
+.PP
+.nf
+Check if login and password are correct (in file fichier/allow)
+password in File are hash (sha224)
+pLog : id login
+pPasswd : password
+return : true if correct login
+false else
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TornadoServerMI from the source code\&.

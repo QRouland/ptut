@@ -194,10 +194,10 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         GlobalVars.log.printL("->Websocket Closed : "+self.request.remote_ip,lvl.SUCCESS)
         iden = self.current_user
         if iden != "IllegalUser":
-            authorized - 1
+            GlobalVars.authorized - 1
             GlobalVars.log.printL("->"+iden+" : Authorized User Deconnection : "+self.request.remote_ip,lvl.INFO)
         else :
-            unauthorized - 1
+            GlobalVars.unauthorized - 1
             GlobalVars.log.printL("->"+iden +" : Unauthorized User Deconnection : "+self.request.remote_ip,lvl.WARNING)
 
         if GlobalVars.blind == True:

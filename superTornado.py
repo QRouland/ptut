@@ -260,19 +260,19 @@ if __name__ == "__main__":
         GlobalVars.ipServ = GlobalVars.config.ipServ()
         GlobalVars.portServ = GlobalVars.config.portServ()
 
-        if blind == "error" :
+        if GlobalVars.blind == "error" :
             raise ConfigError("Failed Load Blind Configuration")
-        if ipCamera == "error" :
+        if GlobalVars.ipCamera == "error" :
             raise ConfigError("Failed Load IP Camera Configuration")
-        if portCamera == "error" :
+        if GlobalVars.portCamera == "error" :
             raise ConfigError("Failed Load Port Camera Configuration")
-        if idCamera == "error" :
+        if GlobalVars.idCamera == "error" :
             raise ConfigError("Failed Load ID Camera Configuration")
-        if endUrlCamera == "error" :
+        if GlobalVars.endUrlCamera == "error" :
             raise ConfigError("Failed Load ID Camera Configuration")
-        if ipServ == "error" :
+        if GlobalVars.ipServ == "error" :
             raise ConfigError("Failed Load IP Server Configuration")
-        if portServ == "error" :
+        if GlobalVars.portServ == "error" :
             raise ConfigError("Failed Load Port Server Configuration")
     except ConfigError as e :
         GlobalVars.log.printL(e.value,lvl.FAIL)

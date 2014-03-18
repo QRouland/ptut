@@ -252,13 +252,13 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     GlobalVars.log.printL("->Loading configuration ... ",lvl.INFO)
     try :
-        GlobalVars.blind = config.isBlind()
-        GlobalVars.ipCamera = config.ipCamera()
-        GlobalVars.portCamera = config.portCamera()
-        GlobalVars.idCamera = config.idCamera()
-        GlobalVars.endUrlCamera = config.endUrlCamera()
-        GlobalVars.ipServ = config.ipServ()
-        GlobalVars.portServ = config.portServ()
+        GlobalVars.blind = GlobalVars.config.isBlind()
+        GlobalVars.ipCamera = GlobalVars.config.ipCamera()
+        GlobalVars.portCamera = GlobalVars.config.portCamera()
+        GlobalVars.idCamera = GlobalVars.config.idCamera()
+        GlobalVars.endUrlCamera = GlobalVars.config.endUrlCamera()
+        GlobalVars.ipServ = GlobalVars.config.ipServ()
+        GlobalVars.portServ = GlobalVars.config.portServ()
 
         if blind == "error" :
             raise ConfigError("Failed Load Blind Configuration")

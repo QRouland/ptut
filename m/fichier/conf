@@ -2,7 +2,7 @@ blind=1
 camera=192.168.1.13
 portCamera=80
 idUrlCamera=test:a
-endUrlCamera=image.jpg?cidx=791836195
+endUrlCamera=/image.jpg
 serv=192.168.1.12
 portServ=80
 

@@ -293,7 +293,7 @@ if __name__ == "__main__":
     print ""
 
     GlobalVars.urlSocket = 'ws://'+GlobalVars.ipServ+':'+GlobalVars.portCamera+'/socket'
-    GlobalVars.urlCamera = 'http://'+GlobalVars.idUrlCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/'+GlobalVars.endUrlCamera
+    GlobalVars.urlCamera = 'http://'+GlobalVars.idUrlCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+GlobalVars.endUrlCamera
 
     GlobalVars.log.printL("->Ping camera ...",lvl.INFO)
     try :

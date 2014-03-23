@@ -214,8 +214,10 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         Allow send pRq request to the house
         """
         GlobalVars.log.printL('maison = httplib.HTTPConnection("192.168.16.150", 80)',lvl.DEBUG)
+        """maison = httplib.HTTPConnection("192.168.16.150")"""
         try :
-            GlobalVars.log.printL('maison.request("GET",'+pRq,lvl.DEBUG)
+            GlobalVars.log.printL(pRq,lvl.DEBUG)
+            """maison.request("GET",pRq)"""
             GlobalVars.log.printL("->Signal To House Send Successfully", lvl.SUCCESS)
         except Exception, e :
             GlobalVars.log.printL(e, lvl.FAIL)

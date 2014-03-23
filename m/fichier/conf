@@ -3,6 +3,6 @@ camera=192.168.1.13
 portCamera=80
 idUrlCamera=test:a
 endUrlCamera=/image.jpg
-serv=192.168.1.12
+serv=localhost
 portServ=80
 

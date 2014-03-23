@@ -286,6 +286,8 @@ if __name__ == "__main__":
         GlobalVars.log.printL(" +Not blind unhabitant",lvl.INFO)
     GlobalVars.log.printL("  +Ip Camera : " + GlobalVars.ipCamera,lvl.INFO)
     GlobalVars.log.printL("  +Port Camera : " + GlobalVars.portCamera,lvl.INFO)
+    GlobalVars.log.printL("  +ID url Camera : " + GlobalVars.idUrlCamera,lvl.INFO)
+    GlobalVars.log.printL("  +End url Camera : " + GlobalVars.endUrlCamera,lvl.INFO)
     GlobalVars.log.printL("  +Ip Server : " + GlobalVars.ipServ,lvl.INFO)
     GlobalVars.log.printL("  +Port Server : " + GlobalVars.portServ,lvl.INFO)
     print ""

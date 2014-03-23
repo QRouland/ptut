@@ -230,6 +230,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             f = urlopen(GlobalVars.urlCamera)
             data = f.read()
             encoded = base64.b64encode(data)
+            f.close()
             self.write_message(encoded)
             GlobalVars.log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)
         except Exception, e :
@@ -255,7 +256,7 @@ if __name__ == "__main__":
         GlobalVars.blind = GlobalVars.config.isBlind()
         GlobalVars.ipCamera = GlobalVars.config.ipCamera()
         GlobalVars.portCamera = GlobalVars.config.portCamera()
-        GlobalVars.idCamera = GlobalVars.config.idCamera()
+        GlobalVars.idUrlCamera = GlobalVars.config.idUrlCamera()
         GlobalVars.endUrlCamera = GlobalVars.config.endUrlCamera()
         GlobalVars.ipServ = GlobalVars.config.ipServ()
         GlobalVars.portServ = GlobalVars.config.portServ()
@@ -266,10 +267,10 @@ if __name__ == "__main__":
             raise ConfigError("Failed Load IP Camera Configuration")
         if GlobalVars.portCamera == "error" :
             raise ConfigError("Failed Load Port Camera Configuration")
-        if GlobalVars.idCamera == "error" :
+        if GlobalVars.idUrlCamera == "error" :
             raise ConfigError("Failed Load ID Camera Configuration")
         if GlobalVars.endUrlCamera == "error" :
-            raise ConfigError("Failed Load ID Camera Configuration")
+            raise ConfigError("Failed Load End Url  Camera Configuration")
         if GlobalVars.ipServ == "error" :
             raise ConfigError("Failed Load IP Server Configuration")
         if GlobalVars.portServ == "error" :
@@ -290,7 +291,7 @@ if __name__ == "__main__":
     print ""
 
     GlobalVars.urlSocket = 'ws://'+GlobalVars.ipServ+':'+GlobalVars.portCamera+'/socket'
-    GlobalVars.urlCamera = 'http://'+GlobalVars.idCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/'+GlobalVars.endUrlCamera
+    GlobalVars.urlCamera = 'http://'+GlobalVars.idUrlCamera+'@'+GlobalVars.ipCamera+':'+GlobalVars.portCamera+'/'+GlobalVars.endUrlCamera
 
     GlobalVars.log.printL("->Ping camera ...",lvl.INFO)
     try :

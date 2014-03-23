@@ -56,11 +56,11 @@ class LoadConf(object):
         return self.loadValue("portServ")
 
     """
-    Return idCamera configuration
+    Return idUrlCamera configuration
     Else "error"
     """
-    def idCamera(self) :
-        return self.loadValue("idCamera")
+    def idUrlCamera(self) :
+        return self.loadValue("idUrlCamera")
 
     """
     Return endUrlCamera configuration

@@ -128,8 +128,8 @@ try :
             val = cookie.value
     ws = create_connection("ws://127.0.0.1/socket",\
     header={"Cookie:user="+val})
-    print "Sending"
-    ws.send("Asf for data")
+    print "Sending :ask for data"
+    ws.send("Ask for data")
     print "Sent"
     print "Receiving..."
     result =  ws.recv()
@@ -182,8 +182,8 @@ try :
             val = cookie.value
     ws = create_connection("ws://127.0.0.1/socket",\
     header={"Cookie:user="+val})
-    print "Sending"
-    ws.send("Asf for data")
+    print "Sending : ask for data"
+    ws.send("Ask for data")
     print "Sent"
     print "Receiving..."
     result =  ws.recv()

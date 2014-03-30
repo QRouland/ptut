@@ -1,11 +1,18 @@
 class LoadConf(object):
     """Loading configuration file"""
+
+    def __init__(self,path):
+        """
+        Define file path for load config
+        """
+        self.path = path
+
     def loadValue(self, key):
         """
         Return the value associate to the key into conf file (fichier/conf)
         Else return "error"
         """
-        with open("m/fichier/conf", "r") as source :
+        with open(self.path , "r") as source :
             for ligne in source:
                 data = ligne.rstrip('\r\n').split('=')
                 if data[0] == key :
@@ -68,6 +75,18 @@ class LoadConf(object):
     """
     def endUrlCamera(self) :
         return self.loadValue("endUrlCamera")
+    """
+    Return ipDomoMi configuration
+    Else "error"
+    """
+    def ipDomo(self) :
+        return self.loadValue("ipDomoMi")
+    """
+    Return portDomoMi configuration
+    Else "error"
+    """
+    def portDomo(self) :
+        return self.loadValue("portDomoMi")
 
 
 

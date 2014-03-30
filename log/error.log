@@ -1,0 +1,444 @@
+2014-03-30 14:32:54,209 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 14:32:54,210 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-30 14:33:04,042 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 15:21:06,988 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:06:08,864 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:06:18,790 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 167, in open
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:06:18,862 :: ERROR :: Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 209, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:06:18,922 :: ERROR :: Exception in callback <functools.partial object at 0x2606788>
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/ioloop.py", line 477, in _run_callback
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 209, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:07:27,874 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:07:38,578 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 182, in open
+    self.send_image()
+  File "superTornado.py", line 242, in send_image
+    GlobalVars.log.printL(e,lvl.FAIL)
+  File "/home/sidya/Documents/iut/ptut/m/log.py", line 96, in printL
+    pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
+TypeError: cannot concatenate 'str' and 'exceptions.IOError' objects
+2014-03-30 17:09:23,728 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:09:34,694 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 182, in open
+    self.send_image()
+  File "superTornado.py", line 242, in send_image
+    GlobalVars.log.printL(e,lvl.FAIL)
+  File "/home/sidya/Documents/iut/ptut/m/log.py", line 96, in printL
+    pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
+TypeError: cannot concatenate 'str' and 'exceptions.IOError' objects
+2014-03-30 17:12:01,751 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:12:13,861 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:16,871 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:19,881 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:22,891 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:25,901 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:28,911 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:31,921 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:15:30,298 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 18:02:32,924 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:02:32,924 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 18:57:08,187 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:11,197 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:14,208 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:17,217 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:20,227 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:23,237 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:26,247 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:29,257 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:32,267 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:35,277 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:38,287 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:41,297 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:44,307 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:47,317 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:50,327 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:53,337 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:56,347 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:59,357 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:02,367 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:05,377 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:08,387 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:11,397 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:14,407 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:17,417 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:20,427 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:23,437 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:26,447 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:29,457 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:32,467 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:35,477 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:38,487 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:02:23,510 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:02:23,511 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:08:41,704 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:08:41,704 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:09:27,890 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:09:27,891 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:12:34,657 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:12:34,657 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:12:37,667 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:12:37,667 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:22:29,177 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:22:29,177 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:22:45,317 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:22:45,317 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:25:41,673 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:25:41,674 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:26:46,773 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:26:46,774 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:28:25,120 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:28:25,120 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:30:30,997 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:30:30,997 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:38:25,513 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:38:25,514 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:39:04,793 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:39:04,794 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:39:41,963 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:39:41,964 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:45:18,550 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:45:18,550 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:46:19,370 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:46:19,370 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:49:02,733 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:49:02,734 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:51:07,270 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:51:10,280 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:53:25,483 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:53:28,493 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:54:55,283 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:54:58,293 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:57:16,233 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:57:19,243 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:11:38,057 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:11:41,067 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:17:03,077 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:17:06,087 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:24,303 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:27,313 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:56,890 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:59,900 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:45:28,953 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:45:31,963 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:52,060 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:55,070 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:58,080 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:58,080 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:00:41,353 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:44,363 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:47,373 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:47,373 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:01:09,833 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:12,843 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:15,853 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:15,853 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:01:52,123 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:55,133 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:58,143 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:58,143 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:05:00,373 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:03,383 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:06,393 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:06,393 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:08:10,170 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 21:08:13,179 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:16,190 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:19,200 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:19,200 :: ERROR :: [91m[0m
+2014-03-30 21:12:37,160 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 21:12:43,670 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:46,679 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:49,689 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:49,690 :: ERROR :: [91mFailed Send data : Socket Close [0m
+2014-03-30 21:20:00,449 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:03,460 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:06,470 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:06,470 :: ERROR :: [91mFailed Send data : Socket Close [0m

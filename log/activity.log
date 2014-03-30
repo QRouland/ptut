@@ -1,0 +1,1769 @@
+2014-03-30 14:32:51,197 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 14:32:51,197 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +Ip Server : 192.168.1.12[0m
+2014-03-30 14:32:51,198 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 14:32:51,199 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 14:32:54,209 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 14:32:54,209 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 14:32:54,210 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-30 14:33:01,030 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 14:33:01,031 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 14:33:01,031 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 14:33:01,031 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 14:33:01,031 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 14:33:01,031 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 14:33:01,032 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 14:33:01,032 :: INFO :: [95m  +Ip Server : 192.168.1.12[0m
+2014-03-30 14:33:01,032 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 14:33:01,032 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 14:33:04,042 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 14:33:04,042 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 14:33:04,043 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 14:58:25,479 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 14:58:25,479 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 14:58:25,479 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 14:58:25,479 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +Ip Server : 192.168.1.12[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 14:58:25,480 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 14:58:25,481 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 15:21:03,975 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 15:21:03,976 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 15:21:03,976 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 15:21:03,976 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 15:21:03,976 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +Ip Server : 192.168.1.12[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 15:21:03,977 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 15:21:06,988 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 15:21:06,989 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 15:21:06,990 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 15:23:37,799 :: INFO :: 302 GET /video (127.0.0.1) 0.62ms
+2014-03-30 15:23:37,803 :: INFO :: 200 GET / (127.0.0.1) 2.51ms
+2014-03-30 15:24:31,086 :: INFO :: 302 GET /video (127.0.0.1) 0.48ms
+2014-03-30 15:24:31,087 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 15:24:55,425 :: INFO :: 200 GET / (127.0.0.1) 0.54ms
+2014-03-30 15:24:55,555 :: INFO :: 200 GET /style/styles.css (127.0.0.1) 63.02ms
+2014-03-30 15:24:55,589 :: INFO :: 200 GET /images/iut.jpg (127.0.0.1) 32.90ms
+2014-03-30 15:24:55,622 :: INFO :: 200 GET /images/favicon.ico (127.0.0.1) 32.76ms
+2014-03-30 15:24:55,623 :: INFO :: 200 GET /images/favicon.gif (127.0.0.1) 0.51ms
+2014-03-30 15:24:55,751 :: INFO :: 200 GET /images/favicon.gif (127.0.0.1) 1.15ms
+2014-03-30 15:25:42,115 :: INFO :: 302 GET /video (127.0.0.1) 0.46ms
+2014-03-30 15:25:42,117 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 15:28:01,533 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:28:01,535 :: INFO :: 200 GET / (127.0.0.1) 0.51ms
+2014-03-30 15:28:06,317 :: INFO :: 302 GET /video (127.0.0.1) 0.43ms
+2014-03-30 15:28:06,318 :: INFO :: 200 GET / (127.0.0.1) 0.72ms
+2014-03-30 15:28:17,360 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 15:28:17,362 :: INFO :: 200 GET / (127.0.0.1) 0.58ms
+2014-03-30 15:28:23,447 :: INFO :: 302 GET /video (127.0.0.1) 0.44ms
+2014-03-30 15:28:23,449 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 15:28:40,757 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 15:28:40,759 :: INFO :: 200 GET / (127.0.0.1) 0.80ms
+2014-03-30 15:28:49,711 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:28:49,713 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 15:29:38,565 :: INFO :: 302 GET /video (127.0.0.1) 0.33ms
+2014-03-30 15:29:38,567 :: INFO :: 200 GET / (127.0.0.1) 0.82ms
+2014-03-30 15:32:22,698 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:32:22,700 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 15:32:34,739 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 15:32:34,741 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 15:33:18,051 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:33:18,052 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 15:33:32,570 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:33:32,571 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 15:33:50,599 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:33:50,601 :: INFO :: 200 GET / (127.0.0.1) 0.55ms
+2014-03-30 15:34:07,587 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 15:34:07,589 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 15:34:19,708 :: INFO :: 302 GET /video (127.0.0.1) 0.29ms
+2014-03-30 15:34:19,710 :: INFO :: 200 GET / (127.0.0.1) 0.49ms
+2014-03-30 15:34:29,376 :: INFO :: 302 GET /video (127.0.0.1) 0.54ms
+2014-03-30 15:34:29,377 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 15:42:33,801 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 15:42:33,803 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 15:54:45,610 :: INFO :: 302 GET /video (127.0.0.1) 0.29ms
+2014-03-30 15:54:45,611 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 15:54:57,413 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 15:54:57,414 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 15:55:12,777 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 15:55:12,779 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 15:55:30,541 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 15:55:30,543 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 15:55:30,544 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 15:55:30,545 :: INFO :: 302 POST / (127.0.0.1) 0.88ms
+2014-03-30 15:55:30,547 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.72ms
+2014-03-30 15:56:22,728 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 15:56:22,729 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 15:56:22,730 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 15:56:22,731 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 15:56:22,733 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 15:57:56,088 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 15:57:56,089 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 15:57:56,091 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 15:57:56,091 :: INFO :: 302 POST / (127.0.0.1) 0.76ms
+2014-03-30 15:57:56,093 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 15:58:23,326 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 15:58:23,327 :: INFO :: 200 GET / (127.0.0.1) 0.70ms
+2014-03-30 15:58:23,329 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 15:58:23,329 :: INFO :: 302 POST / (127.0.0.1) 0.90ms
+2014-03-30 15:58:23,331 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.67ms
+2014-03-30 15:59:02,334 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 15:59:02,336 :: INFO :: 200 GET / (127.0.0.1) 0.39ms
+2014-03-30 15:59:02,337 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 15:59:02,338 :: INFO :: 302 POST / (127.0.0.1) 1.64ms
+2014-03-30 15:59:02,340 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:29:36,369 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:29:36,370 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 16:29:36,371 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:29:36,373 :: INFO :: 302 POST / (127.0.0.1) 2.02ms
+2014-03-30 16:29:36,374 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.68ms
+2014-03-30 16:29:36,377 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:29:36,379 :: INFO :: 302 POST / (127.0.0.1) 3.22ms
+2014-03-30 16:29:36,380 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 16:31:59,300 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:31:59,301 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:31:59,303 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:31:59,303 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 16:31:59,305 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 16:31:59,306 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:31:59,306 :: INFO :: 302 POST / (127.0.0.1) 0.72ms
+2014-03-30 16:31:59,308 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 16:31:59,309 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:31:59,309 :: INFO :: 302 POST / (127.0.0.1) 0.72ms
+2014-03-30 16:31:59,311 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 16:33:00,931 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:33:00,932 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 16:33:00,934 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:33:00,934 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 16:33:00,936 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 16:33:00,938 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:33:00,938 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 16:33:00,939 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:33:00,941 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:33:00,941 :: INFO :: 302 POST / (127.0.0.1) 0.72ms
+2014-03-30 16:33:00,942 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:34:28,700 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:34:28,701 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:34:28,702 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:34:28,703 :: INFO :: 302 POST / (127.0.0.1) 0.81ms
+2014-03-30 16:34:28,705 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 16:34:28,706 :: WARNING :: 405 POST /video (127.0.0.1) 0.33ms
+2014-03-30 16:35:38,903 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:35:38,904 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 16:35:38,906 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:35:38,906 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 16:35:38,908 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 16:35:38,909 :: WARNING :: 405 POST /video (127.0.0.1) 0.32ms
+2014-03-30 16:35:54,437 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:35:54,439 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 16:35:54,440 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:35:54,440 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 16:35:54,442 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 16:35:54,443 :: WARNING :: 405 POST /video (127.0.0.1) 0.34ms
+2014-03-30 16:36:22,051 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 16:36:22,052 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 16:36:22,054 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:36:22,054 :: INFO :: 302 POST / (127.0.0.1) 0.80ms
+2014-03-30 16:36:22,055 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 16:36:22,057 :: WARNING :: 405 POST /video (127.0.0.1) 0.57ms
+2014-03-30 16:38:23,543 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:38:23,544 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:38:23,545 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:38:23,546 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 16:38:23,548 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:38:23,549 :: WARNING :: 405 POST /video (127.0.0.1) 0.33ms
+2014-03-30 16:38:57,636 :: INFO :: 302 GET /video (127.0.0.1) 0.29ms
+2014-03-30 16:38:57,637 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 16:38:57,638 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:38:57,639 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 16:38:57,640 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 16:38:57,641 :: WARNING :: 405 POST /video (127.0.0.1) 0.33ms
+2014-03-30 16:39:15,149 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:39:15,151 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:39:15,152 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:39:15,153 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 16:39:15,154 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 16:39:15,155 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:39:15,156 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 16:39:15,157 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:39:15,158 :: WARNING :: 405 POST /video (127.0.0.1) 0.32ms
+2014-03-30 16:39:47,388 :: INFO :: 302 GET /video (127.0.0.1) 0.32ms
+2014-03-30 16:39:47,389 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 16:39:47,391 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:39:47,391 :: INFO :: 302 POST / (127.0.0.1) 1.19ms
+2014-03-30 16:39:47,393 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 16:39:47,395 :: WARNING :: 405 POST /video (127.0.0.1) 0.36ms
+2014-03-30 16:41:11,867 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 16:41:11,868 :: INFO :: 200 GET / (127.0.0.1) 0.64ms
+2014-03-30 16:41:11,869 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:41:11,870 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 16:41:11,872 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.59ms
+2014-03-30 16:41:11,873 :: WARNING :: 404 POST //unauthorized (127.0.0.1) 0.59ms
+2014-03-30 16:41:25,324 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 16:41:25,325 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 16:41:25,327 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:41:25,327 :: INFO :: 302 POST / (127.0.0.1) 0.98ms
+2014-03-30 16:41:25,329 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:41:25,331 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 16:41:25,333 :: INFO :: 200 GET /video (127.0.0.1) 0.94ms
+2014-03-30 16:41:25,334 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 16:41:25,335 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 16:42:01,222 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:42:01,223 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:42:01,225 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:42:01,225 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 16:42:01,227 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 16:42:01,228 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.77ms
+2014-03-30 16:42:01,230 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 16:42:01,231 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 16:42:01,232 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 16:42:09,750 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 16:42:09,752 :: INFO :: 200 GET / (127.0.0.1) 0.66ms
+2014-03-30 16:42:09,753 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:42:09,754 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 16:42:09,755 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 16:42:09,757 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 16:42:09,758 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 16:42:09,759 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.31ms
+2014-03-30 16:42:09,760 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 16:45:14,671 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 16:45:14,673 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 16:45:14,674 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:45:14,675 :: INFO :: 302 POST / (127.0.0.1) 1.00ms
+2014-03-30 16:45:14,677 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 16:45:14,678 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 16:45:14,679 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 16:45:14,681 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.36ms
+2014-03-30 16:45:14,682 :: INFO :: 200 GET / (127.0.0.1) 0.70ms
+2014-03-30 16:45:14,684 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:45:14,684 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 16:45:14,686 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 16:46:40,260 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 16:46:40,283 :: INFO :: 200 GET /video (127.0.0.1) 0.48ms
+2014-03-30 16:46:40,355 :: INFO :: 200 GET /js/jquery-2.1.0.min.js (127.0.0.1) 18.04ms
+2014-03-30 16:46:42,543 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.63ms
+2014-03-30 16:46:42,567 :: INFO :: 200 GET / (127.0.0.1) 0.52ms
+2014-03-30 16:48:36,695 :: INFO :: 302 GET /video (127.0.0.1) 0.43ms
+2014-03-30 16:48:36,696 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 16:48:36,697 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:48:36,698 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 16:48:36,700 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 16:48:36,701 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 16:48:36,702 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 16:48:36,703 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.30ms
+2014-03-30 16:48:36,704 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 16:48:36,706 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:48:36,706 :: INFO :: 302 POST / (127.0.0.1) 0.96ms
+2014-03-30 16:48:36,708 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.59ms
+2014-03-30 16:54:15,653 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 16:54:15,655 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 16:54:15,656 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:54:15,657 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 16:54:15,658 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 16:54:15,659 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 16:54:15,661 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 16:54:15,662 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.31ms
+2014-03-30 16:54:15,663 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 16:54:15,664 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:54:15,664 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 16:54:15,666 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.38ms
+2014-03-30 16:55:15,359 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 16:55:15,361 :: INFO :: 200 GET / (127.0.0.1) 0.70ms
+2014-03-30 16:55:15,362 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 16:55:15,363 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 16:55:15,364 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 16:55:15,366 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 16:55:15,367 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 16:55:15,368 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 16:55:15,369 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 16:55:15,371 :: INFO :: 302 POST / (127.0.0.1) 0.57ms
+2014-03-30 16:55:15,372 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 17:06:05,853 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 17:06:05,853 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 17:06:05,853 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 17:06:05,853 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 17:06:05,853 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 17:06:05,854 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 17:06:08,864 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:06:08,865 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 17:06:08,865 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 17:06:18,658 :: INFO :: 302 POST / (127.0.0.1) 1.34ms
+2014-03-30 17:06:18,688 :: INFO :: 200 GET /video (127.0.0.1) 3.84ms
+2014-03-30 17:06:18,790 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 17:06:18,790 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 17:06:18,790 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 17:06:18,790 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 167, in open
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:06:18,862 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 17:06:18,862 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 17:06:18,862 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 17:06:18,862 :: ERROR :: Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 209, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:06:18,922 :: ERROR :: Exception in callback <functools.partial object at 0x2606788>
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/ioloop.py", line 477, in _run_callback
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 209, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 219, in send_signal_house
+    GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.iptDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
+AttributeError: class GlobalVars has no attribute 'iptDomo'
+2014-03-30 17:07:24,863 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 17:07:24,863 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 17:07:24,863 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 17:07:24,863 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 17:07:24,863 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 17:07:24,863 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 17:07:24,864 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 17:07:27,874 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:07:27,875 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 17:07:27,876 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 17:07:35,428 :: INFO :: 302 POST / (127.0.0.1) 1.14ms
+2014-03-30 17:07:35,454 :: INFO :: 200 GET /video (127.0.0.1) 2.91ms
+2014-03-30 17:07:35,569 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 17:07:35,570 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 17:07:35,570 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 17:07:35,570 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 17:07:38,578 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 182, in open
+    self.send_image()
+  File "superTornado.py", line 242, in send_image
+    GlobalVars.log.printL(e,lvl.FAIL)
+  File "/home/sidya/Documents/iut/ptut/m/log.py", line 96, in printL
+    pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
+TypeError: cannot concatenate 'str' and 'exceptions.IOError' objects
+2014-03-30 17:07:38,579 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 17:07:38,579 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 17:07:38,579 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 17:07:38,579 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 17:09:20,716 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 17:09:20,717 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 17:09:20,717 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 17:09:20,717 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 17:09:20,717 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 17:09:20,718 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 17:09:20,718 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 17:09:20,718 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 17:09:20,718 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 17:09:20,718 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 17:09:20,719 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 17:09:20,719 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 17:09:23,728 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:09:23,728 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 17:09:23,729 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 17:09:31,523 :: INFO :: 302 POST / (127.0.0.1) 1.31ms
+2014-03-30 17:09:31,553 :: INFO :: 200 GET /video (127.0.0.1) 4.09ms
+2014-03-30 17:09:31,685 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 17:09:31,685 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 17:09:31,685 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 17:09:31,686 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 17:09:34,694 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 182, in open
+    self.send_image()
+  File "superTornado.py", line 242, in send_image
+    GlobalVars.log.printL(e,lvl.FAIL)
+  File "/home/sidya/Documents/iut/ptut/m/log.py", line 96, in printL
+    pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
+TypeError: cannot concatenate 'str' and 'exceptions.IOError' objects
+2014-03-30 17:09:34,695 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 17:09:34,695 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 17:09:34,695 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 17:09:34,695 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 17:11:58,740 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 17:11:58,740 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 17:11:58,740 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 17:11:58,741 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 17:12:01,751 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:12:01,751 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 17:12:01,753 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 17:12:10,702 :: INFO :: 302 POST / (127.0.0.1) 1.13ms
+2014-03-30 17:12:10,731 :: INFO :: 200 GET /video (127.0.0.1) 4.08ms
+2014-03-30 17:12:10,851 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 17:12:10,852 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 17:12:10,852 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 17:12:10,852 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 17:12:13,861 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:13,862 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:16,871 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:16,872 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:19,881 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:19,882 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:22,891 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:22,892 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:25,901 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:25,902 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:28,911 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:28,912 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:12:31,921 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 17:12:31,922 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 17:15:27,287 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 17:15:27,288 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 17:15:27,288 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 17:15:27,289 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 17:15:27,289 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 17:15:27,289 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 17:15:27,289 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 17:15:30,298 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 17:15:30,298 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 17:15:30,299 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 17:15:34,420 :: INFO :: 302 GET /video (127.0.0.1) 0.68ms
+2014-03-30 17:15:34,424 :: INFO :: 200 GET / (127.0.0.1) 2.51ms
+2014-03-30 17:15:34,425 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 17:15:34,426 :: INFO :: 302 POST / (127.0.0.1) 1.07ms
+2014-03-30 17:15:34,428 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.79ms
+2014-03-30 17:15:34,429 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.50ms
+2014-03-30 17:15:34,431 :: INFO :: 200 GET /video (127.0.0.1) 1.01ms
+2014-03-30 17:15:34,432 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 17:15:34,433 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 17:15:34,435 :: INFO :: 302 POST / (127.0.0.1) 0.59ms
+2014-03-30 17:15:34,436 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 17:15:34,437 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 17:16:02,437 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 17:16:02,438 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 17:16:02,440 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 17:16:02,440 :: INFO :: 302 POST / (127.0.0.1) 1.00ms
+2014-03-30 17:16:02,442 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 17:16:02,443 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 17:16:02,445 :: INFO :: 200 GET /video (127.0.0.1) 0.48ms
+2014-03-30 17:16:02,446 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 17:16:02,447 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 17:16:02,449 :: INFO :: 302 POST / (127.0.0.1) 0.67ms
+2014-03-30 17:16:02,452 :: INFO :: 200 GET /video (127.0.0.1) 1.66ms
+2014-03-30 17:16:45,953 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 17:16:45,955 :: INFO :: 200 GET / (127.0.0.1) 0.67ms
+2014-03-30 17:16:45,956 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 17:16:45,956 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 17:16:45,958 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 17:16:45,959 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 17:16:45,961 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 17:16:45,962 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 17:16:45,963 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 17:16:45,965 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 17:16:45,966 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 17:17:52,263 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 17:17:52,265 :: INFO :: 200 GET / (127.0.0.1) 0.63ms
+2014-03-30 17:17:52,266 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 17:17:52,266 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 17:17:52,268 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 17:17:52,269 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 17:17:52,271 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 17:17:52,272 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 17:17:52,273 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 17:17:52,275 :: INFO :: 302 POST / (127.0.0.1) 0.67ms
+2014-03-30 17:17:52,277 :: INFO :: 200 GET /video (127.0.0.1) 0.99ms
+2014-03-30 18:01:42,477 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 18:01:42,479 :: INFO :: 200 GET / (127.0.0.1) 0.37ms
+2014-03-30 18:01:42,480 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 18:01:42,481 :: INFO :: 302 POST / (127.0.0.1) 1.17ms
+2014-03-30 18:01:42,483 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 18:01:42,484 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 18:01:42,485 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 18:01:42,486 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 18:01:42,488 :: INFO :: 200 GET / (127.0.0.1) 0.46ms
+2014-03-30 18:01:42,490 :: INFO :: 302 POST / (127.0.0.1) 1.15ms
+2014-03-30 18:01:42,492 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 18:01:42,493 :: WARNING :: 404 GET /ocket (127.0.0.1) 0.30ms
+2014-03-30 18:02:13,286 :: INFO :: 302 GET /video (127.0.0.1) 0.46ms
+2014-03-30 18:02:13,287 :: INFO :: 200 GET / (127.0.0.1) 0.61ms
+2014-03-30 18:02:13,289 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 18:02:13,289 :: INFO :: 302 POST / (127.0.0.1) 0.82ms
+2014-03-30 18:02:13,291 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.50ms
+2014-03-30 18:02:13,292 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 18:02:13,294 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 18:02:13,295 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.36ms
+2014-03-30 18:02:13,296 :: INFO :: 200 GET / (127.0.0.1) 0.44ms
+2014-03-30 18:02:13,298 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 18:02:13,300 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 18:02:13,301 :: WARNING :: 404 GET /ocket (127.0.0.1) 0.30ms
+2014-03-30 18:02:29,898 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 18:02:29,899 :: INFO :: 200 GET / (127.0.0.1) 0.37ms
+2014-03-30 18:02:29,900 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 18:02:29,901 :: INFO :: 302 POST / (127.0.0.1) 0.79ms
+2014-03-30 18:02:29,902 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 18:02:29,904 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.50ms
+2014-03-30 18:02:29,906 :: INFO :: 200 GET /video (127.0.0.1) 0.68ms
+2014-03-30 18:02:29,907 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.54ms
+2014-03-30 18:02:29,910 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 18:02:29,911 :: INFO :: 302 POST / (127.0.0.1) 0.58ms
+2014-03-30 18:02:29,913 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 18:02:29,914 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:02:32,924 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:02:32,924 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 18:56:58,974 :: INFO :: 200 GET / (127.0.0.1) 0.44ms
+2014-03-30 18:57:05,007 :: INFO :: 302 POST / (127.0.0.1) 1.41ms
+2014-03-30 18:57:05,031 :: INFO :: 200 GET /video (127.0.0.1) 0.80ms
+2014-03-30 18:57:05,178 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 18:57:05,179 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 18:57:05,179 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 18:57:05,179 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 18:57:08,187 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:08,188 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:11,197 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:11,198 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:14,208 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:14,209 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:17,217 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:17,218 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:20,227 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:20,228 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:23,237 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:23,238 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:26,247 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:26,248 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:29,257 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:29,258 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:32,267 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:32,268 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:35,277 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:35,278 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:38,287 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:38,288 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:41,297 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:41,298 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:44,307 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:44,308 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:47,317 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:47,318 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:50,327 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:50,328 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:53,337 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:53,338 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:56,347 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:56,348 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:57:59,357 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:57:59,358 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:02,367 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:02,368 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:05,377 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:05,378 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:08,387 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:08,388 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:11,397 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:11,398 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:14,407 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:14,408 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:17,417 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:17,418 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.35ms
+2014-03-30 18:58:17,418 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:20,427 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:20,428 :: INFO :: 200 GET / (127.0.0.1) 0.46ms
+2014-03-30 18:58:20,429 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:23,437 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:23,438 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:26,447 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:26,447 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:29,457 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:29,458 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:32,467 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:32,468 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:35,477 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:35,478 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 18:58:38,487 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 18:58:38,487 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 18:58:38,487 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 18:58:38,488 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 18:58:38,488 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:02:20,487 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 19:02:20,489 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:02:20,490 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:02:20,490 :: INFO :: 302 POST / (127.0.0.1) 0.89ms
+2014-03-30 19:02:20,492 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 19:02:20,494 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 19:02:20,495 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:02:20,496 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 19:02:20,497 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 19:02:20,499 :: INFO :: 302 POST / (127.0.0.1) 0.61ms
+2014-03-30 19:02:20,500 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 19:02:20,502 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:02:23,510 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:02:23,511 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:05:40,351 :: INFO :: 302 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:05:40,353 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 19:05:40,354 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:05:40,354 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 19:05:40,356 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 19:05:40,357 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:05:40,359 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 19:05:40,360 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:05:40,363 :: INFO :: 200 GET / (127.0.0.1) 1.07ms
+2014-03-30 19:05:40,365 :: INFO :: 302 POST / (127.0.0.1) 0.65ms
+2014-03-30 19:05:40,367 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 19:08:38,680 :: INFO :: 302 GET /video (127.0.0.1) 0.26ms
+2014-03-30 19:08:38,681 :: INFO :: 200 GET / (127.0.0.1) 0.30ms
+2014-03-30 19:08:38,682 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:08:38,682 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:08:38,684 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 19:08:38,685 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:08:38,687 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 19:08:38,688 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.31ms
+2014-03-30 19:08:38,689 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:08:38,692 :: INFO :: 302 POST / (127.0.0.1) 1.76ms
+2014-03-30 19:08:38,693 :: INFO :: 200 GET /video (127.0.0.1) 0.57ms
+2014-03-30 19:08:38,695 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:08:41,704 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:08:41,704 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:09:24,865 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:09:24,866 :: INFO :: 200 GET / (127.0.0.1) 0.39ms
+2014-03-30 19:09:24,868 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:09:24,868 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:09:24,870 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 19:09:24,871 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 19:09:24,872 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 19:09:24,873 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.31ms
+2014-03-30 19:09:24,874 :: INFO :: 200 GET / (127.0.0.1) 0.39ms
+2014-03-30 19:09:24,876 :: INFO :: 302 POST / (127.0.0.1) 0.94ms
+2014-03-30 19:09:24,879 :: INFO :: 200 GET /video (127.0.0.1) 1.60ms
+2014-03-30 19:09:24,881 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:09:27,890 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:09:27,891 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:12:31,632 :: INFO :: 302 GET /video (127.0.0.1) 0.33ms
+2014-03-30 19:12:31,634 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:12:31,635 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:12:31,636 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 19:12:31,637 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 19:12:31,639 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 19:12:31,640 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:12:31,641 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 19:12:31,643 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 19:12:31,644 :: INFO :: 302 POST / (127.0.0.1) 0.58ms
+2014-03-30 19:12:31,645 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:12:31,647 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:12:34,657 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:12:34,657 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:12:36,798 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:12:36,799 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 19:12:36,801 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:12:36,801 :: INFO :: 302 POST / (127.0.0.1) 1.01ms
+2014-03-30 19:12:36,804 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.53ms
+2014-03-30 19:12:36,806 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 19:12:36,808 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 19:12:36,809 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.35ms
+2014-03-30 19:12:36,810 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:12:36,812 :: INFO :: 302 POST / (127.0.0.1) 0.92ms
+2014-03-30 19:12:36,813 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:12:36,815 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:12:37,667 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:12:37,667 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:14:13,493 :: INFO :: 302 GET /video (127.0.0.1) 0.35ms
+2014-03-30 19:14:13,494 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:14:13,496 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:14:13,496 :: INFO :: 302 POST / (127.0.0.1) 0.76ms
+2014-03-30 19:14:13,498 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:14:13,499 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 19:14:13,501 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:14:13,502 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.32ms
+2014-03-30 19:14:13,503 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:14:13,505 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 19:14:13,507 :: INFO :: 200 GET /video (127.0.0.1) 1.17ms
+2014-03-30 19:16:45,951 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:16:45,953 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 19:16:45,954 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:16:45,954 :: INFO :: 302 POST / (127.0.0.1) 0.83ms
+2014-03-30 19:16:45,956 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 19:16:45,958 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 19:16:45,959 :: INFO :: 200 GET /video (127.0.0.1) 0.46ms
+2014-03-30 19:16:45,960 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.35ms
+2014-03-30 19:16:45,962 :: INFO :: 200 GET / (127.0.0.1) 0.63ms
+2014-03-30 19:16:45,964 :: INFO :: 302 POST / (127.0.0.1) 1.33ms
+2014-03-30 19:16:45,966 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:18:52,440 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:18:52,441 :: INFO :: 200 GET / (127.0.0.1) 0.46ms
+2014-03-30 19:18:52,443 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:18:52,443 :: INFO :: 302 POST / (127.0.0.1) 0.98ms
+2014-03-30 19:18:52,446 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.84ms
+2014-03-30 19:18:52,447 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:18:52,449 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:18:52,450 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 19:18:52,451 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:18:52,453 :: INFO :: 302 POST / (127.0.0.1) 0.89ms
+2014-03-30 19:18:52,454 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 19:18:59,056 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:18:59,058 :: INFO :: 200 GET / (127.0.0.1) 0.52ms
+2014-03-30 19:18:59,059 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:18:59,059 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:18:59,061 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 19:18:59,062 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 19:18:59,065 :: INFO :: 200 GET /video (127.0.0.1) 1.07ms
+2014-03-30 19:18:59,066 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.31ms
+2014-03-30 19:18:59,067 :: INFO :: 200 GET / (127.0.0.1) 0.39ms
+2014-03-30 19:18:59,069 :: INFO :: 302 POST / (127.0.0.1) 0.60ms
+2014-03-30 19:18:59,070 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:21:13,159 :: INFO :: 302 GET /video (127.0.0.1) 0.37ms
+2014-03-30 19:21:13,161 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 19:21:13,162 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:21:13,162 :: INFO :: 302 POST / (127.0.0.1) 0.76ms
+2014-03-30 19:21:13,164 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.50ms
+2014-03-30 19:21:13,167 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.57ms
+2014-03-30 19:21:13,168 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:21:13,170 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.32ms
+2014-03-30 19:21:13,171 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:21:13,172 :: INFO :: 302 POST / (127.0.0.1) 0.59ms
+2014-03-30 19:21:13,174 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:22:26,149 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:22:26,150 :: INFO :: 200 GET / (127.0.0.1) 0.61ms
+2014-03-30 19:22:26,152 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:22:26,152 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 19:22:26,154 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 19:22:26,155 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 19:22:26,157 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:22:26,158 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 19:22:26,161 :: INFO :: 200 GET / (127.0.0.1) 1.31ms
+2014-03-30 19:22:26,162 :: INFO :: 302 POST / (127.0.0.1) 0.63ms
+2014-03-30 19:22:26,164 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 19:22:26,166 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:22:29,177 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:22:29,177 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:22:42,291 :: INFO :: 302 GET /video (127.0.0.1) 0.29ms
+2014-03-30 19:22:42,293 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:22:42,294 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:22:42,295 :: INFO :: 302 POST / (127.0.0.1) 0.70ms
+2014-03-30 19:22:42,296 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 19:22:42,298 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 19:22:42,301 :: INFO :: 200 GET /video (127.0.0.1) 0.93ms
+2014-03-30 19:22:42,302 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.32ms
+2014-03-30 19:22:42,303 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:22:42,304 :: INFO :: 302 POST / (127.0.0.1) 0.58ms
+2014-03-30 19:22:42,306 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 19:22:42,307 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:22:45,317 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:22:45,317 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:25:38,622 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:25:38,623 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:25:38,625 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:25:38,625 :: INFO :: 302 POST / (127.0.0.1) 0.81ms
+2014-03-30 19:25:38,627 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:25:38,629 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.53ms
+2014-03-30 19:25:38,630 :: INFO :: 200 GET /video (127.0.0.1) 0.51ms
+2014-03-30 19:25:38,634 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 19:25:38,636 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 19:25:38,660 :: INFO :: 302 POST / (127.0.0.1) 0.80ms
+2014-03-30 19:25:38,662 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 19:25:38,664 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:25:41,673 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:25:41,674 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:26:43,601 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:26:43,602 :: INFO :: 200 GET / (127.0.0.1) 0.49ms
+2014-03-30 19:26:43,604 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:26:43,605 :: INFO :: 302 POST / (127.0.0.1) 0.87ms
+2014-03-30 19:26:43,607 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.83ms
+2014-03-30 19:26:43,625 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.98ms
+2014-03-30 19:26:43,626 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:26:43,653 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 19:26:43,654 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:26:43,742 :: INFO :: 302 POST / (127.0.0.1) 0.94ms
+2014-03-30 19:26:43,743 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:26:43,765 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:26:46,773 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:26:46,774 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:28:22,004 :: INFO :: 302 GET /video (127.0.0.1) 1.08ms
+2014-03-30 19:28:22,005 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 19:28:22,007 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:28:22,007 :: INFO :: 302 POST / (127.0.0.1) 0.81ms
+2014-03-30 19:28:22,009 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:28:22,023 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.64ms
+2014-03-30 19:28:22,024 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:28:22,053 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 19:28:22,055 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:28:22,082 :: INFO :: 302 POST / (127.0.0.1) 0.60ms
+2014-03-30 19:28:22,083 :: INFO :: 200 GET /video (127.0.0.1) 0.40ms
+2014-03-30 19:28:22,110 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:28:25,120 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:28:25,120 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:30:20,535 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:30:20,536 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:30:20,538 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:30:20,539 :: INFO :: 302 POST / (127.0.0.1) 1.42ms
+2014-03-30 19:30:20,541 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:30:20,551 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 19:30:20,553 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:30:20,577 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.60ms
+2014-03-30 19:30:20,579 :: INFO :: 200 GET / (127.0.0.1) 0.44ms
+2014-03-30 19:30:20,602 :: INFO :: 302 POST / (127.0.0.1) 0.60ms
+2014-03-30 19:30:20,604 :: INFO :: 200 GET /video (127.0.0.1) 0.59ms
+2014-03-30 19:30:27,866 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:30:27,868 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 19:30:27,870 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:30:27,870 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 19:30:27,872 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:30:27,899 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 19:30:27,901 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:30:27,929 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.35ms
+2014-03-30 19:30:27,931 :: INFO :: 200 GET / (127.0.0.1) 0.44ms
+2014-03-30 19:30:27,958 :: INFO :: 302 POST / (127.0.0.1) 0.63ms
+2014-03-30 19:30:27,960 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:30:27,986 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:30:30,997 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:30:30,997 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:38:22,425 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:38:22,427 :: INFO :: 200 GET / (127.0.0.1) 0.59ms
+2014-03-30 19:38:22,429 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:38:22,429 :: INFO :: 302 POST / (127.0.0.1) 0.88ms
+2014-03-30 19:38:22,431 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.76ms
+2014-03-30 19:38:22,436 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.57ms
+2014-03-30 19:38:22,438 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:38:22,440 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 19:38:22,441 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 19:38:22,479 :: INFO :: 302 POST / (127.0.0.1) 0.62ms
+2014-03-30 19:38:22,480 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:38:22,504 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:38:25,513 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:38:25,514 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:38:42,048 :: INFO :: 302 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:38:42,050 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:38:42,051 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:38:42,052 :: INFO :: 302 POST / (127.0.0.1) 0.81ms
+2014-03-30 19:38:42,053 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:38:42,059 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.56ms
+2014-03-30 19:38:42,060 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:38:42,080 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 19:38:42,082 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 19:38:42,083 :: INFO :: 302 POST / (127.0.0.1) 0.62ms
+2014-03-30 19:38:42,085 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:39:01,658 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:39:01,659 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 19:39:01,661 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:39:01,661 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:39:01,663 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 19:39:01,709 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 19:39:01,711 :: INFO :: 200 GET /video (127.0.0.1) 0.46ms
+2014-03-30 19:39:01,750 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 19:39:01,752 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 19:39:01,780 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:39:01,781 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:39:01,783 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:39:04,793 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:39:04,794 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:39:38,845 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 19:39:38,846 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:39:38,848 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:39:38,848 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:39:38,850 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 19:39:38,877 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.78ms
+2014-03-30 19:39:38,879 :: INFO :: 200 GET /video (127.0.0.1) 0.59ms
+2014-03-30 19:39:38,904 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.94ms
+2014-03-30 19:39:38,906 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:39:38,927 :: INFO :: 302 POST / (127.0.0.1) 0.63ms
+2014-03-30 19:39:38,928 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 19:39:38,953 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:39:41,963 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:39:41,964 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:40:08,053 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:40:08,054 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:40:08,056 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:40:08,056 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 19:40:08,058 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:40:08,066 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.55ms
+2014-03-30 19:40:08,067 :: INFO :: 200 GET /video (127.0.0.1) 0.46ms
+2014-03-30 19:40:08,096 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.36ms
+2014-03-30 19:40:08,097 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:40:08,125 :: INFO :: 302 POST / (127.0.0.1) 0.63ms
+2014-03-30 19:40:08,126 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:40:35,380 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 19:40:35,381 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 19:40:35,383 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:40:35,383 :: INFO :: 302 POST / (127.0.0.1) 0.76ms
+2014-03-30 19:40:35,385 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:40:35,391 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 19:40:35,393 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:40:35,415 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:40:35,416 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 19:40:35,434 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 19:40:35,435 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:40:35,458 :: INFO :: Malformed HTTP request from ('127.0.0.1', 52974): Malformed HTTP headers
+2014-03-30 19:40:59,501 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:40:59,502 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 19:40:59,504 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:40:59,504 :: INFO :: 302 POST / (127.0.0.1) 0.82ms
+2014-03-30 19:40:59,506 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:40:59,533 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 19:40:59,535 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 19:40:59,563 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.56ms
+2014-03-30 19:40:59,565 :: INFO :: 200 GET / (127.0.0.1) 0.81ms
+2014-03-30 19:40:59,592 :: INFO :: 302 POST / (127.0.0.1) 0.61ms
+2014-03-30 19:40:59,593 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:40:59,620 :: INFO :: Malformed HTTP request from ('127.0.0.1', 52985): Malformed HTTP headers
+2014-03-30 19:41:51,987 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 19:41:51,989 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 19:41:51,990 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:41:51,990 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 19:41:51,992 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:41:51,994 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 19:41:51,995 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:41:52,027 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.57ms
+2014-03-30 19:41:52,029 :: INFO :: 200 GET / (127.0.0.1) 0.71ms
+2014-03-30 19:41:52,056 :: INFO :: 302 POST / (127.0.0.1) 0.71ms
+2014-03-30 19:41:52,058 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:43:43,366 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:43:43,367 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:43:43,369 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:43:43,369 :: INFO :: 302 POST / (127.0.0.1) 0.85ms
+2014-03-30 19:43:43,371 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 19:43:43,377 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.87ms
+2014-03-30 19:43:43,379 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:43:43,399 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 19:43:43,401 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:43:43,427 :: INFO :: 302 POST / (127.0.0.1) 1.03ms
+2014-03-30 19:43:43,429 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:43:43,448 :: INFO :: Malformed HTTP request from ('127.0.0.1', 53007): Malformed HTTP headers
+2014-03-30 19:44:22,040 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:44:22,041 :: INFO :: 200 GET / (127.0.0.1) 0.51ms
+2014-03-30 19:44:22,043 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:44:22,043 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 19:44:22,045 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:44:22,046 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.49ms
+2014-03-30 19:44:22,048 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:44:22,073 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.56ms
+2014-03-30 19:44:22,075 :: INFO :: 200 GET / (127.0.0.1) 0.85ms
+2014-03-30 19:44:22,077 :: INFO :: 302 POST / (127.0.0.1) 0.74ms
+2014-03-30 19:44:22,079 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 19:44:22,111 :: INFO :: Malformed HTTP request from ('127.0.0.1', 53018): Malformed HTTP headers
+2014-03-30 19:45:15,448 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:45:15,450 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 19:45:15,451 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:45:15,452 :: INFO :: 302 POST / (127.0.0.1) 0.79ms
+2014-03-30 19:45:15,453 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 19:45:15,461 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.55ms
+2014-03-30 19:45:15,464 :: INFO :: 200 GET /video (127.0.0.1) 0.81ms
+2014-03-30 19:45:15,488 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 19:45:15,489 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:45:15,512 :: INFO :: 302 POST / (127.0.0.1) 0.97ms
+2014-03-30 19:45:15,514 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:45:15,541 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:45:18,550 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:45:18,550 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:46:16,269 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:46:16,271 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:46:16,273 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:46:16,273 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 19:46:16,275 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 19:46:16,287 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 19:46:16,289 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 19:46:16,311 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 19:46:16,313 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 19:46:16,337 :: INFO :: 302 POST / (127.0.0.1) 0.67ms
+2014-03-30 19:46:16,338 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 19:46:16,362 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:46:19,370 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:46:19,370 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:46:52,669 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:46:52,670 :: INFO :: 200 GET / (127.0.0.1) 0.37ms
+2014-03-30 19:46:52,672 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:46:52,672 :: INFO :: 302 POST / (127.0.0.1) 0.77ms
+2014-03-30 19:46:52,674 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:46:52,695 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 19:46:52,697 :: INFO :: 200 GET /video (127.0.0.1) 0.59ms
+2014-03-30 19:46:52,718 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.43ms
+2014-03-30 19:46:52,719 :: INFO :: 200 GET / (127.0.0.1) 0.46ms
+2014-03-30 19:46:52,746 :: INFO :: 302 POST / (127.0.0.1) 0.59ms
+2014-03-30 19:46:52,748 :: INFO :: 200 GET /video (127.0.0.1) 0.64ms
+2014-03-30 19:48:41,804 :: INFO :: 302 GET /video (127.0.0.1) 0.28ms
+2014-03-30 19:48:41,805 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 19:48:41,807 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:48:41,807 :: INFO :: 302 POST / (127.0.0.1) 1.17ms
+2014-03-30 19:48:41,810 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 19:48:41,820 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 19:48:41,821 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:48:41,843 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.54ms
+2014-03-30 19:48:41,845 :: INFO :: 200 GET / (127.0.0.1) 0.85ms
+2014-03-30 19:48:41,872 :: INFO :: 302 POST / (127.0.0.1) 1.02ms
+2014-03-30 19:48:41,874 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:48:59,647 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 19:48:59,649 :: INFO :: 200 GET / (127.0.0.1) 0.34ms
+2014-03-30 19:48:59,650 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:48:59,651 :: INFO :: 302 POST / (127.0.0.1) 0.82ms
+2014-03-30 19:48:59,652 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 19:48:59,654 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 19:48:59,655 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:48:59,682 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.38ms
+2014-03-30 19:48:59,683 :: INFO :: 200 GET / (127.0.0.1) 0.46ms
+2014-03-30 19:48:59,685 :: INFO :: 302 POST / (127.0.0.1) 0.59ms
+2014-03-30 19:48:59,686 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 19:48:59,724 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:49:02,733 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:49:02,734 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 19:51:04,145 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 19:51:04,146 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 19:51:04,148 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:51:04,148 :: INFO :: 302 POST / (127.0.0.1) 0.81ms
+2014-03-30 19:51:04,150 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.40ms
+2014-03-30 19:51:04,183 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 19:51:04,184 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:51:04,210 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 19:51:04,212 :: INFO :: 200 GET / (127.0.0.1) 0.55ms
+2014-03-30 19:51:04,234 :: INFO :: 302 POST / (127.0.0.1) 0.61ms
+2014-03-30 19:51:04,235 :: INFO :: 200 GET /video (127.0.0.1) 0.39ms
+2014-03-30 19:51:04,259 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 19:51:04,260 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 19:51:04,260 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 19:51:04,260 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:51:07,270 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:51:07,271 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:51:10,280 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:51:10,281 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 19:51:10,281 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 19:51:10,281 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 19:51:10,281 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:53:22,394 :: INFO :: 302 GET /video (127.0.0.1) 0.28ms
+2014-03-30 19:53:22,395 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 19:53:22,397 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:53:22,398 :: INFO :: 302 POST / (127.0.0.1) 1.83ms
+2014-03-30 19:53:22,400 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.60ms
+2014-03-30 19:53:22,402 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.63ms
+2014-03-30 19:53:22,403 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:53:22,405 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.32ms
+2014-03-30 19:53:22,406 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 19:53:22,453 :: INFO :: 302 POST / (127.0.0.1) 0.79ms
+2014-03-30 19:53:22,455 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:53:22,476 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 19:53:22,476 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 19:53:22,476 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 19:53:22,476 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:53:25,483 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:53:25,484 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:53:28,493 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:53:28,494 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 19:53:28,494 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 19:53:28,494 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 19:53:28,494 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:54:52,172 :: INFO :: 302 GET /video (127.0.0.1) 0.42ms
+2014-03-30 19:54:52,174 :: INFO :: 200 GET / (127.0.0.1) 0.52ms
+2014-03-30 19:54:52,176 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:54:52,176 :: INFO :: 302 POST / (127.0.0.1) 1.26ms
+2014-03-30 19:54:52,179 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.69ms
+2014-03-30 19:54:52,199 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 19:54:52,200 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:54:52,224 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.33ms
+2014-03-30 19:54:52,225 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 19:54:52,249 :: INFO :: 302 POST / (127.0.0.1) 0.89ms
+2014-03-30 19:54:52,251 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 19:54:52,272 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 19:54:52,273 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 19:54:52,273 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 19:54:52,273 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:54:55,283 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:54:55,284 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:54:58,293 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:54:58,294 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 19:54:58,294 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 19:54:58,294 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 19:54:58,295 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:57:13,153 :: INFO :: 302 GET /video (127.0.0.1) 0.35ms
+2014-03-30 19:57:13,155 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 19:57:13,156 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 19:57:13,157 :: INFO :: 302 POST / (127.0.0.1) 1.22ms
+2014-03-30 19:57:13,159 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 19:57:13,164 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.56ms
+2014-03-30 19:57:13,165 :: INFO :: 200 GET /video (127.0.0.1) 0.50ms
+2014-03-30 19:57:13,187 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 19:57:13,188 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 19:57:13,190 :: INFO :: 302 POST / (127.0.0.1) 0.61ms
+2014-03-30 19:57:13,191 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 19:57:13,222 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 19:57:13,223 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 19:57:13,223 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 19:57:13,223 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 19:57:16,233 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:57:16,234 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 19:57:19,243 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 19:57:19,244 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 19:57:19,244 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 19:57:19,244 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 19:57:19,244 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:11:34,943 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 20:11:34,944 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 20:11:34,946 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:11:34,946 :: INFO :: 302 POST / (127.0.0.1) 0.78ms
+2014-03-30 20:11:34,948 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 20:11:34,962 :: INFO :: 302 POST /unauthorized (127.0.0.1) 1.11ms
+2014-03-30 20:11:34,963 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 20:11:34,990 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 20:11:34,991 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 20:11:35,020 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 20:11:35,022 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 20:11:35,047 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:11:35,048 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:11:35,048 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:11:35,048 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:11:38,057 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:11:38,057 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:11:41,067 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:11:41,067 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:11:41,067 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:11:41,068 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:11:41,068 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:16:59,977 :: INFO :: 302 GET /video (127.0.0.1) 0.83ms
+2014-03-30 20:16:59,979 :: INFO :: 200 GET / (127.0.0.1) 0.89ms
+2014-03-30 20:16:59,980 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:16:59,981 :: INFO :: 302 POST / (127.0.0.1) 0.82ms
+2014-03-30 20:16:59,982 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.47ms
+2014-03-30 20:16:59,998 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 20:17:00,000 :: INFO :: 200 GET /video (127.0.0.1) 0.51ms
+2014-03-30 20:17:00,023 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 20:17:00,024 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 20:17:00,040 :: INFO :: 302 POST / (127.0.0.1) 0.60ms
+2014-03-30 20:17:00,042 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 20:17:00,068 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:17:00,068 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:17:00,068 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:17:00,069 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:17:03,077 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:17:03,077 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:17:06,087 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:17:06,087 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:17:06,087 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:17:06,088 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:17:06,088 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:42:21,223 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 20:42:21,225 :: INFO :: 200 GET / (127.0.0.1) 0.36ms
+2014-03-30 20:42:21,227 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:42:21,227 :: INFO :: 302 POST / (127.0.0.1) 0.84ms
+2014-03-30 20:42:21,230 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 20:42:21,233 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.48ms
+2014-03-30 20:42:21,235 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 20:42:21,267 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 20:42:21,269 :: INFO :: 200 GET / (127.0.0.1) 0.45ms
+2014-03-30 20:42:21,291 :: INFO :: 302 POST / (127.0.0.1) 0.70ms
+2014-03-30 20:42:21,293 :: INFO :: 200 GET /video (127.0.0.1) 0.48ms
+2014-03-30 20:42:21,294 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:42:21,295 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:42:21,295 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:42:21,295 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:42:24,303 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:24,304 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:42:27,313 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:27,314 :: INFO :: 302 POST / (127.0.0.1) 0.61ms
+2014-03-30 20:42:27,314 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:42:27,315 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:42:27,315 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:42:27,315 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:42:27,316 :: INFO :: 200 GET /video (127.0.0.1) 0.63ms
+2014-03-30 20:42:53,715 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 20:42:53,717 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 20:42:53,718 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:42:53,718 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 20:42:53,720 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 20:42:53,748 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.74ms
+2014-03-30 20:42:53,750 :: INFO :: 200 GET /video (127.0.0.1) 0.50ms
+2014-03-30 20:42:53,829 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.53ms
+2014-03-30 20:42:53,831 :: INFO :: 200 GET / (127.0.0.1) 0.61ms
+2014-03-30 20:42:53,857 :: INFO :: 302 POST / (127.0.0.1) 0.96ms
+2014-03-30 20:42:53,858 :: INFO :: 200 GET /video (127.0.0.1) 0.45ms
+2014-03-30 20:42:53,879 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:42:53,879 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:42:53,879 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:42:53,880 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:42:56,890 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:56,891 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:42:59,900 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:42:59,901 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.32ms
+2014-03-30 20:42:59,901 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:42:59,901 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:42:59,901 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:42:59,901 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:42:59,902 :: INFO :: 200 GET / (127.0.0.1) 0.28ms
+2014-03-30 20:45:25,827 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 20:45:25,829 :: INFO :: 200 GET / (127.0.0.1) 0.37ms
+2014-03-30 20:45:25,831 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:45:25,832 :: INFO :: 302 POST / (127.0.0.1) 1.44ms
+2014-03-30 20:45:25,834 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.45ms
+2014-03-30 20:45:25,855 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 20:45:25,856 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 20:45:25,884 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 20:45:25,885 :: INFO :: 200 GET / (127.0.0.1) 0.43ms
+2014-03-30 20:45:25,914 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 20:45:25,915 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 20:45:25,943 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:45:25,943 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:45:25,943 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:45:25,943 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:45:28,953 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:45:28,954 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:45:31,963 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:45:31,964 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.33ms
+2014-03-30 20:45:31,964 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:45:31,965 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:45:31,965 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:45:31,965 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:45:31,966 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 20:45:31,967 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 20:45:31,968 :: INFO :: 200 GET / (127.0.0.1) 0.40ms
+2014-03-30 20:59:48,978 :: INFO :: 302 GET /video (127.0.0.1) 0.58ms
+2014-03-30 20:59:48,979 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 20:59:48,981 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 20:59:48,982 :: INFO :: 302 POST / (127.0.0.1) 0.87ms
+2014-03-30 20:59:48,983 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.53ms
+2014-03-30 20:59:48,988 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 20:59:48,990 :: INFO :: 200 GET /video (127.0.0.1) 0.73ms
+2014-03-30 20:59:49,022 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 20:59:49,023 :: INFO :: 200 GET / (127.0.0.1) 0.64ms
+2014-03-30 20:59:49,047 :: INFO :: 302 POST / (127.0.0.1) 0.66ms
+2014-03-30 20:59:49,049 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 20:59:49,050 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 20:59:49,050 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 20:59:49,050 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 20:59:49,051 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:59:52,060 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:52,060 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:59:55,070 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:55,071 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.34ms
+2014-03-30 20:59:55,071 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 20:59:55,071 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 20:59:55,071 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 20:59:55,071 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 20:59:55,072 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 20:59:55,073 :: INFO :: 302 GET /video (127.0.0.1) 0.28ms
+2014-03-30 20:59:55,074 :: INFO :: 200 GET / (127.0.0.1) 0.30ms
+2014-03-30 20:59:55,101 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 20:59:58,080 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 20:59:58,080 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:00:38,215 :: INFO :: 302 GET /video (127.0.0.1) 0.30ms
+2014-03-30 21:00:38,217 :: INFO :: 200 GET / (127.0.0.1) 0.79ms
+2014-03-30 21:00:38,219 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:00:38,220 :: INFO :: 302 POST / (127.0.0.1) 0.86ms
+2014-03-30 21:00:38,222 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.42ms
+2014-03-30 21:00:38,260 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.86ms
+2014-03-30 21:00:38,262 :: INFO :: 200 GET /video (127.0.0.1) 0.47ms
+2014-03-30 21:00:38,290 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 21:00:38,291 :: INFO :: 200 GET / (127.0.0.1) 0.47ms
+2014-03-30 21:00:38,319 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 21:00:38,321 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 21:00:38,342 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:00:38,343 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:00:38,343 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:00:38,343 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:00:41,353 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:41,354 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:00:44,363 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:44,364 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.34ms
+2014-03-30 21:00:44,364 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:00:44,364 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:00:44,365 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:00:44,365 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:00:44,365 :: INFO :: 200 GET / (127.0.0.1) 0.29ms
+2014-03-30 21:00:44,366 :: INFO :: 302 GET /video (127.0.0.1) 0.29ms
+2014-03-30 21:00:44,368 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 21:00:44,391 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:00:47,373 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:00:47,373 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:01:06,682 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:01:06,683 :: INFO :: 200 GET / (127.0.0.1) 0.35ms
+2014-03-30 21:01:06,685 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:01:06,685 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 21:01:06,687 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.68ms
+2014-03-30 21:01:06,703 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.55ms
+2014-03-30 21:01:06,705 :: INFO :: 200 GET /video (127.0.0.1) 0.68ms
+2014-03-30 21:01:06,726 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 21:01:06,728 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 21:01:06,754 :: INFO :: 302 POST / (127.0.0.1) 0.73ms
+2014-03-30 21:01:06,755 :: INFO :: 200 GET /video (127.0.0.1) 0.44ms
+2014-03-30 21:01:06,824 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:01:06,825 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:01:06,825 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:01:06,825 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:01:09,833 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:09,833 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:01:12,843 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:12,844 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.32ms
+2014-03-30 21:01:12,844 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:01:12,844 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:01:12,844 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:01:12,844 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:01:12,845 :: INFO :: 200 GET / (127.0.0.1) 0.28ms
+2014-03-30 21:01:12,868 :: INFO :: 302 GET /video (127.0.0.1) 0.28ms
+2014-03-30 21:01:12,869 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 21:01:12,893 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:01:15,853 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:15,853 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:01:49,024 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:01:49,025 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 21:01:49,027 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:01:49,028 :: INFO :: 302 POST / (127.0.0.1) 1.26ms
+2014-03-30 21:01:49,029 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.44ms
+2014-03-30 21:01:49,039 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.54ms
+2014-03-30 21:01:49,040 :: INFO :: 200 GET /video (127.0.0.1) 0.46ms
+2014-03-30 21:01:49,064 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.36ms
+2014-03-30 21:01:49,065 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 21:01:49,089 :: INFO :: 302 POST / (127.0.0.1) 0.64ms
+2014-03-30 21:01:49,091 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 21:01:49,113 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:01:49,113 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:01:49,113 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:01:49,114 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:01:52,123 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:52,123 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:01:55,133 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:55,134 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.33ms
+2014-03-30 21:01:55,134 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:01:55,134 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:01:55,135 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:01:55,135 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:01:55,135 :: INFO :: 200 GET / (127.0.0.1) 0.32ms
+2014-03-30 21:01:55,141 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:01:55,142 :: INFO :: 200 GET / (127.0.0.1) 0.30ms
+2014-03-30 21:01:55,175 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:01:58,143 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:01:58,143 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:04:57,261 :: INFO :: 302 GET /video (127.0.0.1) 0.46ms
+2014-03-30 21:04:57,263 :: INFO :: 200 GET / (127.0.0.1) 0.38ms
+2014-03-30 21:04:57,265 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:04:57,265 :: INFO :: 302 POST / (127.0.0.1) 0.75ms
+2014-03-30 21:04:57,267 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.41ms
+2014-03-30 21:04:57,289 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.51ms
+2014-03-30 21:04:57,293 :: INFO :: 200 GET /video (127.0.0.1) 0.99ms
+2014-03-30 21:04:57,313 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.37ms
+2014-03-30 21:04:57,314 :: INFO :: 200 GET / (127.0.0.1) 0.42ms
+2014-03-30 21:04:57,340 :: INFO :: 302 POST / (127.0.0.1) 0.85ms
+2014-03-30 21:04:57,343 :: INFO :: 200 GET /video (127.0.0.1) 0.95ms
+2014-03-30 21:04:57,364 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:04:57,364 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:04:57,364 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:04:57,365 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:05:00,373 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:00,374 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:05:03,383 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:03,384 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.35ms
+2014-03-30 21:05:03,384 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:05:03,384 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:05:03,385 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:05:03,385 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:05:03,385 :: INFO :: 200 GET / (127.0.0.1) 0.30ms
+2014-03-30 21:05:03,386 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:05:03,387 :: INFO :: 200 GET / (127.0.0.1) 0.30ms
+2014-03-30 21:05:03,417 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:05:06,393 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:05:06,393 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 190, in on_message
+    self.send_image()
+  File "superTornado.py", line 243, in send_image
+    self.write_message("error")
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 178, in write_message
+    raise WebSocketClosedError()
+WebSocketClosedError
+2014-03-30 21:08:07,160 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 21:08:07,161 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 21:08:07,161 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 21:08:10,170 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 21:08:10,170 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 21:08:10,170 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 21:08:11,779 :: INFO :: 302 GET /video (127.0.0.1) 0.53ms
+2014-03-30 21:08:11,783 :: INFO :: 200 GET / (127.0.0.1) 3.03ms
+2014-03-30 21:08:11,785 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:08:11,785 :: INFO :: 302 POST / (127.0.0.1) 1.08ms
+2014-03-30 21:08:11,787 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.74ms
+2014-03-30 21:08:11,789 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.46ms
+2014-03-30 21:08:11,791 :: INFO :: 200 GET /video (127.0.0.1) 0.99ms
+2014-03-30 21:08:11,821 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.53ms
+2014-03-30 21:08:11,823 :: INFO :: 200 GET / (127.0.0.1) 0.95ms
+2014-03-30 21:08:11,843 :: INFO :: 302 POST / (127.0.0.1) 0.72ms
+2014-03-30 21:08:11,844 :: INFO :: 200 GET /video (127.0.0.1) 0.37ms
+2014-03-30 21:08:11,845 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:08:11,845 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:08:11,846 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:08:11,846 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:08:13,179 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:13,180 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:08:16,190 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:16,191 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.33ms
+2014-03-30 21:08:16,191 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:08:16,191 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:08:16,191 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:08:16,191 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:08:16,192 :: INFO :: 200 GET / (127.0.0.1) 0.28ms
+2014-03-30 21:08:16,208 :: INFO :: 302 GET /video (127.0.0.1) 0.31ms
+2014-03-30 21:08:16,209 :: INFO :: 200 GET / (127.0.0.1) 0.33ms
+2014-03-30 21:08:16,236 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:08:19,200 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:08:19,200 :: ERROR :: [91m[0m
+2014-03-30 21:12:34,149 :: INFO :: [95m->Loading configuration ... [0m
+2014-03-30 21:12:34,150 :: SUCCESS :: [92m->Configuration Server Load Successfully ![0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +Blind unhabitant[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +Ip Camera : 192.168.1.13[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +Port Camera : 80[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +ID url Camera : test:a[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +End url Camera : /image.jpg[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +Ip Server : 127.0.0.1[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +Port Server : 80[0m
+2014-03-30 21:12:34,150 :: INFO :: [95m  +IP Domotic : 192.168.16.150[0m
+2014-03-30 21:12:34,151 :: INFO :: [95m  +Port Domotic : 80[0m
+2014-03-30 21:12:34,151 :: INFO :: [95m->Ping camera ...[0m
+2014-03-30 21:12:37,160 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-30 21:12:37,160 :: INFO :: [95m->Server Start ...[0m
+2014-03-30 21:12:37,160 :: SUCCESS :: [92m->Server Start Successfully ![0m
+2014-03-30 21:12:40,575 :: INFO :: 302 GET /video (127.0.0.1) 0.60ms
+2014-03-30 21:12:40,579 :: INFO :: 200 GET / (127.0.0.1) 2.99ms
+2014-03-30 21:12:40,581 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:12:40,581 :: INFO :: 302 POST / (127.0.0.1) 1.06ms
+2014-03-30 21:12:40,583 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.84ms
+2014-03-30 21:12:40,585 :: INFO :: 302 POST /unauthorized (127.0.0.1) 1.17ms
+2014-03-30 21:12:40,588 :: INFO :: 200 GET /video (127.0.0.1) 1.00ms
+2014-03-30 21:12:40,610 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.34ms
+2014-03-30 21:12:40,611 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 21:12:40,635 :: INFO :: 302 POST / (127.0.0.1) 0.94ms
+2014-03-30 21:12:40,637 :: INFO :: 200 GET /video (127.0.0.1) 0.41ms
+2014-03-30 21:12:40,659 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:12:40,659 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:12:40,660 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:12:40,660 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:12:43,670 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:43,670 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:12:46,679 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:46,681 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.38ms
+2014-03-30 21:12:46,681 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:12:46,681 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:12:46,681 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:12:46,682 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:12:46,682 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 21:12:46,683 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:12:46,684 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 21:12:46,732 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:12:49,689 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:12:49,690 :: ERROR :: [91mFailed Send data : Socket Close [0m
+2014-03-30 21:19:57,335 :: INFO :: 302 GET /video (127.0.0.1) 0.41ms
+2014-03-30 21:19:57,337 :: INFO :: 200 GET / (127.0.0.1) 0.41ms
+2014-03-30 21:19:57,338 :: WARNING :: [93m->An unauthorized user try to access : 127.0.0.1[0m
+2014-03-30 21:19:57,339 :: INFO :: 302 POST / (127.0.0.1) 1.21ms
+2014-03-30 21:19:57,341 :: INFO :: 200 GET /unauthorized (127.0.0.1) 0.39ms
+2014-03-30 21:19:57,342 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.52ms
+2014-03-30 21:19:57,344 :: INFO :: 200 GET /video (127.0.0.1) 0.43ms
+2014-03-30 21:19:57,390 :: INFO :: 302 POST /unauthorized (127.0.0.1) 0.57ms
+2014-03-30 21:19:57,391 :: INFO :: 200 GET / (127.0.0.1) 0.56ms
+2014-03-30 21:19:57,416 :: INFO :: 302 POST / (127.0.0.1) 1.00ms
+2014-03-30 21:19:57,418 :: INFO :: 200 GET /video (127.0.0.1) 0.42ms
+2014-03-30 21:19:57,440 :: SUCCESS :: [92m->Websocket Open : 127.0.0.1[0m
+2014-03-30 21:19:57,440 :: INFO :: [95m->jmi : Authorized user connection : 127.0.0.1[0m
+2014-03-30 21:19:57,440 :: INFO :: [95m->Send audio alarm authorized user[0m
+2014-03-30 21:19:57,440 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:20:00,449 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:00,450 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:20:03,460 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:03,460 :: INFO :: 302 GET /disconnection (127.0.0.1) 0.32ms
+2014-03-30 21:20:03,461 :: SUCCESS :: [92m->Websocket Closed : 127.0.0.1[0m
+2014-03-30 21:20:03,461 :: INFO :: [95m->jmi : Authorized User Deconnection : 127.0.0.1[0m
+2014-03-30 21:20:03,461 :: INFO :: [95m->Send Audio Alarm Deconnection User[0m
+2014-03-30 21:20:03,461 :: SUCCESS :: [92m->Signal To House Send Successfully[0m
+2014-03-30 21:20:03,462 :: INFO :: 200 GET / (127.0.0.1) 0.28ms
+2014-03-30 21:20:03,463 :: INFO :: 302 GET /video (127.0.0.1) 0.27ms
+2014-03-30 21:20:03,464 :: INFO :: 200 GET / (127.0.0.1) 0.31ms
+2014-03-30 21:20:03,485 :: INFO :: [95m->Demand Data Receive : 127.0.0.1[0m
+2014-03-30 21:20:06,470 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-30 21:20:06,470 :: ERROR :: [91mFailed Send data : Socket Close [0m

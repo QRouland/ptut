@@ -85,15 +85,15 @@ class Log(object):
         pLvl : level of log message
         """
         if pLvl == lvl.DEBUG :
-            pMsg = bcolors.DEBUG + pMsg + bcolors.ENDC
+            pMsg = bcolors.DEBUG + str(pMsg) + bcolors.ENDC
         elif pLvl == lvl.INFO :
-            pMsg = bcolors.INFO + pMsg + bcolors.ENDC
+            pMsg = bcolors.INFO + str(pMsg) + bcolors.ENDC
         elif pLvl == lvl.SUCCESS :
-            pMsg = bcolors.SUCCESS + pMsg + bcolors.ENDC
+            pMsg = bcolors.SUCCESS + str(pMsg) + bcolors.ENDC
         elif pLvl == lvl.WARNING :
-            pMsg = bcolors.WARNING + pMsg + bcolors.ENDC
+            pMsg = bcolors.WARNING + str(pMsg) + bcolors.ENDC
         elif pLvl == lvl.FAIL :
-            pMsg = bcolors.FAIL + pMsg + bcolors.ENDC
+            pMsg = bcolors.FAIL + str(pMsg) + bcolors.ENDC
         self.logger.log(pLvl,pMsg)
 
 

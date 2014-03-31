@@ -582,3 +582,82 @@ WebSocketClosedError
 2014-03-31 23:04:53,313 :: ERROR :: [91m'EPollIOLoop' object has no attribute 'end'[0m
 2014-03-31 23:05:12,716 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
 2014-03-31 23:07:45,023 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:14:35,836 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:16:33,090 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:16:36,100 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:16:39,110 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:16:39,110 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-03-31 23:18:24,510 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:18:33,028 :: ERROR :: Uncaught exception in /socket
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 322, in wrapper
+    return callback(*args, **kwargs)
+  File "superTornado.py", line 170, in open
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20autorisee")')
+  File "superTornado.py", line 225, in send_signal_house
+    maison = httplib.HTTPConnection(GlobalVars.ipDomo,GlobalVars.portDomo)
+NameError: global name 'httplib' is not defined
+2014-03-31 23:18:33,029 :: ERROR :: Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 214, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 225, in send_signal_house
+    maison = httplib.HTTPConnection(GlobalVars.ipDomo,GlobalVars.portDomo)
+NameError: global name 'httplib' is not defined
+2014-03-31 23:18:33,030 :: ERROR :: Exception in callback <functools.partial object at 0x1a247e0>
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado/ioloop.py", line 477, in _run_callback
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/httpserver.py", line 218, in _on_connection_close
+    callback()
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/lib/python2.7/site-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado/websocket.py", line 293, in on_connection_close
+    self.on_close()
+  File "superTornado.py", line 214, in on_close
+    self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20rompue")')
+  File "superTornado.py", line 225, in send_signal_house
+    maison = httplib.HTTPConnection(GlobalVars.ipDomo,GlobalVars.portDomo)
+NameError: global name 'httplib' is not defined
+2014-03-31 23:18:36,133 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:18:36,133 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-03-31 23:19:51,123 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:20:01,790 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:20:04,800 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:20:07,810 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:20:07,810 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-03-31 23:40:20,683 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:40:29,820 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:40:32,829 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:40:35,840 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 23:40:35,840 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-04-01 00:12:20,859 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-04-01 00:12:23,869 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-04-01 00:12:26,879 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-04-01 00:12:26,880 :: ERROR :: [91m->Failed Send data : Socket Close [0m

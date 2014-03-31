@@ -442,3 +442,143 @@ WebSocketClosedError
 2014-03-30 21:20:03,460 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
 2014-03-30 21:20:06,470 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
 2014-03-30 21:20:06,470 :: ERROR :: [91mFailed Send data : Socket Close [0m
+2014-03-31 09:36:33,426 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:36:33,427 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:37:37,257 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:37:37,257 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:37:40,886 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:37:40,887 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:37:47,541 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:37:47,541 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:38:21,233 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:38:21,234 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:38:21,234 :: ERROR :: [91m[Errno 98] Address already in use[0m
+2014-03-31 09:38:42,192 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:38:42,193 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 09:38:42,193 :: ERROR :: [91m[Errno 98] Address already in use[0m
+2014-03-31 09:39:13,491 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:13,492 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:13,582 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:13,582 :: ERROR :: [91mFailed Send data : Socket Close [0m
+2014-03-31 09:39:59,575 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:59,576 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:59,631 :: ERROR :: [91m[Errno socket error] [Errno 101] Network is unreachable[0m
+2014-03-31 09:39:59,631 :: ERROR :: [91mFailed Send data : Socket Close [0m
+2014-03-31 09:45:24,887 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:24,889 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:45:29,891 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:34,897 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:39,903 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:42,911 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:45:47,913 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:52,920 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:45:57,923 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:02,930 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:02,931 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:46:03,934 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:46:08,940 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:13,943 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:18,948 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:23,954 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:28,956 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:33,963 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:38,969 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:43,971 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:48,977 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:53,984 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:46:58,990 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:03,993 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:08,999 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:14,006 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:19,008 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:24,015 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:29,021 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:34,027 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:39,034 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:44,040 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:49,046 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:54,052 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:59,058 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:47:59,060 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:48:04,063 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:09,070 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:14,076 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:19,083 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:24,089 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:29,095 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:34,101 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:39,107 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:44,113 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:49,120 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:54,126 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:48:59,131 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:04,137 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:09,144 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:14,150 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:19,156 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:24,162 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:29,168 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:34,174 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:39,181 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:44,187 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:49,194 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:54,197 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:49:56,790 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 09:49:59,204 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:04,210 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:09,215 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:14,217 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:19,224 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:24,230 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:29,236 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:34,242 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:39,248 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:44,255 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:49,258 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:54,264 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:50:59,267 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:00,271 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:51:01,274 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 09:51:06,280 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:11,286 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:16,289 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:21,295 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:26,301 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:31,304 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:36,305 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:41,310 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 09:51:46,316 :: ERROR :: [91m[Errno socket error] timed out[0m
+2014-03-31 22:22:16,377 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 22:22:35,717 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:22:38,727 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:22:41,737 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:22:41,737 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-03-31 22:25:13,293 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:25:16,303 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:25:19,313 :: ERROR :: [91m[Errno socket error] [Errno 113] No route to host[0m
+2014-03-31 22:25:19,313 :: ERROR :: [91m->Failed Send data : Socket Close [0m
+2014-03-31 22:48:22,036 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 22:58:56,590 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 22:58:56,591 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 22:58:56,591 :: ERROR :: [91mtype object 'EndHandler' has no attribute 'signal'[0m
+2014-03-31 23:01:05,976 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:01:05,978 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:01:05,978 :: ERROR :: [91mname 'signalHandler' is not defined[0m
+2014-03-31 23:01:20,010 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:01:20,012 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:01:20,012 :: ERROR :: [91mname 'signal_handler' is not defined[0m
+2014-03-31 23:01:36,046 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:02:51,136 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:02:53,149 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:02:53,150 :: ERROR :: [91msignal_handler() takes exactly 3 arguments (2 given)[0m
+2014-03-31 23:03:32,420 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:03:32,421 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:03:32,421 :: ERROR :: [91msignal() takes exactly 2 arguments (3 given)[0m
+2014-03-31 23:04:39,016 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:04:41,132 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:04:41,133 :: ERROR :: [91msignal_handler() takes exactly 3 arguments (2 given)[0m
+2014-03-31 23:04:51,493 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:04:53,313 :: ERROR :: [91mServer Start Failed ![0m
+2014-03-31 23:04:53,313 :: ERROR :: [91m'EPollIOLoop' object has no attribute 'end'[0m
+2014-03-31 23:05:12,716 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m
+2014-03-31 23:07:45,023 :: ERROR :: [91m->WARNING : Camera Unreachable! Check Camera Configuration![0m

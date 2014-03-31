@@ -9,19 +9,30 @@ from tornado.ioloop import PeriodicCallback
 
 f = open("requestToMi", "w")
 
-class MainHandler(tornado.web.RequestHandler):
+class SayHandler(tornado.web.RequestHandler):
     def get(self):
-        print "lol"
+        source = self.get_argument("source","")
+        text = self.get_argument("text","")
+        print"/micom/say.php?source=" + source + "&text=" + text
+
+
+class LampHandler(tornado.web.RequestHandler):
+    def get(self):
+        room = self.get_argument("room","")
+        order = self.get_argument("order","")
+        print"/micom/lamp.php?room=" + room + "&order=" + order
+
 
 
 application = tornado.web.Application([
-    (r"/lol", MainHandler)])
+    (r"/micom/say.php", SayHandler),
+    (r"micom/lamp.php", LampHandler)])
 
 if __name__ == "__main__":
     try :
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application)
-        http_server.listen(80)
+        http_server.listen(8080)
         tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         print e

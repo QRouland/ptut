@@ -15,12 +15,15 @@ import os
 from urllib import urlopen
 import string
 import random
+import signal
 
 """Import files"""
 from m.loadConf import *
 from m.login import *
 from m.log import *
 
+def signal_handler(signal,frame) :
+        GlobalVars.loop.stop()
 
 class GlobalVars :
     """
@@ -40,7 +43,7 @@ class GlobalVars :
     portDomo=""
     authorized = 0
     unauthorized = 0
-
+    loop = tornado.ioloop.IOLoop.instance()
 
 
 
@@ -164,7 +167,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             if GlobalVars.blind == True:
                 GlobalVars.authorized + 1
                 GlobalVars.log.printL('->Send audio alarm authorized user',lvl.INFO)
-                self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20autorisee")')
+                self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20autorisee")')
             else:
                 GlobalVars.authorized + 1
                 GlobalVars.log.printL('->Send visual alarm authorized user',lvl.INFO)
@@ -174,7 +177,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             if GlobalVars.blind == True:
                 GlobalVars.unauthorized + 1
                 GlobalVars.log.printL('->Send audio alarm unauthorized user',lvl.WARNING)
-                self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20non%20autorisee")')
+                self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20non%20autorisee")')
             else:
                 GlobalVars.unauthorized + 1
                 GlobalVars.log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
@@ -208,7 +211,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         if GlobalVars.blind == True:
             if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized == 0):
                 GlobalVars.log.printL('->Send Audio Alarm Deconnection User', lvl.INFO)
-                self.send_signal_house('maison.request("GET", "/micom/say.php?source=toto&text=Connection%20a%20la%20camera%20rompue")')
+                self.send_signal_house('maison.request("GET", "/micom/say.php?source=tornado&text=Connection%20a%20la%20camera%20rompue")')
         else:
             if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized == 0):
                 GlobalVars.log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
@@ -243,6 +246,8 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         except Exception, e :
             GlobalVars.log.printL(e,lvl.FAIL)
             self.write_message("error")
+
+
 
 
 application = tornado.web.Application([
@@ -324,8 +329,21 @@ if __name__ == "__main__":
         tornado.options.parse_command_line()
         http_server = tornado.httpserver.HTTPServer(application)
         http_server.listen(GlobalVars.portServ)
+        signal.signal(signal.SIGINT, signal_handler)
         GlobalVars.log.printL("->Server Start Successfully !",lvl.SUCCESS)
-        tornado.ioloop.IOLoop.instance().start()
     except Exception, e :
         GlobalVars.log.printL("Server Start Failed !",lvl.FAIL)
+        GlobalVars.log.printL(e,lvl.FAIL)
+        sys.exit(1)
+    try :
+        GlobalVars.loop.start()
+    except Exception, e :
+        GlobalVars.log.printL("Server Crash !",lvl.FAIL)
+        GlobalVars.log.printL(e,lvl.FAIL)
+        sys.exit(1)
+    try :
+        GlobalVars.log.printL("->Server Stop Successfully !",lvl.SUCCESS)
+    except Exception, e :
+        GlobalVars.log.printL("Server Stop Failed !",lvl.FAIL)
+        GlobalVars.log.printL(e,lvl.FAIL)
         sys.exit(1)

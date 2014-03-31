@@ -107,13 +107,13 @@ class testLogin(object):
                 err +=1
 
         if err==0:
-            print "TEST SUCESSFULL : all login were succesfull"
+            print "TEST SUCESSFULL : All Login Were Succesfull"
         else :
-            print "TEST FAIL: all login  were not succesfull"
+            print "TEST FAIL: All Login  Were Not Succesfull"
 
 
 
-        print "\nTesting invalid keys"
+        print "\nTesting invalid id and password"
         err = 0
         for i in range(10):
             value =  LoginObject.checkLogin(
@@ -130,6 +130,40 @@ class testLogin(object):
             print "TEST FAIL : Login Ok With Invalid Information"
         else :
             print "TEST SUCESSFULL :  Login Not Ok With Invalid Information"
+
+        print "\nTesting invalid id and correct password"
+        err = 0
+        for name,passwd in self.assos :
+            name = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(random.randint(1,20)))
+            value =  LoginObject.checkLogin(name,passwd)
+
+            if value == True:
+                print "NOK : Return True"
+                err += 1
+            else :
+                print "OK : Return False"
+
+        if err>0:
+            print "TEST FAIL : Login Ok With Invalid Information"
+        else :
+            print "TEST SUCESSFULL :  Login Not Ok With Invalid Id"
+
+        print "\nTesting invalid password and correct id"
+        err = 0
+        for name,passwd in self.assos :
+            passwd = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(random.randint(1,20)))
+            value =  LoginObject.checkLogin(name,passwd)
+
+            if value == True:
+                print "NOK : Return True"
+                err += 1
+            else :
+                print "OK : Return False"
+
+        if err>0:
+            print "TEST FAIL : Login Ok With Invalid Information"
+        else :
+            print "TEST SUCESSFULL :  Login Not Ok With Invalid Password"
 
 
 

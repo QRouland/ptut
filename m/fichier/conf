@@ -5,6 +5,5 @@ idUrlCamera=test:a
 endUrlCamera=/image.jpg
 serv=127.0.0.1
 portServ=80
-ipDomoMi=192.168.16.150
-portDomoMi=80
-
+ipDomoMi=127.0.0.1
+portDomoMi=8080

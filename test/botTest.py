@@ -31,7 +31,19 @@ opener.addheaders = [('User-agent',
 print "Hello, I'm botTest :)"
 print "I'm here for test MI camera server."
 print "I'm not a python script for the server, I'm a browser  : \n" + browser.replace(";","")
-print "\nI'm starting test with video page where an unconnect user can't normaly access :"
+print "\nI'm starting test with main page of the site :"
+print "PATH: /"
+print "TYPE REQUEST : GET"
+print "DATA SEND : -"
+print ""
+resp = opener.open(base_url+"video")
+if resp.geturl()== base_url:
+    print("OK : receive / page")
+else:
+    print("NOK : not receive / page !")
+cj.save()
+
+print "\nI'm continue with video page where an unconnect user can't normaly access :"
 print "PATH: /video"
 print "TYPE REQUEST : GET"
 print "DATA SEND : -"
@@ -116,7 +128,7 @@ else:
 cj.save()
 
 
-print "\nNow I have acess to /video i will try to connect to websocket to aquire image :"
+print "\nNow I have access to /video I will try to connect to websocket to aquire image :"
 print "PATH: /socket "
 print "TYPE REQUEST : GET"
 print "DATA SEND :"
@@ -144,7 +156,7 @@ except Exception, e :
     print "NOK : Failed To Connect To Websocket And Received Data"
 cj.save()
 
-print "\nI will now try to disconnet :"
+print "\nI will now try to disconnect :"
 print "PATH: / "
 print "TYPE REQUEST : GET"
 print "DATA SEND : - "
@@ -156,7 +168,7 @@ else:
     print("NOK : not redirect to / !")
 cj.save()
 
-print "\nI'm now test video for check if i am disconnected :"
+print "\nI'm now test video for check If I Am Disconnected :"
 print "PATH: /video"
 print "TYPE REQUEST : GET"
 print "DATA SEND : -"
@@ -170,7 +182,7 @@ cj.save()
 
 
 
-print "\nNow I Will Try To Connect To The Websocket then I not connected :"
+print "\nNow I Will Try To Connect To The Websocket Then I not connected :"
 print "PATH: /socket "
 print "TYPE REQUEST : GET"
 print "DATA SEND :"

@@ -7,10 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "_bcdgilmopsuvw",
+  0: "_bcdegilmopsuvw",
   1: "bcdglmsuvw",
   2: "s",
-  3: "_cgilops",
+  3: "_cegilops",
   4: "p"
 };
 

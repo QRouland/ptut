@@ -1,4 +1,4 @@
-.TH "superTornado.BaseHandler" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.TH "superTornado.BaseHandler" 3 "Tue Apr 1 2014" "Version 1.0" "TornadoServerMI" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,6 +24,18 @@ Inherited by \fBsuperTornado\&.DisconnectionHandler\fP, \fBsuperTornado\&.MainHa
 .nf
 Define BaseHandler for create the basis for session connection
 cookie secure  based (sign and timestamp )
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def superTornado\&.BaseHandler\&.get_current_user (self)"
+
+.PP
+.nf
+Return id connect current user connect
+else null
 
 .fi
 .PP

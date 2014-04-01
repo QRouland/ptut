@@ -34,58 +34,61 @@ class LoadConf(object):
         else :
             return rep
 
-    """
-    Return ipCamera configuration
-    Else "error"
-    """
     def ipCamera(self) :
+        """
+        Return ipCamera configuration
+        Else "error"
+        """
         return self.loadValue("camera")
 
-    """
-    Return portCamera configuration
-    Else "error"
-    """
     def portCamera(self) :
+        """
+        Return portCamera configuration
+        Else "error"
+        """
         return self.loadValue("portCamera")
 
-    """
-    Return ipServ configuration
-    Else "error"
-    """
     def ipServ(self) :
+        """
+        Return ipServ configuration
+        Else "error"
+        """
         return self.loadValue("serv")
 
-    """
-    Return portServ configuration
-    Else "error"
-    """
+
     def portServ(self) :
+        """
+        Return portServ configuration
+        Else "error"
+        """
         return self.loadValue("portServ")
 
-    """
-    Return idUrlCamera configuration
-    Else "error"
-    """
     def idUrlCamera(self) :
+        """
+        Return idUrlCamera configuration
+        Else "error"
+        """
         return self.loadValue("idUrlCamera")
 
-    """
-    Return endUrlCamera configuration
-    Else "error"
-    """
     def endUrlCamera(self) :
+        """
+        Return endUrlCamera configuration
+        Else "error"
+        """
         return self.loadValue("endUrlCamera")
-    """
-    Return ipDomoMi configuration
-    Else "error"
-    """
+
     def ipDomo(self) :
+        """
+        Return ipDomoMi configuration
+        Else "error"
+        """
         return self.loadValue("ipDomoMi")
-    """
-    Return portDomoMi configuration
-    Else "error"
-    """
+
     def portDomo(self) :
+        """
+        Return portDomoMi configuration
+        Else "error"
+        """
         return self.loadValue("portDomoMi")
 
 

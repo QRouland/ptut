@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['post',['post',['../classsuper_tornado_1_1_main_handler.html#a34b9f9761f25b951e452954252e82deb',1,'superTornado.MainHandler.post()'],['../classsuper_tornado_1_1_unauthorized_handler.html#af4b77e66e008a11b82cad37160e4c5d9',1,'superTornado.UnauthorizedHandler.post()']]],
-  ['printl',['printL',['../classm_1_1log_1_1_log.html#ae0287ddb37e9c5e3ac794a8ff7bbbe14',1,'m::log::Log']]]
+  ['on_5fclose',['on_close',['../classsuper_tornado_1_1_w_socket_handler.html#acd974cfb26b4f7461cb631407a7e3c1d',1,'superTornado::WSocketHandler']]],
+  ['on_5fmessage',['on_message',['../classsuper_tornado_1_1_w_socket_handler.html#a4ef2fe7a6016b72f7d80c80260f2ceae',1,'superTornado::WSocketHandler']]],
+  ['open',['open',['../classsuper_tornado_1_1_w_socket_handler.html#a93c6a7682da1900113bf2f0894b93fa2',1,'superTornado::WSocketHandler']]]
 ];

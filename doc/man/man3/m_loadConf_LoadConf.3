@@ -1,4 +1,4 @@
-.TH "m.loadConf.LoadConf" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.TH "m.loadConf.LoadConf" 3 "Tue Apr 1 2014" "Version 1.0" "TornadoServerMI" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,9 @@ Inherits object\&.
 .SS "Public Member Functions"
 
 .in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
 .ti -1c
 .RI "def \fBloadValue\fP"
 .br
@@ -29,6 +32,25 @@ Inherits object\&.
 .ti -1c
 .RI "def \fBportServ\fP"
 .br
+.ti -1c
+.RI "def \fBidUrlCamera\fP"
+.br
+.ti -1c
+.RI "def \fBendUrlCamera\fP"
+.br
+.ti -1c
+.RI "def \fBipDomo\fP"
+.br
+.ti -1c
+.RI "def \fBportDomo\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBpath\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -39,8 +61,69 @@ Loading configuration file
 .fi
 .PP
  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def m\&.loadConf\&.LoadConf\&.__init__ (self, path)"
+
+.PP
+.nf
+Define file path for load config
+
+.fi
+.PP
+ 
 .SH "Member Function Documentation"
 .PP 
+.SS "def m\&.loadConf\&.LoadConf\&.endUrlCamera (self)"
+
+.PP
+.nf
+Return endUrlCamera configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.idUrlCamera (self)"
+
+.PP
+.nf
+Return idUrlCamera configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.ipCamera (self)"
+
+.PP
+.nf
+Return ipCamera configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.ipDomo (self)"
+
+.PP
+.nf
+Return ipDomoMi configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.ipServ (self)"
+
+.PP
+.nf
+Return ipServ configuration
+Else "error"
+
+.fi
+.PP
+ 
 .SS "def m\&.loadConf\&.LoadConf\&.isBlind (self)"
 
 .PP
@@ -57,6 +140,36 @@ Else false
 .nf
 Return the value associate to the key into conf file (fichier/conf)
 Else return "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.portCamera (self)"
+
+.PP
+.nf
+Return portCamera configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.portDomo (self)"
+
+.PP
+.nf
+Return portDomoMi configuration
+Else "error"
+
+.fi
+.PP
+ 
+.SS "def m\&.loadConf\&.LoadConf\&.portServ (self)"
+
+.PP
+.nf
+Return portServ configuration
+Else "error"
 
 .fi
 .PP

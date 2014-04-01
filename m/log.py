@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 
 class bcolors:
     """
-    Define constant value color for different level
+    Define constant color value for different level
     """
     DEBUG = '\033[94m'
     INFO = '\033[95m'

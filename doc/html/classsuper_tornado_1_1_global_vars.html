@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="link lol.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">TornadoServerMI
-   &#160;<span id="projectnumber">0.3</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">An tornado server for smart house&#39;s camera of IUT Blagnac</div>
   </td>
@@ -117,8 +117,11 @@ $(document).ready(function(){initNavTree('classsuper_tornado_1_1_global_vars.htm
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a0091cf90c3955b9dd9917e441d6d307f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0091cf90c3955b9dd9917e441d6d307f"></a>
-tuple&#160;</td><td class="memItemRight" valign="bottom"><b>config</b> = <a class="el" href="classm_1_1load_conf_1_1_load_conf.html">LoadConf</a>()</td></tr>
+tuple&#160;</td><td class="memItemRight" valign="bottom"><b>config</b> = <a class="el" href="classm_1_1load_conf_1_1_load_conf.html">LoadConf</a>(&quot;m/fichier/conf&quot;)</td></tr>
 <tr class="separator:a0091cf90c3955b9dd9917e441d6d307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027c191330c93fb0ce920d0c0cd7b8b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a027c191330c93fb0ce920d0c0cd7b8b2"></a>
+tuple&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> = <a class="el" href="classm_1_1log_1_1_log.html">Log</a>()</td></tr>
+<tr class="separator:a027c191330c93fb0ce920d0c0cd7b8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88c8b1da2e0b050af8a379a117440a44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88c8b1da2e0b050af8a379a117440a44"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>blind</b> = False</td></tr>
 <tr class="separator:a88c8b1da2e0b050af8a379a117440a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,27 +131,40 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>ipCamera</b> = &quo
 <tr class="memitem:a1ac437cbfa5d3a6d35b079411ee6fb0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ac437cbfa5d3a6d35b079411ee6fb0a"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>portCamera</b> = &quot;&quot;</td></tr>
 <tr class="separator:a1ac437cbfa5d3a6d35b079411ee6fb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b35cd7e739aad2f78100e5c44be95a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b35cd7e739aad2f78100e5c44be95a"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>portServ</b> = &quot;&quot;</td></tr>
-<tr class="separator:a46b35cd7e739aad2f78100e5c44be95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a027c191330c93fb0ce920d0c0cd7b8b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a027c191330c93fb0ce920d0c0cd7b8b2"></a>
-tuple&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> = <a class="el" href="classm_1_1log_1_1_log.html">Log</a>()</td></tr>
-<tr class="separator:a027c191330c93fb0ce920d0c0cd7b8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e47041f62f9a703fc68916c2bb9cbe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e47041f62f9a703fc68916c2bb9cbe5"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>endUrlCamera</b> = &quot;&quot;</td></tr>
+<tr class="separator:a6e47041f62f9a703fc68916c2bb9cbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11b9f2e40a970b6254a02a6683d0ea9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11b9f2e40a970b6254a02a6683d0ea9"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>idCamera</b> = &quot;&quot;</td></tr>
+<tr class="separator:ac11b9f2e40a970b6254a02a6683d0ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c579f7873a30bd5ee9d3547fea1ecd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c579f7873a30bd5ee9d3547fea1ecd"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>urlCamera</b> = &quot;&quot;</td></tr>
 <tr class="separator:af9c579f7873a30bd5ee9d3547fea1ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b35cd7e739aad2f78100e5c44be95a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b35cd7e739aad2f78100e5c44be95a"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>portServ</b> = &quot;&quot;</td></tr>
+<tr class="separator:a46b35cd7e739aad2f78100e5c44be95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198024d11aabe49f4cced6f8c92f2557"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a198024d11aabe49f4cced6f8c92f2557"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>urlSocket</b> = &quot;&quot;</td></tr>
 <tr class="separator:a198024d11aabe49f4cced6f8c92f2557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d938abea96eeb8ba2506a5630852151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d938abea96eeb8ba2506a5630852151"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>ipDomo</b> = &quot;&quot;</td></tr>
+<tr class="separator:a5d938abea96eeb8ba2506a5630852151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6421d020adaaef6fe34eda225be7ad8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6421d020adaaef6fe34eda225be7ad8"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>portDomo</b> = &quot;&quot;</td></tr>
+<tr class="separator:af6421d020adaaef6fe34eda225be7ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53190e11b952863f655e2a8637b4d9b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53190e11b952863f655e2a8637b4d9b0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>authorized</b> = 0</td></tr>
 <tr class="separator:a53190e11b952863f655e2a8637b4d9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace59d34b127bace56dd6db537a5134a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace59d34b127bace56dd6db537a5134a1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>unauthorized</b> = 0</td></tr>
 <tr class="separator:ace59d34b127bace56dd6db537a5134a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bf135e50433c4c306b59ee9186346a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19bf135e50433c4c306b59ee9186346a"></a>
+tuple&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> = tornado.ioloop.IOLoop.instance()</td></tr>
+<tr class="separator:a19bf135e50433c4c306b59ee9186346a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Global vars for server</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><pre class="fragment">Global vars for server
+</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>superTornado.py</li>
 </ul>
 </div><!-- contents -->
@@ -157,7 +173,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unauthorized</b> = 0</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacesuper_tornado.html">superTornado</a></li><li class="navelem"><a class="el" href="classsuper_tornado_1_1_global_vars.html">GlobalVars</a></li>
-    <li class="footer">Generated on Tue Mar 18 2014 11:32:42 for TornadoServerMI by
+    <li class="footer">Generated on Tue Apr 1 2014 12:45:09 for TornadoServerMI by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

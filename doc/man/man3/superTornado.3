@@ -1,4 +1,4 @@
-.TH "superTornado" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.TH "superTornado" 3 "Tue Apr 1 2014" "Version 1.0" "TornadoServerMI" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,6 +31,13 @@ superTornado \-
 .RI "class \fBWSocketHandler\fP"
 .br
 .in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBsignal_handler\fP"
+.br
+.in -1c
 .SS "Variables"
 
 .in +1c
@@ -47,6 +54,17 @@ superTornado \-
 .PP
 .nf
 Import Tornado Server
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def superTornado\&.signal_handler (signal, frame)"
+
+.PP
+.nf
+Interception signal for stop server
+
 .fi
 .PP
  

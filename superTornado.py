@@ -23,6 +23,9 @@ from m.login import *
 from m.log import *
 
 def signal_handler(signal,frame) :
+    """
+    Interception signal for stop server
+    """
         GlobalVars.loop.stop()
 
 class GlobalVars :
@@ -53,6 +56,10 @@ class BaseHandler(tornado.web.RequestHandler):
     cookie secure  based (sign and timestamp )
     """
     def get_current_user(self):
+        """
+        Return id connect current user connect
+        else null
+        """
         return self.get_secure_cookie("user")
 
 

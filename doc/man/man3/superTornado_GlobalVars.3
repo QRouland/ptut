@@ -1,4 +1,4 @@
-.TH "superTornado.GlobalVars" 3 "Tue Mar 18 2014" "Version 0.3" "TornadoServerMI" \" -*- nroff -*-
+.TH "superTornado.GlobalVars" 3 "Tue Apr 1 2014" "Version 1.0" "TornadoServerMI" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,10 @@ superTornado.GlobalVars \-
 
 .in +1c
 .ti -1c
-.RI "tuple \fBconfig\fP = \fBLoadConf\fP()"
+.RI "tuple \fBconfig\fP = \fBLoadConf\fP('m/fichier/conf')"
+.br
+.ti -1c
+.RI "tuple \fBlog\fP = \fBLog\fP()"
 .br
 .ti -1c
 .RI "\fBblind\fP = False"
@@ -22,22 +25,34 @@ superTornado.GlobalVars \-
 .RI "string \fBportCamera\fP = ''"
 .br
 .ti -1c
-.RI "string \fBportServ\fP = ''"
+.RI "string \fBendUrlCamera\fP = ''"
 .br
 .ti -1c
-.RI "tuple \fBlog\fP = \fBLog\fP()"
+.RI "string \fBidCamera\fP = ''"
 .br
 .ti -1c
 .RI "string \fBurlCamera\fP = ''"
 .br
 .ti -1c
+.RI "string \fBportServ\fP = ''"
+.br
+.ti -1c
 .RI "string \fBurlSocket\fP = ''"
+.br
+.ti -1c
+.RI "string \fBipDomo\fP = ''"
+.br
+.ti -1c
+.RI "string \fBportDomo\fP = ''"
 .br
 .ti -1c
 .RI "int \fBauthorized\fP = 0"
 .br
 .ti -1c
 .RI "int \fBunauthorized\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBloop\fP = tornado\&.ioloop\&.IOLoop\&.instance()"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -46,6 +61,7 @@ superTornado.GlobalVars \-
 .PP
 .nf
 Global vars for server
+
 .fi
 .PP
  

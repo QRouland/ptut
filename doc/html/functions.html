@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="link lol.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">TornadoServerMI
-   &#160;<span id="projectnumber">0.3</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">An tornado server for smart house&#39;s camera of IUT Blagnac</div>
   </td>
@@ -114,17 +114,37 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <div class="contents">
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
 <li>__init__()
-: <a class="el" href="classm_1_1log_1_1_log.html#a427aee1729c3bfbc0683753f2f5a5e8b">m.log.Log</a>
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a2443a99a4a23bec9199a3c69e9570b5c">m.loadConf.LoadConf</a>
+, <a class="el" href="classm_1_1log_1_1_log.html#a427aee1729c3bfbc0683753f2f5a5e8b">m.log.Log</a>
 , <a class="el" href="classm_1_1log_1_1_single_level_filter.html#a0d9e04941fa9c8c37e6d49a2a38cc7e0">m.log.SingleLevelFilter</a>
+, <a class="el" href="classm_1_1login_1_1_login.html#a6180bac74728dc060db2b8a192ad5426">m.login.Login</a>
 </li>
 <li>checkLogin()
 : <a class="el" href="classm_1_1login_1_1_login.html#ab5b1758239ba271d5e8ce570a1f99f44">m.login.Login</a>
+</li>
+<li>endUrlCamera()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a690fbd9ee268ac71df2b5b061c9c46a0">m.loadConf.LoadConf</a>
 </li>
 <li>get()
 : <a class="el" href="classsuper_tornado_1_1_disconnection_handler.html#a342baf9e09790a755c5fd85f115c6198">superTornado.DisconnectionHandler</a>
 , <a class="el" href="classsuper_tornado_1_1_main_handler.html#aa07ddde9b0a5bd006a055858ffef03cd">superTornado.MainHandler</a>
 , <a class="el" href="classsuper_tornado_1_1_unauthorized_handler.html#abd4e0e51dd5bae66506808c6e2beeb8d">superTornado.UnauthorizedHandler</a>
 , <a class="el" href="classsuper_tornado_1_1_video_handler.html#a349cb4813821fec69a5ae01ab1067b53">superTornado.VideoHandler</a>
+</li>
+<li>get_current_user()
+: <a class="el" href="classsuper_tornado_1_1_base_handler.html#aecb8cb2cc891c1012986d266958b981d">superTornado.BaseHandler</a>
+</li>
+<li>idUrlCamera()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#aa13e3a8882b8967afbdec6e1b984a0df">m.loadConf.LoadConf</a>
+</li>
+<li>ipCamera()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a90af7dd2fda7be0dea8b4a65ce38eb2f">m.loadConf.LoadConf</a>
+</li>
+<li>ipDomo()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#ab4d22d50a55664a4b82954af8f5ad327">m.loadConf.LoadConf</a>
+</li>
+<li>ipServ()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a855f4f41860aa066b816236cc074f471">m.loadConf.LoadConf</a>
 </li>
 <li>isBlind()
 : <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#ac3be38f004ccea7185b261b0e16ccbc2">m.loadConf.LoadConf</a>
@@ -140,6 +160,15 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>open()
 : <a class="el" href="classsuper_tornado_1_1_w_socket_handler.html#a93c6a7682da1900113bf2f0894b93fa2">superTornado.WSocketHandler</a>
+</li>
+<li>portCamera()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a6db2941a05e53d8eb028c38dce89a5dc">m.loadConf.LoadConf</a>
+</li>
+<li>portDomo()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#ac04a37d96bd5ab4cd6a680d13359691a">m.loadConf.LoadConf</a>
+</li>
+<li>portServ()
+: <a class="el" href="classm_1_1load_conf_1_1_load_conf.html#a5318b43bf50966159fee6a88bce49e45">m.loadConf.LoadConf</a>
 </li>
 <li>post()
 : <a class="el" href="classsuper_tornado_1_1_main_handler.html#a34b9f9761f25b951e452954252e82deb">superTornado.MainHandler</a>
@@ -160,7 +189,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 18 2014 11:32:43 for TornadoServerMI by
+    <li class="footer">Generated on Tue Apr 1 2014 12:45:10 for TornadoServerMI by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

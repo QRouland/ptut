@@ -55,7 +55,7 @@ else:
     print("NOK : not redirect to / !")
 cj.save()
 
-print "\nI will know try to connect with bad login information :"
+print "\nI will now try to connect with bad login information :"
 print "PATH: /"
 print "TYPE REQUEST : POST"
 print "DATA SEND :"
@@ -168,7 +168,7 @@ else:
     print("NOK : not redirect to / !")
 cj.save()
 
-print "\nI'm now test video for check If I Am Disconnected :"
+print "\nI'm Will Now Test Video For Check If I Am Disconnected :"
 print "PATH: /video"
 print "TYPE REQUEST : GET"
 print "DATA SEND : -"
@@ -182,7 +182,7 @@ cj.save()
 
 
 
-print "\nNow I Will Try To Connect To The Websocket Then I not connected :"
+print "\nNow I Will Try To Connect To The Websocket Then I Not Connected :"
 print "PATH: /socket "
 print "TYPE REQUEST : GET"
 print "DATA SEND :"

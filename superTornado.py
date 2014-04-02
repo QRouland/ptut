@@ -250,6 +250,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             temp = open("temp","w")
             socket.setdefaulttimeout(5)
             f = urlopen(GlobalVars.urlCamera)
+            data = ""
             isData = False
             for ligne in f:
                 if ligne == "--MOBOTIX_Fast_Serverpush--":

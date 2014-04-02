@@ -247,19 +247,28 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         Allow send the image in the websocket
         """
         try :
-            temp = open("temp","w")
-            socket.setdefaulttimeout(5)
-            f = urlopen(GlobalVars.urlCamera)
-            isData = False
-            data = f.readline().rstrip('\r\n')
-            while(data != "--MOBOTIX_Fast_Serverpush--"):
-                data = f.readline().rstrip('\r\n')
-                if isData == True:
-                    temp.write(data)
-                if data == "ENDSECTIONEVENT" :
-                    isData = True
-                data = f.read()
-            encoded = base64.b64encode(data)
+
+            with open("temp","w") as temp :
+                socket.setdefaulttimeout(5)
+                f = urlopen(GlobalVars.urlCamera)
+                temp.write(f.read())
+                temp.close()
+            with open("temp","r") as temp :
+                with open("temp2","w") as dest :
+                    isData = False
+                    for ligne in temp
+                        ligne.rstrip('\r\n')
+                        if data ="--MOTOBIX_Fast_Serverpush"
+                            isData = False
+                        if isData == True:
+                            dest.write(data+"\n")
+                        if data == "ENDSECTIONEVENT" :
+                            isData = True
+                        data = f.read()
+                        temp.close()
+                        dest.close()
+            with open("temp2","r") as data :
+                encoded = base64.b64encode(data.read())
             f.close()
             self.write_message(encoded)
             GlobalVars.log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)

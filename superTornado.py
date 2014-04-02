@@ -19,7 +19,7 @@ import signal
 import httplib
 
 
-sys.path[:0]=['../']
+sys.path[:0]=['/']
 """Import files"""
 from m.loadConf import *
 from m.login import *

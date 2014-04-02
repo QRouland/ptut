@@ -250,7 +250,14 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             temp = open("temp","w")
             socket.setdefaulttimeout(5)
             f = urlopen(GlobalVars.urlCamera)
-            data = f.read()
+            isData = False
+            for ligne in f:
+                if ligne == "--MOBOTIX_Fast_Serverpush--":
+                    isData = False
+                if isData == True :
+                    data = ligne
+                if ligne == "ENDSECTION EVENT":
+                    isData = True
             temp.write(f.read())
             encoded = base64.b64encode(data)
             f.close()

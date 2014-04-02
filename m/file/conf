@@ -1,9 +1,9 @@
 blind=1
-camera=192.168.16.7
+camera=192.168.1.13
 portCamera=80
-idUrlCamera=etud:etud2013
-endUrlCamera=/control/faststream.jpg?framecount=1&stream=full
-serv=10.0.2.15
+idUrlCamera=test:a
+endUrlCamera=/image.jpg
+serv=127.0.0.1
 portServ=80
-ipDomoMi=192.168.16.150
-portDomoMi=80
+ipDomoMi=127.0.0.1
+portDomoMi=8080

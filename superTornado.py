@@ -258,11 +258,11 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                     isData = False
                     for ligne in temp :
                         data = ligne.rstrip('\r\n')
-                        if data =="--MOTOBIX_Fast_Serverpush":
+                        if data =="--MOTOBIX_Fast_Serverpush--":
                             isData = False
                         if isData == True:
                             dest.write(data+"\n")
-                        if data == "ENDSECTIONEVENT" :
+                        if data == "ENDSECTION EVENT" :
                             isData = True
                         data = f.read()
                     dest.close()

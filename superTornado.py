@@ -258,7 +258,6 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 if data == "ENDSECTIONEVENT" :
                     isData = True
             data = f.read()
-
             encoded = base64.b64encode(data)
             f.close()
             self.write_message(encoded)

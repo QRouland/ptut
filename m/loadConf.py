@@ -14,7 +14,7 @@ class LoadConf(object):
         """
         with open(self.path , "r") as source :
             for ligne in source:
-                data = ligne.rstrip('\r\n').split('=')
+                data = ligne.rstrip('\r\n').split(' ')
                 if data[0] == key :
                     source.close()
                     return data[1]

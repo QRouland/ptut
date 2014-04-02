@@ -27,7 +27,7 @@ class testConf(object):
             key=''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(random.randint(1,20)))
             value = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(random.randint(1,20)))
             self.assos[i] = [key,value]
-            f.write(key+"="+value+"\n")
+            f.write(key+" "+value+"\n")
         f.close()
         print "Random Conf File Create"
 

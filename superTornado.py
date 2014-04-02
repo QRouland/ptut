@@ -253,7 +253,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                 f = urlopen(GlobalVars.urlCamera)
                 temp.write(f.read())
                 temp.close()
-            with open("temp","r") as d :
+            with open("temp","r") as temp :
                 with open("temp2","w") as dest :
                     isData = False
                     for ligne in temp :
@@ -265,8 +265,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                         if data == "ENDSECTIONEVENT" :
                             isData = True
                         data = f.read()
-                        d.close()
-                        dest.close()
+                    dest.close()
+                temp.close()
+
             with open("temp2","r") as data :
                 encoded = base64.b64encode(data.read())
             f.close()

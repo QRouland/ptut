@@ -251,10 +251,10 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             socket.setdefaulttimeout(5)
             f = urlopen(GlobalVars.urlCamera)
             data = f.read()
-            temp.write(data)
-            #encoded = base64.b64encode(data)
+            temp.write(f.read())
+            encoded = base64.b64encode(data)
             f.close()
-            self.write_message(data)
+            self.write_message(encoded)
             GlobalVars.log.printL( "->Image Data Send : " + self.request.remote_ip, lvl.INFO)
         except Exception, e :
             GlobalVars.log.printL(e,lvl.FAIL)

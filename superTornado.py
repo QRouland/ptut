@@ -35,7 +35,7 @@ class GlobalVars :
     """
     Global vars for server
     """
-    config = LoadConf("/m/file/conf")
+    config = LoadConf("m/file/conf")
     log = Log()
     blind = False
     ipCamera = ""

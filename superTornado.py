@@ -256,9 +256,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             with open("temp","r") as temp :
                 with open("temp2","w") as dest :
                     isData = False
-                    for ligne in temp
+                    for ligne in temp :
                         ligne.rstrip('\r\n')
-                        if data ="--MOTOBIX_Fast_Serverpush"
+                        if data ="--MOTOBIX_Fast_Serverpush":
                             isData = False
                         if isData == True:
                             dest.write(data+"\n")

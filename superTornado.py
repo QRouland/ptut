@@ -225,7 +225,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         else:
             if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized == 0):
                 GlobalVars.log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
-                self.send_signal_house("GET", "/micom/lamp.php?room=salon1&order=0")
+                self.send_signal_house("/micom/lamp.php?room=salon1&order=0")
 
     def send_signal_house(self, pRq) :
         """
@@ -234,6 +234,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
         GlobalVars.log.printL('maison = httplib.HTTPConnection("'+GlobalVars.ipDomo+'",'+ GlobalVars.portDomo+')',lvl.DEBUG)
         maison = httplib.HTTPConnection(GlobalVars.ipDomo,GlobalVars.portDomo)
         try :
+            socket.setdefaulttimeout(20)
             GlobalVars.log.printL(pRq,lvl.DEBUG)
             maison.request("GET",pRq)
             GlobalVars.log.printL("->Signal To House Send Successfully", lvl.SUCCESS)

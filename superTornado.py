@@ -264,7 +264,6 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
                             dest.write(data+"\n")
                         if data == "ENDSECTION EVENT" :
                             isData = True
-                        data = f.read()
                     dest.close()
                 temp.close()
 

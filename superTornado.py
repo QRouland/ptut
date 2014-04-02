@@ -253,11 +253,12 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             data = ""
             isData = False
             for ligne in f:
-                if ligne == "--MOBOTIX_Fast_Serverpush--\n":
+                ligne = ligne.rstrip('\r\n')
+                if ligne == "--MOBOTIX_Fast_Serverpush--":
                     isData = False
                 if isData == True :
                     data = data + ligne.read()
-                if ligne == "ENDSECTION EVENT\n":
+                if ligne == "ENDSECTION EVENT":
                     isData = True
             temp.write(f.read())
             encoded = base64.b64encode(data)

@@ -251,13 +251,13 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             socket.setdefaulttimeout(5)
             f = urlopen(GlobalVars.urlCamera)
             isData = False
-            while(data != "--MOBOTIX_Fast_Serverpush--")
-            data = f.readline().rstrip('\r\n')
-            if isData == True:
-                temp.write(data)
-            if data == "ENDSECTIONEVENT" :
-                isData = True
-            data = f.read()
+            while(data != "--MOBOTIX_Fast_Serverpush--"):
+                data = f.readline().rstrip('\r\n')
+                if isData == True:
+                    temp.write(data)
+                if data == "ENDSECTIONEVENT" :
+                    isData = True
+                data = f.read()
             encoded = base64.b64encode(data)
             f.close()
             self.write_message(encoded)

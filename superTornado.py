@@ -251,7 +251,7 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             socket.setdefaulttimeout(5)
             f = urlopen(GlobalVars.urlCamera)
             data = f.read()
-            temp = f.write()
+            temp = f.read()
             encoded = base64.b64encode(data)
             f.close()
             self.write_message(encoded)

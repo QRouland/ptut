@@ -26,7 +26,7 @@ class LampHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/micom/say.php", SayHandler),
-    (r"micom/lamp.php", LampHandler)])
+    (r"/micom/lamp.php", LampHandler)])
 
 if __name__ == "__main__":
     try :

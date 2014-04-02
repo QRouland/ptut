@@ -30,12 +30,3 @@ class Login(object):
                         return True
             source.close()
         return False
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "TornadoServerMI", "index.html", [
+  [ "MI Protect Privacy", "index.html", [
     [ "ptut", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],

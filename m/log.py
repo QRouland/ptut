@@ -57,18 +57,18 @@ class Log(object):
         self.logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)-15s :: %(levelname)s :: %(message)s')
 
-        file_handler = RotatingFileHandler('log/activity.log', 'a', 1000000, 1)
+        file_handler = RotatingFileHandler('../log/activity.log', 'a', 1000000, 1)
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
 
-        file_handler_warning = RotatingFileHandler('log/warning.log', 'a', 1000000, 1)
+        file_handler_warning = RotatingFileHandler('../log/warning.log', 'a', 1000000, 1)
         f1 = SingleLevelFilter(logging.WARNING, False)
         file_handler_warning.addFilter(f1)
         file_handler_warning.setFormatter(formatter)
         self.logger.addHandler(file_handler_warning)
 
-        file_handler_error = RotatingFileHandler('log/error.log', 'a', 1000000, 1)
+        file_handler_error = RotatingFileHandler('../log/error.log', 'a', 1000000, 1)
         file_handler_error.setLevel(logging.ERROR)
         file_handler_error.setFormatter(formatter)
         self.logger.addHandler(file_handler_error)
@@ -95,10 +95,3 @@ class Log(object):
         elif pLvl == lvl.FAIL :
             pMsg = bcolors.FAIL + str(pMsg) + bcolors.ENDC
         self.logger.log(pLvl,pMsg)
-
-
-
-
-
-
-

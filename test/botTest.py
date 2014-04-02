@@ -212,7 +212,3 @@ cj.save()
 
 print "\nI have finished to test MI camera server."
 print "Good Bye."
-
-
-
-

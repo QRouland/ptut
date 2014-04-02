@@ -1,0 +1,9 @@
+blind=1
+camera=192.168.16.7
+portCamera=80
+idUrlCamera=etud:etud2013
+endUrlCamera=/control/faststream.jpg?framecount=1&stream=full
+serv=10.0.2.15
+portServ=80
+ipDomoMi=192.168.16.150
+portDomoMi=80

@@ -17,6 +17,9 @@ import string
 import random
 import signal
 import httplib
+
+
+sys.path[:0]=['../']
 """Import files"""
 from m.loadConf import *
 from m.login import *
@@ -26,13 +29,13 @@ def signal_handler(signal,frame) :
     """
     Interception signal for stop server
     """
-        GlobalVars.loop.stop()
+    GlobalVars.loop.stop()
 
 class GlobalVars :
     """
     Global vars for server
     """
-    config = LoadConf("m/fichier/conf")
+    config = LoadConf("../m/file/conf")
     log = Log()
     blind = False
     ipCamera = ""
@@ -84,7 +87,7 @@ class MainHandler(BaseHandler):
         iden = self.get_argument("id","")
         paswd = self.get_argument("paswd","")
 
-        login = Login("m/fichier/allow")
+        login = Login("m/file/allow")
         autorise = login.checkLogin(iden, paswd)
         self.set_secure_cookie("user", iden)
         if autorise == True:

@@ -191,7 +191,9 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             else:
                 GlobalVars.unauthorized + 1
                 GlobalVars.log.printL('->Send visual alarm unauthorized user',lvl.WARNING)
-                self.send_signal_house("/micom/lamp.php?room=salon1&order=1")
+                self.send_signal_house("/micom/lamp.php?room=cuisine1&order=1")
+                if GlobalVars.authorized > 0 :
+                    self.send_signal_house("/micom/lamp.php?room=salon1&order=0")
         self.send_image()
 
 
@@ -226,6 +228,10 @@ class WSocketHandler(BaseHandler,tornado.websocket.WebSocketHandler):
             if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized == 0):
                 GlobalVars.log.printL('->Send Visual Alarm Deconnection User ...',lvl.INFO)
                 self.send_signal_house("/micom/lamp.php?room=salon1&order=0")
+                self.send_signal_house("/micom/lamp.php?room=cuisine1&order=0")
+            if (GlobalVars.unauthorized == 0) and (GlobalVars.authorized > 0) :
+                self.send_signal_house("/micom/lamp.php?room=salon1&order=1")
+                self.send_signal_house("/micom/lamp.php?room=cuisine1&order=0")
 
     def send_signal_house(self, pRq) :
         """

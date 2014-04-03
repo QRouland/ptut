@@ -145,7 +145,6 @@ try :
     print "Sent"
     print "Receiving..."
     result =  ws.recv()
-    print "Rep : " + result
 
     if result == "error":
         print "NOK : Response From Socket But Is An Error"
@@ -199,7 +198,6 @@ try :
     print "Sent"
     print "Receiving..."
     result =  ws.recv()
-    print "Rep : " + result
 
     if result == "error":
         print "NOK : Response From Socket But Is An Error"

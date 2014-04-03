@@ -39,7 +39,7 @@ class LoadConf(object):
         Return ipCamera configuration
         Else "error"
         """
-        return self.loadValue("camera")
+        return self.loadValue("ipCamera")
 
     def portCamera(self) :
         """
@@ -53,7 +53,7 @@ class LoadConf(object):
         Return ipServ configuration
         Else "error"
         """
-        return self.loadValue("serv")
+        return self.loadValue("ipServ")
 
 
     def portServ(self) :

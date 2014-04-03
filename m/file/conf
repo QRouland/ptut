@@ -1,13 +1,9 @@
-# Unhabitant
-blind 1
-#Camera
-ipCamera 192.168.1.13
+blind 0
+ipCamera 192.168.16.7
 portCamera 80
-idUrlCamera test:a
-endUrlCamera /image.jpg
-#Serv
+idUrlCamera etud:etud2013
+endUrlCamera /record/current.jpg
 ipServ 127.0.0.1
 portServ 80
-#MI
-ipDomoMi 127.0.0.1
-portDomoMi 8080
+ipDomoMi 192.168.16.150
+portDomoMi 80

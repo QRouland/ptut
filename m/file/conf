@@ -1,7 +1,7 @@
 blind 0
 ipCamera 192.168.16.7
 portCamera 80
-idUrlCamera etud:etud2013
+idUrlCamera 
 endUrlCamera /record/current.jpg
 ipServ 127.0.0.1
 portServ 80
